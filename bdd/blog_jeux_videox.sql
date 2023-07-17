@@ -1,3 +1,6 @@
+CREATE DATABASE blog_jeux;
+USE blog_jeux;
+
 CREATE TABLE `Articles` (
 	`id_articles` INT NOT NULL AUTO_INCREMENT,
 	`titre` varchar(30) NOT NULL,

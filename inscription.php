@@ -12,30 +12,44 @@
 
 <body class="inscription">
 
-    <div class="container">
-        <div class="signup-form">
-            <h2>Inscription</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="motdepasse">Mot de passe</label>
-                    <input type="password" id="motdepasse" name="motdepasse" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirmermotdepasse">Confirmer mot de passe</label>
-                    <input type="password" id="confirmermotdepasse" name="confirmermotdepasse" required>
-                </div>
-                <button type="submit">Inscription</button>
-            </form>
+<!-- modale d'incription -->
+    <!-- <div id="modal-inscription" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('inscription')">&times;</span>
+            <div class="signup-form">
+                <h2>Inscription</h2>
+                <form> -->
+                    <!-- ... Contenu du formulaire d'inscription ... -->
+
+                    <div class="container">
+                        <div class="signup-form">
+                            <h2>Inscription</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="motdepasse">Mot de passe</label>
+                                    <input type="password" id="motdepasse" name="motdepasse" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmermotdepasse">Confirmer mot de passe</label>
+                                    <input type="password" id="confirmermotdepasse" name="confirmermotdepasse" required>
+                                </div>
+                                <button type="submit">Inscription</button>
+                            </form>
+                        </div>
+                    </div>
+
+                <!-- </form>
+            </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="script.js"></script>
 </body>

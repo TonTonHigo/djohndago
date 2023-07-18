@@ -22,6 +22,9 @@
             <div class="nav-right">
                 <button class="btn">Inscription</button>
                 <button class="btn">Connexion</button>
+
+                <!-- <button onclick="openModal('connexion')">Connexion</button> -->
+    <!--        <button onclick="openModal('inscription')">Inscription</button> -->
             </div>
         </nav>
     </header>

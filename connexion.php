@@ -12,20 +12,35 @@
 
 <body class="connexion">
 
-    <div class="container">
-        <div class="login-form">
-            <h2>Connexion</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="motdepasse">Mot de passe</label>
-                    <input type="password" id="motdepasse" name="motdepasse" required>
-                </div>
-                <button type="submit">Connexion</button>
-            </form>
+
+    <!-- Modal de Connexion -->
+    <div id="modal-connexion" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('connexion')">&times;</span>
+            <div class="login-form">
+                <h2>Connexion</h2>
+                <form>
+                    <!-- ... Contenu du formulaire de connexion ... -->
+
+                    <div class="container">
+                        <div class="login-form">
+                            <h2>Connexion</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="motdepasse">Mot de passe</label>
+                                    <input type="password" id="motdepasse" name="motdepasse" required>
+                                </div>
+                                <button type="submit">Connexion</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
 

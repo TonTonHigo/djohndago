@@ -1,0 +1,95 @@
+/* couleur untiliser pour le projet
+    #000000
+    #FFF
+    #E83CF5
+    #A4133C 
+    #0B77DE
+*/
+
+body .acceuil{
+    background: url(site_exemples\img\decormanette.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pour la navbar */
+body .navbar {
+    margin: 0;
+    padding: 0;
+    font-family: 'Permanent Marker" sans sérif';
+    
+}
+
+header {
+    background: url(site_exemples\img\decormarvel.jpg);
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #000000, #FFF, #E83CF5, #A4133C, #0B77DE);
+    padding: 10px 20px;
+}
+
+.nav-left img {
+    height: 100px; /* Ajuste la taille du logo en fonction de tes besoins */
+    width: 250px;
+}
+
+.nav-center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-center li {
+    margin: 0 15px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #ffffff; /* Couleur des liens */
+    font-size: 40px;
+}
+
+.nav-right .btn {
+    padding: 12px 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #000000; /* Couleur des boutons */
+    color: #fff; /* Couleur du texte des boutons */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Style du bouton lorsqu'il est survolé */
+.nav-right .btn:hover {
+    background-color: #A4133C;
+}
+
+
+

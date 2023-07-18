@@ -93,3 +93,174 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mon css pour mon footer */
+body .FOOTER {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-image: url('site_exemples/img/decolastofusblackandwhite.jpg');
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.contact {
+    width: 60%;
+    padding: 20px;
+    color:#A4133C;
+    font-size: 30px;
+}
+
+.contact h2 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.contact button {
+    padding: 12px 16px;
+    border: none;
+    background-color: #A4133C;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.social {
+    width: 40%;
+    padding: 20px;
+    color: #A4133C;
+    font-size: 30px;
+}
+
+.social h2 {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+
+.social ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.social li {
+    margin-right: 10px;
+}
+
+.social img {
+    height: 30px; /* Ajuste la taille des logos selon tes besoins */
+}

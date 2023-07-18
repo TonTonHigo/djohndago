@@ -48,6 +48,14 @@ CREATE TABLE `Roles` (
 	PRIMARY KEY (`id_roles`)
 );
 
+CREATE TABLE `Contacts` (
+	`id_contacts` INT NOT NULL AUTO_INCREMENT,
+	`nom` varchar(20) NOT NULL,
+	`email` varchar(30) NOT NULL,
+	`contenu` TEXT(1000) NOT NULL,
+	PRIMARY KEY (`id_contacts`)
+);
+
 ALTER TABLE `Articles` ADD CONSTRAINT `Articles_fk0` FOREIGN KEY (`id_auteurs`) REFERENCES `Auteurs`(`id_auteurs`);
 
 ALTER TABLE `Auteurs` ADD CONSTRAINT `Auteurs_fk0` FOREIGN KEY (`id_roles`) REFERENCES `Roles`(`id_roles`);
@@ -57,6 +65,7 @@ ALTER TABLE `Commentaires` ADD CONSTRAINT `Commentaires_fk0` FOREIGN KEY (`id_ar
 ALTER TABLE `Articles_tags` ADD CONSTRAINT `Articles_tags_fk0` FOREIGN KEY (`id_articles`) REFERENCES `Articles`(`id_articles`);
 
 ALTER TABLE `Articles_tags` ADD CONSTRAINT `Articles_tags_fk1` FOREIGN KEY (`id_tags`) REFERENCES `Tags`(`id_tags`);
+
 
 
 

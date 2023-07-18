@@ -10,10 +10,17 @@
 </head>
 <body class="blog">
     
+<?php include ('navbar.php'); ?>
+
+
+
+    
 
 
 
 
+
+<?php include ('footer.php'); ?>
 <script src="script.js"></script>
 </body>
 </html>

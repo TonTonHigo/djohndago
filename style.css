@@ -92,98 +92,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* mon css pour mon footer */
 body .FOOTER {
     margin: 0;
@@ -262,5 +170,152 @@ body .FOOTER {
 }
 
 .social img {
-    height: 30px; /* Ajuste la taille des logos selon tes besoins */
+    height: 60px; /* Ajuste la taille des logos selon tes besoins */
 }
+
+
+
+
+
+
+
+
+
+
+body .connexion {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    
+}
+
+.container {
+    background-image: url('site_exemples/img/decopageconnexion.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #040404;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #0B77DE;
+    margin-bottom: 5px;
+    font-size: x-large;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0B77DE;
+    color: #FFF;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+/* Style du bouton lorsqu'il est survolé */
+button:hover {
+    background-color: #A4133C;
+}
+
+
+
+
+
+
+
+
+
+
+/* css de ma page d'inscription */
+body .inscription {
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-image: url('site_exemples/img/decopageconnexion.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.signup-form h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0B77DE;
+    color: #000000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Style du bouton lorsqu'il est survolé */
+button:hover {
+    background-color: #A4133C;
+    
+}
+

@@ -171,9 +171,6 @@ body .FOOTER {
     align-items: center;
     justify-content: space-around;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding-top: 10%;
 }

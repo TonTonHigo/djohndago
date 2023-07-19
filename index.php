@@ -11,6 +11,8 @@
 <body class="acceuil">
 <?php include ('header.php'); ?>
 
+
+<!-- mon carousel -->
 <div class="carousel-container">
         <div class="carousel">
             <div class="slide">

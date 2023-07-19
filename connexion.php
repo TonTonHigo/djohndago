@@ -14,12 +14,12 @@
 
 
     <!-- Modal de Connexion -->
-    <div id="modal-connexion" class="modal">
+    <!-- <div id="modal-connexion" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('connexion')">&times;</span>
             <div class="login-form">
                 <h2>Connexion</h2>
-                <form>
+                <form> -->
                     <!-- ... Contenu du formulaire de connexion ... -->
 
                     <div class="container">
@@ -39,10 +39,10 @@
                         </div>
                     </div>
 
-                </form>
+                <!-- </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="script.js"></script>
 </body>

@@ -7,7 +7,7 @@
 */
 
 body .acceuil{
-    background: url(site_exemples\img\decormanette.jpg);
+    background: url('../djohndago/site_exemples/img/decopageconnexion.jpg');
 }
 
 
@@ -100,7 +100,7 @@ body .FOOTER {
 }
 
 .footer {
-    background-image: url('site_exemples/img/decolastofusblackandwhite.jpg');
+    background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     background-size: cover;
     height: 500px;
     display: flex;
@@ -181,7 +181,7 @@ body .FOOTER {
 
 
 
-
+/* page de connexion */
 body .connexion {
     margin: 0;
     padding: 0;

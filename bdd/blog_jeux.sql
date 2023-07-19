@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 19 juil. 2023 à 06:56
+-- Généré le : mer. 19 juil. 2023 à 11:11
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `articles`
 --
 
+DROP TABLE IF EXISTS `articles`;
 CREATE TABLE IF NOT EXISTS `articles` (
   `id_articles` int NOT NULL AUTO_INCREMENT,
   `image` varchar(100) NOT NULL,
@@ -47,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
 INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_publication`, `categorie`, `id_auteurs`) VALUES
 (1, 'site_exemples/img/21-games-keyart-01-07jun23$en.webp', 'Double A', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 1),
 (2, 'site_exemples/img/decolastofusblackandwhite.jpg', 'The last of us 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 2),
-(3, 'site_exemples/img/decor (30).jpg', 'Days Gone', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 6, 3);
+(3, 'site_exemples/img/decor (29).jpg', 'God of war', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 6, 3);
 
 -- --------------------------------------------------------
 
@@ -55,7 +56,7 @@ INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_public
 -- Structure de la table `articles_tags`
 --
 
-
+DROP TABLE IF EXISTS `articles_tags`;
 CREATE TABLE IF NOT EXISTS `articles_tags` (
   `id_articles_tags` int NOT NULL AUTO_INCREMENT,
   `id_articles` int NOT NULL,
@@ -71,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `articles_tags` (
 -- Structure de la table `auteurs`
 --
 
-
+DROP TABLE IF EXISTS `auteurs`;
 CREATE TABLE IF NOT EXISTS `auteurs` (
   `id_auteurs` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -98,7 +99,7 @@ INSERT INTO `auteurs` (`id_auteurs`, `nom`, `bio`, `email`, `mdp`, `id_roles`) V
 -- Structure de la table `commentaires`
 --
 
-
+DROP TABLE IF EXISTS `commentaires`;
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `id_commentaires` int NOT NULL AUTO_INCREMENT,
   `contenu` text NOT NULL,
@@ -114,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 -- Structure de la table `contacts`
 --
 
-
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id_contacts` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -129,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Structure de la table `roles`
 --
 
-
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `id_roles` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -150,7 +151,7 @@ INSERT INTO `roles` (`id_roles`, `nom`) VALUES
 -- Structure de la table `tags`
 --
 
-
+DROP TABLE IF EXISTS `tags`;
 CREATE TABLE IF NOT EXISTS `tags` (
   `id_tags` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,

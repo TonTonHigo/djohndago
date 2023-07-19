@@ -26,7 +26,7 @@ use MaConnexion as GlobalMaConnexion;
             $dsn = "mysql:host=$this->hote;dbname=$this->nomBaseDeDonnees;charset=utf8mb4";
             $this->connexionPDO = new PDO($dsn,$this->nomUtilisateur, $this->motDePasse);
             $this->connexionPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Connexion reussi";
+            // echo "Connexion reussi";
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
         }
@@ -129,7 +129,7 @@ use MaConnexion as GlobalMaConnexion;
     }
  }
 
- $test = new MaConnexion("blog_jeux","","root","localhost");
+//  $test = new MaConnexion("blog_jeux","","root","localhost");
  
 
 ?>

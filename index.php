@@ -13,53 +13,15 @@
 
 
 <!-- mon carousel -->
-<div class="carousel-container">
-        <div class="carousel">
-            <div class="slide">
-                <img src="site_exemples\img\fps game image.jpg" alt="Image 1">
-                <div class="caption">
-                    <h3>Titre de l'image 1</h3>
-                    <p class="fluo-text">Texte de l'image 1</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="site_exemples\img\nfs.jpg" alt="Image 2">
-                <div class="caption">
-                    <h3>Titre de l'image 2</h3>
-                    <p class="fluo-text">Texte de l'image 2</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="site_exemples\img\decormanette.jpg" alt="Image 2">
-                <div class="caption">
-                    <h3>Titre de l'image 2</h3>
-                    <p class="fluo-text">Texte de l'image 2</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="site_exemples\img\decormarvel.jpg" alt="Image 2">
-                <div class="caption">
-                    <h3>Titre de l'image 2</h3>
-                    <p class="fluo-text">Texte de l'image 2</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="site_exemples\img\queen.jpg" alt="Image 2">
-                <div class="caption">
-                    <h3>Titre de l'image 2</h3>
-                    <p class="fluo-text">Texte de l'image 2</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="site_exemples\img\daysgone.jpg" alt="Image 2">
-                <div class="caption">
-                    <h3>Titre de l'image 2</h3>
-                    <p class="fluo-text">Texte de l'image 2</p>
-                </div>
-            </div>
-            <!-- Ajoute les autres slides ici -->
+
+<div class="carousel-container-nav">
+        <div class="carousel-slide">
+            <img src="./img/wallpaperflare.com_wallpaper(9).jpg" alt="Image 1">
+            <img src="./img/xdefiant.jpg" alt="Image 2">
+            <img src="./img/decor (32).jpg" alt="Image 3">
         </div>
     </div>
+
 
     <hr class="trait">
 

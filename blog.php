@@ -1,6 +1,7 @@
 <?php include ('Maconnexion.php'); 
 session_start();
 $_SESSION['role'] = 2;
+$_SESSION['id'] = 1;
 ?>
 
 <!DOCTYPE html>
@@ -48,10 +49,12 @@ $_SESSION['role'] = 2;
                             <div class="form">
     
                                     <form class="login-form" method="POST" action="crud.php" id="form_article">
-                                        <input type="text" placeholder="image"/>
-                                        <input type="text" placeholder="titre"/>
-                                        <input type="text" placeholder="contenu"/>
-                                        <input type="date" placeholder="date"/>
+                                        <input name="image" type="text" placeholder="image"/>
+                                        <input name="titre" type="text" placeholder="titre"/>
+                                        <input name="categorie" type="number" placeholder="categorie"/>
+                                        <input name="contenu" type="text" placeholder="contenu"/>
+                                        <input name="date" type="date" placeholder="date"/>
+                                        <input name="id_auteur" type="number" value="' . $_SESSION['id'] . '" hidden/>
                                     </form>
     
                             </div>
@@ -69,6 +72,15 @@ $_SESSION['role'] = 2;
             }
         ?>
            
+           <div>
+                <?php
+                    $select = new MaConnexion("blog_jeux", "" , "root" , "localhost");
+                    $afficher = $select -> select("articles","*");
+                    foreach($afficher as $cartes){
+                        
+                    }
+                ?>
+           </div>
         </section>
 
 

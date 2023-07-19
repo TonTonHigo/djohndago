@@ -16,9 +16,13 @@
 
 <div class="carousel-container-nav">
         <div class="carousel-slide">
-            <img src="./img/wallpaperflare.com_wallpaper(9).jpg" alt="Image 1">
-            <img src="./img/xdefiant.jpg" alt="Image 2">
-            <img src="./img/decor (32).jpg" alt="Image 3">
+            <img src="site_exemples\img\single-player-action-keyart-01-en-21oct22.webp" alt="Image 1">
+            <img src="site_exemples\img\daysgone.jpg" alt="Image 2">
+            <img src="site_exemples\img\kakshi.jpg" alt="Image 3">
+            <img src="site_exemples\img\decolastofusblackandwhite.jpg" alt="Image 4">
+            <img src="site_exemples\img\bm.jpg" alt="Image 5">
+            <img src="site_exemples\img\sexy.jpg" alt="Image 6">
+            <img src="site_exemples\img\onepeace.jpg" alt="Image 7">
         </div>
     </div>
 

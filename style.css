@@ -15,6 +15,97 @@ body .acceuil{
 }
 
 
+/* ... Styles pour le reste de ta page ... */
+/* mon carousel */
+/* ... Styles pour le reste de ta page ... */
+/* ... Styles pour le reste de ta page ... */
+
+/* Conteneur du carousel */
+.carousel-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Conteneur des slides (le carousel lui-même) */
+.carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Une slide */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0; /* Par défaut, on masque la slide */
+    transition: opacity 1s ease-in-out; /* Transition pour les changements de slides */
+}
+
+/* Slide active (celle qui est actuellement affichée) */
+.slide.active {
+    opacity: 1; /* On affiche la slide active */
+}
+
+/* Image à l'intérieur de la slide */
+.slide img {
+    width: 100%;
+    height: auto; /* Ajustement pour afficher l'image dans sa taille d'origine */
+}
+
+/* Légende de la slide */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+/* Titre dans la légende */
+.caption h3 {
+    font-size: 24px;
+}
+
+/* Texte dans la légende avec couleur fluorescente */
+.caption p.fluo-text {
+    font-size: 18px;
+    color: #E83CF5;
+}
+
+/* Animation pour le défilement des slides */
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0); /* La slide active est centrée à l'écran */
+    }
+    20%, 80% {
+        transform: translateX(-100%); /* Les autres slides sont déplacées vers la gauche */
+    }
+}
+
+
+
+
+/* un trait pour separait le carourssel du reste de la pages */
+hr .trait{
+    width: 90%;
+    height: 3px;
+    color: #0B77DE;
+}
+
+
+/* image apres le carousel */
+.gta{
+    width: 100%;
+    height: 400px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+
 
 
 
@@ -99,7 +190,7 @@ nav {
 /* mon css pour mon footer */
 body .FOOTER {
     margin: 0;
-    padding: 0;
+    padding-top: 0;
     font-family: Arial, sans-serif;
 }
 
@@ -115,6 +206,7 @@ body .FOOTER {
     bottom: 0;
     left: 0;
     width: 100%;
+    padding-top: 10%;
 }
 
 .contact {

@@ -10,7 +10,7 @@
 </head>
 <body class="blog">
     
-<?php include ('navbar.php'); ?>
+<?php include ('header.php'); ?>
 
 
 

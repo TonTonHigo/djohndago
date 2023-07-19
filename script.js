@@ -19,6 +19,9 @@ function showSlide() {
 setInterval(showSlide, 4000);
 
 
+
+
+
 // Pour le boutton stylé
 var animateButton = function(e) {
 

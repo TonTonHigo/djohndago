@@ -43,6 +43,29 @@ use MaConnexion as GlobalMaConnexion;
         }    
     }
 
+    public function select_where_articles($table, $column, $id) {
+        try {
+            $requete = "SELECT $column FROM $table WHERE id_articles = $id";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); // Fetch the result of the query into an associative array
+
+            return $resultat;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
+    public function select_where_auteurs($table, $column, $id) {
+        try {
+            $requete = "SELECT $column FROM $table WHERE id_auteurs = $id";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); // Fetch the result of the query into an associative array
+
+            return $resultat;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
+
     public function delete($table, $id, $cond){
         try {
             $requete = "DELETE FROM $table WHERE $id = $cond";

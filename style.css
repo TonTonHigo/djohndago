@@ -462,8 +462,12 @@ button:hover {
 
 
 /* BLOG */
-#blog_grid{
-    display: grid;
+#blog_flex{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap;
+    padding: 5% 0;
 }
 
 .bubbly-button{

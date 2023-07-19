@@ -15,8 +15,8 @@
             </div>
             <div class="nav-center">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="blog.php">Blog</a></li>
                 </ul>
             </div>
             <div class="nav-right">

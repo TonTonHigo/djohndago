@@ -12,7 +12,9 @@
     
 <?php include ('header.php'); ?>
 
-
+    <main>
+        <button class="bubbly-button">Ajouter un article</button>
+    </main>
 
     
 

@@ -78,7 +78,7 @@
 
     <!-- seconde image -->
     <div class="gta">
-        <img src="site_exemples\img\decormanette.jpg" alt="Image 2">
+        <img src="site_exemples\img\wallpaperflare.com_wallpaper(12).jpg" alt="Image 2">
     </div>
 
 

@@ -5,6 +5,14 @@
     #A4133C goyavier
     #0B77DE bleu
 */
+
+/* 
+font-family: 'Lilita One', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Permanent Marker', cursive;
+ */
+
+
 body{
     background: url('site_exemples/img/decopageconnexion.jpg');
     background-repeat: no-repeat;
@@ -15,73 +23,41 @@ body .acceuil{
 }
 
 
-/* ... Styles pour le reste de ta page ... */
-/* mon carousel */
-/* ... Styles pour le reste de ta page ... */
-/* ... Styles pour le reste de ta page ... */
 
 /* Conteneur du carousel */
-.carousel-container {
+
+.carousel-container-nav {
     width: 90%;
     margin: 0 auto;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
     position: relative;
 }
 
-/* Conteneur des slides (le carousel lui-même) */
-.carousel {
+.carousel-slide {
     width: 100%;
     height: 100%;
     display: flex;
+    animation: slide 12s infinite; /* 4 secondes par image (3 images x 4 secondes) */
 }
 
-/* Une slide */
-.slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    opacity: 0; /* Par défaut, on masque la slide */
-    transition: opacity 1s ease-in-out; /* Transition pour les changements de slides */
-}
-
-/* Slide active (celle qui est actuellement affichée) */
-.slide.active {
-    opacity: 1; /* On affiche la slide active */
-}
-
-/* Image à l'intérieur de la slide */
-.slide img {
+.carousel-slide img {
     width: 100%;
     height: auto; /* Ajustement pour afficher l'image dans sa taille d'origine */
 }
 
-/* Légende de la slide */
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-}
-
-/* Titre dans la légende */
-.caption h3 {
-    font-size: 24px;
-}
-
-/* Texte dans la légende avec couleur fluorescente */
-.caption p.fluo-text {
-    font-size: 18px;
-    color: #E83CF5;
-}
-
-/* Animation pour le défilement des slides */
 @keyframes slide {
-    0%, 100% {
-        transform: translateX(0); /* La slide active est centrée à l'écran */
+    0% {
+        transform: translateX(0); /* Départ de la première image */
     }
-    20%, 80% {
-        transform: translateX(-100%); /* Les autres slides sont déplacées vers la gauche */
+    33.33% {
+        transform: translateX(-100%); /* Déplacement vers la deuxième image */
+    }
+    66.66% {
+        transform: translateX(-200%); /* Déplacement vers la troisième image */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la première image */
     }
 }
 
@@ -98,13 +74,56 @@ hr .trait{
 
 /* image apres le carousel */
 .gta{
-    width: 100%;
-    height: 400px;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin: 300px auto;
     border: 4px solid white;
 }
 
+
+
+
+/* titre avant la class cards */
+h2{
+    color: white;
+    font-family: 'Lilita One', cursive;
+}
+/* section de carte apres l'image */
+.card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #A4133C;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 
 
@@ -198,7 +217,7 @@ body .FOOTER {
 .footer {
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     background-size: cover;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: space-around;

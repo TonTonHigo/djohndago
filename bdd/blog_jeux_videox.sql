@@ -3,6 +3,7 @@ USE blog_jeux;
 
 CREATE TABLE `Articles` (
 	`id_articles` INT NOT NULL AUTO_INCREMENT,
+	`image` varchar(100) NOT NULL,
 	`titre` varchar(30) NOT NULL,
 	`contenu` TEXT(1000) NOT NULL,
 	`date_publication` DATE NOT NULL,

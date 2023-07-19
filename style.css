@@ -465,6 +465,9 @@ button:hover {
 
 
 /* BLOG */
+#blog_grid{
+    display: grid;
+}
 
 .bubbly-button{
   font-family: 'Helvetica', 'Arial', sans-serif;

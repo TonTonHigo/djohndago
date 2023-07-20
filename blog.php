@@ -99,7 +99,7 @@ $_SESSION['id'] = 1;
                         #massage'. $cartes['id_articles'] . '{
                             font-weight: 300;
                             letter-spacing: 1px;
-                            background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.51) 100%),url(' . $cartes['image'] . ');
+                            background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.51) 100%),url("' . $cartes['image'] . '");
                             background-size: cover;
                             background-repeat: no-repeat;    
                             padding-top: 280px;

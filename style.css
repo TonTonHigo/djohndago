@@ -715,6 +715,7 @@ p{
 
 .comments {
     /* Styles des commentaires seront ajoutés via JavaScript */
+    font-size: larger;
 }
 
 .like-section {

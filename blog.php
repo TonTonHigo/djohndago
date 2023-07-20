@@ -29,9 +29,9 @@ $_SESSION['id'] = 1;
             if($_SESSION['role'] == 2){
                 echo '
                 <!-- button stylé -->
-                <button type="button" class="bubbly-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Ajouter un article
-                </button>
+                <div class="frame">
+                <button type="button" class="custom-btn btn-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Ajouter un article</span></button>
+                </div>
         
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -89,9 +89,26 @@ $_SESSION['id'] = 1;
                         
 
                             <div class="our_services" id="massage'. $cartes['id_articles'] . '">
-                                <h3>'. $cartes['titre'] . '</h3>
+                                <h3 class="titre_style">'. $cartes['titre'] . '</h3>
                                 <p class="txt3">'. $truncatedContent . '</p>
-                            </div>
+                                <form method="POST" action="article.php">
+                                    <input name="id_articles" value="'. $cartes['id_articles'] . '" hidden>
+                                    <button type="submit" class="txt3 butcard">Voir l\'article</button>
+                                </form>
+                                ';
+
+                        if($_SESSION['role'] == 2){
+                            echo '
+                                <div class="crudbut">
+                                    <button type="button" class="custom-btn-up updatebut" data-bs-toggle="update'. $cartes['id_articles'] . '" data-bs-target="#exampleModal"><span>UPDATE</span></button>
+                                    <button type="button" class="custom-btn-del deletebut" data-bs-toggle="delete'. $cartes['id_articles'] . '" data-bs-target="#exampleModal"><span>DELETE</span></button>
+                                </div>
+                            
+                            ';
+                        }
+                        
+                        echo '
+                                </div> 
                         
                         
 

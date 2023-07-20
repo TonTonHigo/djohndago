@@ -371,8 +371,8 @@ button:hover {
 
 /* css de ma page d'inscription */
 body .inscription {
-    margin: 0 auto;
-    padding: 0 auto;
+    /* margin: 0 auto; */
+    /* padding: 0 auto; */
     font-family: Arial, sans-serif;
 }
 

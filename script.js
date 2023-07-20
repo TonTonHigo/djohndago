@@ -62,16 +62,68 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 
 
 
-// js pour le modale
 
-// Fonction pour ouvrir un modal
-// function openModal(modalId) {
-//     const modal = document.getElementById(`modal-${modalId}`);
-//     modal.style.display = 'block';
-// }
 
-// Fonction pour fermer un modal
-// function closeModal(modalId) {
-//     const modal = document.getElementById(`modal-${modalId}`);
-//     modal.style.display = 'none';
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// code de js pour la page articles de damien
+
+// Sélection des éléments nécessaires
+const commentForm = document.querySelector('.comment-form');
+const commentsContainer = document.querySelector('.comments');
+const likeIcons = document.querySelectorAll('.icon');
+
+// Ajouter un événement "submit" au formulaire de commentaire
+commentForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Récupérer les valeurs des champs du formulaire
+    const nameInput = commentForm.querySelector('input[type="text"]');
+    const commentTextarea = commentForm.querySelector('textarea');
+
+    // Créer un nouvel élément "div" pour afficher le commentaire
+    const commentDiv = document.createElement('div');
+    commentDiv.innerHTML = `<strong>${nameInput.value}</strong>: ${commentTextarea.value}`;
+    commentsContainer.appendChild(commentDiv);
+
+    // Réinitialiser le formulaire après avoir soumis le commentaire
+    commentForm.reset();
+});
+
+// Ajouter un événement "click" pour les icônes d'appréciation
+likeIcons.forEach(icon => {
+    icon.addEventListener('click', function () {
+        // Ajouter la classe "active" à l'icône cliquée pour la mise en évidence
+        this.classList.toggle('active');
+    });
+});
+

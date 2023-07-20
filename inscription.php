@@ -12,14 +12,6 @@
 
 <body class="inscription">
 
-<!-- modale d'incription -->
-    <!-- <div id="modal-inscription" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('inscription')">&times;</span>
-            <div class="signup-form">
-                <h2>Inscription</h2>
-                <form> -->
-                    <!-- ... Contenu du formulaire d'inscription ... -->
 
                     <div class="container">
                         <div class="signup-form">
@@ -46,10 +38,7 @@
                         </div>
                     </div>
 
-                <!-- </form>
-            </div>
-        </div>
-    </div> -->
+    
 
     <script src="script.js"></script>
 </body>

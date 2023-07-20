@@ -217,7 +217,7 @@ body .FOOTER {
 .footer {
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     background-size: cover;
-    height: 400px;
+    /* height: 400px; */
     display: flex;
     align-items: center;
     justify-content: space-around;

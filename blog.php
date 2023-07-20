@@ -72,36 +72,48 @@ $_SESSION['id'] = 1;
             }
         ?>
            
-           <div id="blog_flex">
+           <div id="ourservices">
                 <?php
                     $select = new MaConnexion("blog_jeux", "" , "root" , "localhost");
                     $afficher = $select -> select("articles","*");
                     foreach($afficher as $cartes){
-                        $maxContentLength = 100; // Maximum number of characters to display
+                        $maxContentLength = 100; // Maximum de caractère a afficher 
 
-                        // Truncate the content if it's longer than the maximum length
+                        // Raccourci le contenu si il est trop long
                         $truncatedContent = (strlen($cartes['contenu']) > $maxContentLength) ?
                         substr($cartes['contenu'], 0, $maxContentLength) . "..." :
                         $cartes['contenu'];
 
                         echo '
 
-                            <div class="card" style="width: 25rem;">
-                                <img src="' . $cartes['image'] . '" class="card-img-top" alt="carte ' . $cartes['titre'] . '">
-                                <div class="card-body>
-                                    <h5 class="card-title">' . $cartes['titre'] . '</h5>
-                                    <p class="card-text">' . $truncatedContent . '</p>
-                                    <form action="article.php" method="POST">
-                                        <input name="id_articles" type="number" value="' . $cartes['id_articles'] . '" hidden>
-                                        <button class="btn btn-primary" type="submit" >Voir l\'article</button>
-                                    </form>
-                                </div>
+                        
+
+                            <div class="our_services" id="massage'. $cartes['id_articles'] . '">
+                                <h3>'. $cartes['titre'] . '</h3>
+                                <p class="txt3">'. $truncatedContent . '</p>
                             </div>
+                        
+                        
+
+                        <style>
+                        #massage'. $cartes['id_articles'] . '{
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                            background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.51) 100%),url(' . $cartes['image'] . ');
+                            background-size: cover;
+                            background-repeat: no-repeat;    
+                            padding-top: 280px;
+                            padding-right: 60px;
+                            padding-bottom: 40px;
+                            padding-left: 30px;
+                        }
+                        </style>
+
                         ';
                     }
                 ?>
   
-           </div>
+            </div>
         </section>
 
 

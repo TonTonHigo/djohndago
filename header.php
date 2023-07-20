@@ -20,8 +20,8 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <button class="btn">Inscription</button>
-                <button class="btn">Connexion</button>
+                <button class="btn"><a href="inscription.php">Inscription</a></button>
+                <button class="btn"><a href="connexion.php">Connexion</a></button>
 
                 <!-- <button onclick="openModal('connexion')">Connexion</button> -->
     <!--        <button onclick="openModal('inscription')">Inscription</button> -->

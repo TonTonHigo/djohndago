@@ -327,7 +327,7 @@ body .connexion {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    /* width: 300px; */
 }
 
 .login-form h2 {
@@ -466,7 +466,7 @@ button:hover {
 
 .login-page {
   width: 360px;
-  padding: 8% 0 0;
+  /* padding: 8% 0 0; */
   margin: auto;
 }
 
@@ -865,4 +865,24 @@ p{
     color: white;
     text-shadow: 2px 0 #A4133C, -2px 0 #A4133C, 0 2px #A4133C, 0 -2px #A4133C,
     1px 1px #A4133C, -1px -1px #A4133C, 1px -1px #A4133C, -1px 1px#A4133C;
+}
+
+.modal-body{
+    border: 5px solid #A4133C;
+}
+
+.login-page{
+    /* border: 5px solid black; */
+    
+}
+
+.btn-modal{
+    background-color: #000000;
+    color: white;
+    border: 2px solid white;
+    transition: .5s;
+}
+
+.btn-modal:hover{
+    background-color: #A4133C;
 }

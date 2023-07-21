@@ -66,11 +66,14 @@ use MaConnexion as GlobalMaConnexion;
         }
     }
 
-    public function delete($table, $cond){
+    public function delete($cond){
         try {
-            $requete = "DELETE FROM $table WHERE id_articles = $cond";
-            $resultat = $this->connexionPDO->query($requete);
-            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); //Recupere le resultat de la requete dans un tableau associatif
+            $requete = "DELETE FROM `articles` WHERE id_articles = ?";
+            $resultat = $this->connexionPDO->prepare($requete);
+            $resultat->bindValue(1, $cond);
+
+            $resultat->execute();
+
             return $resultat;
         
         } catch (PDOException $e) {
@@ -81,18 +84,18 @@ use MaConnexion as GlobalMaConnexion;
         
    
 
-    public function insertionArticle_Secure($id_articles,$image,$titre,$contenu,$date_publication,$categorie,$id_auteurs)
+    public function insertionArticle_Secure( $image, $titre, $contenu, $date_publication, $categorie, $id_auteurs)
     {
         try {
-            $requete = "INSERT INTO articles ($image,$titre,$contenu,$date_publication,$categorie,$id_auteurs) VALUES (:image, :titre, :contenu, :date_publication, :categorie, :id_auteurs)";
+            $requete = "INSERT INTO `articles`( image, titre, contenu, date_publication, categorie, id_auteurs) VALUES ( ?, ?, ?, ?, ?, ?)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
-            $requete_preparee->bindParam(':image', $image, PDO::PARAM_STR, 25);
-            $requete_preparee->bindParam(':titre', $titre, PDO::PARAM_STR, 25);
-            $requete_preparee->bindParam(':contenu', $contenu, PDO::PARAM_INT, 25);
-            $requete_preparee->bindParam(':date_publication', $date_publication, PDO::PARAM_INT, 25);
-            $requete_preparee->bindParam(':categorie', $categorie, PDO::PARAM_INT, 25);
-            $requete_preparee->bindParam(':id_auteurs', $id_auteurs, PDO::PARAM_INT, 25);
+            $requete_preparee->bindValue(1, $image);
+            $requete_preparee->bindValue(2, $titre);
+            $requete_preparee->bindValue(3, $contenu);
+            $requete_preparee->bindValue(4, $date_publication);
+            $requete_preparee->bindValue(5, $categorie);
+            $requete_preparee->bindValue(6, $id_auteurs);
 
             $requete_preparee->execute();
             return "insertion reussie";
@@ -108,13 +111,13 @@ use MaConnexion as GlobalMaConnexion;
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
             
-            $requete_preparee->bindValue(1, $image, PDO::PARAM_INT);
-            $requete_preparee->bindValue(2, $titre, PDO::PARAM_STR);
-            $requete_preparee->bindValue(3, $contenu, PDO::PARAM_INT);
-            $requete_preparee->bindValue(4, $date_publication, PDO::PARAM_STR);
-            $requete_preparee->bindValue(5, $categorie, PDO::PARAM_INT);
-            $requete_preparee->bindValue(6, $id_auteurs, PDO::PARAM_STR);
-            $requete_preparee->bindValue(7, $id_articles, PDO::PARAM_STR);
+            $requete_preparee->bindValue(1, $image);
+            $requete_preparee->bindValue(2, $titre);
+            $requete_preparee->bindValue(3, $contenu);
+            $requete_preparee->bindValue(4, $date_publication);
+            $requete_preparee->bindValue(5, $categorie);
+            $requete_preparee->bindValue(6, $id_auteurs);
+            $requete_preparee->bindValue(7, $id_articles);
 
             $requete_preparee->execute();
             return "mise à jour réussie";

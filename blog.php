@@ -39,11 +39,11 @@ $_SESSION['id'] = 1;
                 echo '
                 <!-- button stylé -->
                 <div class="frame">
-                <button type="button" class="custom-btn btn-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Ajouter un article</span></button>
+                <button type="button" class="custom-btn btn-5" data-bs-toggle="modal" data-bs-target="#insertion"><span>Ajouter un article</span></button>
                 </div>
         
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal INSERTION -->
+                <div class="modal fade" id="insertion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -57,11 +57,11 @@ $_SESSION['id'] = 1;
     
                             <div class="form">
     
-                                    <form class="login-form" method="POST" action="crud.php" id="form_article">
+                                    <form class="login-form" method="POST" action="insertion.php" id="form_article">
                                         <input name="image" type="text" placeholder="image"/>
                                         <input name="titre" type="text" placeholder="titre"/>
                                         <input name="categorie" type="number" placeholder="categorie"/>
-                                        <input name="contenu" type="text" placeholder="contenu"/>
+                                        <textarea name="contenu" type="text" placeholder="contenu"/></textarea>
                                         <input name="date" type="date" placeholder="date"/>
                                         <input name="id_auteur" type="number" value="' . $_SESSION['id'] . '" hidden/>
                                     </form>
@@ -71,8 +71,8 @@ $_SESSION['id'] = 1;
     
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button form="form_article" type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button form="form_article" type="submit" class="btn btn-primary">Ajouter l\'article</button>
                     </div>
                     </div>
                 </div>
@@ -109,8 +109,8 @@ $_SESSION['id'] = 1;
                         if($_SESSION['role'] == 2){
                             echo '
                                 <div class="crudbut">
-                                    <button type="button" class="custom-btn-up updatebut" data-bs-toggle="update'. $cartes['id_articles'] . '" data-bs-target="#exampleModal"><span>UPDATE</span></button>
-                                    <button type="button" class="custom-btn-del deletebut" data-bs-toggle="delete'. $cartes['id_articles'] . '" data-bs-target="#exampleModal"><span>DELETE</span></button>
+                                    <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#update'. $cartes['id_articles'] . '"><span>UPDATE</span></button>
+                                    <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#delete'. $cartes['id_articles'] . '"><span>DELETE</span></button>
                                 </div>
                             
                             ';
@@ -119,7 +119,76 @@ $_SESSION['id'] = 1;
                         echo '
                                 </div> 
                         
+                                <!-- Modal UPDATE -->
+                                <div class="modal fade" id="update'. $cartes['id_articles'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Mettre à jour un article</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                    
+                                        <!-- form codepen -->
+                                        <div class="login-page">
+                    
+                                            <div class="form">
+                    
+                                                    <form class="login-form" method="POST" action="update.php" id="update_article'. $cartes['id_articles'] . '">
+                                                        <input name="id_update" type="number" value="'. $cartes['id_articles'] . '" hidden/>
+                                                        <input name="image_update" type="text" placeholder="image"/>
+                                                        <input name="titre_update" type="text" placeholder="titre"/>
+                                                        <input name="categorie_update" type="number" placeholder="categorie"/>
+                                                        <textarea name="contenu_update" type="text" placeholder="contenu"/></textarea>
+                                                        <input name="date_update" type="date" placeholder="date"/>
+                                                        <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden/>
+                                                    </form>
+                    
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button form="update_article'. $cartes['id_articles'] . '" type="submit" class="btn btn-primary">Mettre à jour l\'article</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <!-- Modal DELETE -->
+                                <div class="modal fade" id="delete'. $cartes['id_articles'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Supprimer un article</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">';
                         
+                        echo 'Veut-tu vraiment supprimer l\'article ' . $cartes['titre'] . ' id: ' . $cartes['id_articles'] . ' de la base de donnée ?';
+                        echo '
+
+                                        <!-- form codepen -->
+                                        <div class="login-page">
+                    
+                                            <div class="form">
+                    
+                                                    <form  method="POST" action="delete.php" id="delete_article'. $cartes['id_articles'] . '">
+                                                        <input name="id_delete" type="number" value="'. $cartes['id_articles'] . '" hidden/>                                                        
+                                                    </form>
+                    
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button form="delete_article'. $cartes['id_articles'] . '" type="submit" class="btn btn-primary">Supprimer l\'article</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
 
                         <style>
                         #massage'. $cartes['id_articles'] . '{

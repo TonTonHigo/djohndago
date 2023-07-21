@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="FOOTER">
 
-<div class="footer">
+    <div class="footer">
         <div class="contact">
             <h2>Contact</h2>
-            <form>
-                <input type="text" placeholder="Nom">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
+
         </div>
         <hr>
         <div class="social">
@@ -32,6 +35,7 @@
     </div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

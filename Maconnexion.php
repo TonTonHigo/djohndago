@@ -104,6 +104,19 @@ use MaConnexion as GlobalMaConnexion;
         }
     }
 
+
+
+    
+
+
+
+
+
+
+
+
+
+
     public function miseAJourArticle_Secure($id_articles,$image,$titre,$contenu,$date_publication,$categorie,$id_auteurs)
     {
         try {

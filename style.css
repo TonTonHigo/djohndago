@@ -158,7 +158,6 @@ body .navbar {
 
 header {
     background: url(site_exemples\img\decormarvel.jpg);
-    padding: 10px 20px;
 }
 
 nav {
@@ -762,15 +761,12 @@ button:hover {
 
 /* pages articles de damien */
 
-body .articles{
-    margin: 0 5%;
-}
 
 /* Styles pour le reste de ta page... */
 
 .article {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #ccc;
     /* background-image: linear-gradient(90deg, #000000, #FFF, #E83CF5, #A4133C, #0B77DE); */
@@ -784,8 +780,10 @@ img {
 }
 
 .titrearticles{
-    font-size: xx-large;
+    color: white;
+    font-size: 50px;
     text-align: center;
+    font-weight: bolder;
     background-image: linear-gradient(90deg, #0B77DE,#A4133C, #E83CF5, #A4133C, #0B77DE);
 }
 

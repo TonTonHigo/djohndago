@@ -13,8 +13,18 @@ $_SESSION['id'] = 1;
     <!-- autre -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="articles">
 
     <?php include "header.php"; ?>
 
@@ -26,9 +36,38 @@ $_SESSION['id'] = 1;
         $afficher = $wow -> select_where_articles("articles","*", $articles);
         foreach($afficher as $ligne){
             echo '
-                <img src="' . $ligne['image'] . '">
-                <h1>' . $ligne['titre'] . '</h1>
-                <p>' . $ligne['contenu'] . '</p>
+            <div >
+            <article class="article">
+                <img src="'. $ligne['image'] . '" alt="Image de l\'article">
+                
+                <h1 class="titrearticles">'. $ligne['titre'] . '</h1>
+                <p>'. $ligne['contenu'] . '</p>
+    
+                <div class="like-section">
+                    <div class="icons">
+                        <span class="icon like"><i class="fa-regular fa-heart fa-shake" style="color: #A4133C;"></i>J\'aime</span>
+                        <span class="icon love"><i class="fa-regular fa-star fa-shake" style="color: #A4133C;"></i>J\'adore</span>
+                        <span class="icon dislike"><i class="fa-regular fa-thumbs-down fa-shake" style="color: #A4133C;"></i>J\'aime pas</span>
+                        <span class="icon not-interested"><i class="fa-regular fa-hand fa-shake" style="color: #A4133C;"></i>Pas intéressé</span>
+                    </div>
+                </div>
+                    <!-- Section pour les commentaires -->
+                <div class="comment-section">
+                    <h3>Commentaires</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Votre nom" required>
+                        <textarea placeholder="Votre commentaire" required></textarea>
+                        <button type="submit">Poster le commentaire</button>
+                    </form>
+                    <div class="comments">
+                        <!-- Les commentaires des utilisateurs seront ajoutés ici via JavaScript -->
+                    </div>
+                </div>
+    
+                <!-- Section pour les icônes d\'appréciation -->
+    
+            </article>
+        </div>
             ';
         }
         ?>

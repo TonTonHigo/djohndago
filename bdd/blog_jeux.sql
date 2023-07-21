@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 19 juil. 2023 à 11:11
+-- Généré le : ven. 21 juil. 2023 à 09:22
 -- Version du serveur : 8.0.31
--- Version de PHP : 8.0.26
+-- Version de PHP : 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   PRIMARY KEY (`id_articles`),
   KEY `FK_articles_auteurs` (`id_auteurs`),
   KEY `FK_articles_tags` (`categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `articles`
@@ -48,7 +48,9 @@ CREATE TABLE IF NOT EXISTS `articles` (
 INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_publication`, `categorie`, `id_auteurs`) VALUES
 (1, 'site_exemples/img/21-games-keyart-01-07jun23$en.webp', 'Double A', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 1),
 (2, 'site_exemples/img/decolastofusblackandwhite.jpg', 'The last of us 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 2),
-(3, 'site_exemples/img/decor (29).jpg', 'God of war', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 6, 3);
+(3, 'site_exemples/img/decor (29).jpg', 'God of war', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 6, 3),
+(5, 'site_exemples/img/battlefield-2042-logo.webp', 'L\'avenir de Battlefield', 'caca', '2023-07-21', 1, 1),
+(7, 'site_exemples/img/wallpaperflare.com_wallpaper(11).jpg', 'test', 'test', '2023-07-21', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `id_roles` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
   PRIMARY KEY (`id_roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `roles`
@@ -143,7 +145,8 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 INSERT INTO `roles` (`id_roles`, `nom`) VALUES
 (1, 'visiteur'),
-(2, 'admin');
+(2, 'admin'),
+(3, 'abonné');
 
 -- --------------------------------------------------------
 
@@ -156,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `id_tags` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
   PRIMARY KEY (`id_tags`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `tags`
@@ -168,7 +171,8 @@ INSERT INTO `tags` (`id_tags`, `nom`) VALUES
 (3, 'OPEN WORLD'),
 (4, 'ARCADE'),
 (5, 'COMBAT'),
-(6, 'VIOLENCES');
+(6, 'VIOLENCES'),
+(7, 'COURSES');
 
 --
 -- Contraintes pour les tables déchargées

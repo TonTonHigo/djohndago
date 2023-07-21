@@ -848,3 +848,21 @@ p{
     color: #ffffff;
     font-size: xx-large;
 }
+
+
+
+
+
+
+
+
+
+
+/* css pour mes modale inscription connexion et modal */
+.modal-content{
+    background: url('site_exemples/img/bm.jpg'), no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 0 #A4133C, -2px 0 #A4133C, 0 2px #A4133C, 0 -2px #A4133C,
+    1px 1px #A4133C, -1px -1px #A4133C, 1px -1px #A4133C, -1px 1px#A4133C;
+}

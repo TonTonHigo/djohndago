@@ -675,6 +675,7 @@ body .articles{
 img {
     max-width: 100%;
     max-height: 800px; /* Ajuste la hauteur maximale selon tes besoins */
+    border: 5px solid white;
 }
 
 .titrearticles{

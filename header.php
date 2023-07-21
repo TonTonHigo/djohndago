@@ -11,7 +11,7 @@
     <header>
         <nav>
             <div class="nav-left">
-                <img src="site_exemples/img/LOGO.gif" alt="Logo">
+                <a href="index.php"><img src="site_exemples/img/LOGO.gif" alt="Logo"></a>
             </div>
             <div class="nav-center">
                 <ul>

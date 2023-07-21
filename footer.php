@@ -17,7 +17,7 @@
             <form action="submit_form.php" method="post">
                 <input type="text" name="nom" placeholder="Nom" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" required></textarea>
+                <textarea name="contenu" placeholder="Message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
 

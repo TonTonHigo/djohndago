@@ -1,6 +1,6 @@
 <?php
 // Vérifie si le formulaire a été soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     // Récupère les données du formulaire
     $nom = $_POST["nom"];
     $email = $_POST["email"];
@@ -35,5 +35,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ferme la connexion à la base de données
     $conn = null;
-}
+
 ?>

@@ -450,114 +450,7 @@ button:hover {
     padding: 5% 0;
 } */
 
-.bubbly-button{
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #A4133C;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
-  
-  &:focus {
-    outline: 0;
-  }
-  
-  &:before, &:after{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 140%;
-    height: 100%;
-    left: -20%;
-    z-index: -1000;
-    transition: all ease-in-out 0.5s;
-    background-repeat: no-repeat;
-  }
-  
-  &:before{
-    display: none;
-    top: -75%;
-    background-image:  
-      radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle,  transparent 20%, #A4133C 20%, transparent 30%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%), 
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle,  transparent 10%, #A4133C 15%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-  background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
-  }
-  
-  &:after{
-    display: none;
-    bottom: -75%;
-    background-image:  
-    radial-gradient(circle, #A4133C 20%, transparent 20%), 
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle,  transparent 10%, #A4133C 15%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%),
-    radial-gradient(circle, #A4133C 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
- 
-  &:active{
-    transform: scale(0.9);
-    background-color: darken(#A4133C, 5%);
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-  }
-  
-  &.animate{
-    &:before{
-      display: block;
-      animation: topBubbles ease-in-out 0.75s forwards;
-    }
-    &:after{
-      display: block;
-      animation: bottomBubbles ease-in-out 0.75s forwards;
-    }
-  }
-}
 
-
-@keyframes topBubbles {
-  0%{
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-    50% {
-      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
- 100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
-
-@keyframes bottomBubbles {
-  0%{
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
- 100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
 
 /* modal formulaire */
 
@@ -608,30 +501,243 @@ button:hover {
 
 #ourservices{
     display: flex;
-    margin: 0 10%;
+    justify-content: center;
+    margin: 5%;
 }
 .our_services{
+    border: 5px solid white;
     margin-left: 10px;
     color: white;
 }
-.our_services .txt3{
-    display: none;
-}
-.our_services:hover .txt3{
-    display: block;
+
+.our_services .txt3 {
+    display: none; 
 }
 
-#manu{
-    font-weight: 300;
-    letter-spacing: 1px;
-    background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.51) 100%),url(https://massage-theme.richardpruzek.com/wp-content/uploads/2020/02/massage33.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 280px;
-    padding-right: 60px;
-    padding-bottom: 40px;
-    padding-left: 30px;
+.our_services:hover .txt3 {
+    display: block;
+    width: 100%; 
 }
+
+.butcard{
+    width: 0%;
+    padding: 0px;
+    border: none;
+    background-color: #A4133C;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+.butcard:hover{
+    background-color: transparent;
+    border: 1px solid #0B77DE;
+}
+.titre_style{
+    text-shadow: 2px 0 #0B77DE, -2px 0 #0B77DE, 0 2px #0B77DE, 0 -2px #0B77DE,
+               1px 1px #0B77DE, -1px -1px #0B77DE, 1px -1px #0B77DE, -1px 1px #0B77DE;
+}
+
+/* 5 */
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #A4133C;
+  }
+  .btn-5:hover {
+    color: white;
+    background: black;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #A4133C;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  .frame {
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .custom-btn {
+    width: auto;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: #A4133C;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+  .crudbut{
+    display: none;
+}
+.our_services:hover .crudbut {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.updatebut {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: goldenrod;
+  }
+  .updatebut:hover {
+    color: white;
+    background: black;
+     box-shadow:none;
+  }
+  .updatebut:before,
+  .updatebut:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: goldenrod;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .updatebut:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .updatebut:hover:before,
+  .updatebut:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  .custom-btn-up {
+    width: auto;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: goldenrod;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
+
+.deletebut {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #E83CF5;
+  }
+  .deletebut:hover {
+    color: white;
+    background: black;
+     box-shadow:none;
+  }
+  .deletebut:before,
+  .deletebut:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #E83CF5;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .deletebut:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .deletebut:hover:before,
+  .deletebut:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  .custom-btn-del {
+    width: auto;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: #E83CF5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
 #makeup{
     font-weight: 300;
     letter-spacing: 1px;

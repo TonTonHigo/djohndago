@@ -25,15 +25,22 @@
     <?php include('header.php'); ?>
 
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- mon carousel -->
 
     <div class="carousel-container-nav">
         <div class="carousel-slide">
-            <img src="site_exemples\img\single-player-action-keyart-01-en-21oct22.webp" alt="Image 1">
+            <img src="site_exemples\img\battlefield-2042-logo.webp" alt="Image 1">
             <img src="site_exemples\img\daysgone.jpg" alt="Image 2">
-            <img src="site_exemples\img\kakshi.jpg" alt="Image 3">
+            <img src="site_exemples\img\wallpaperflare.com_wallpaper(10).jpg" alt="Image 3">
             <img src="site_exemples\img\decolastofusblackandwhite.jpg" alt="Image 4">
-            <img src="site_exemples\img\bm.jpg" alt="Image 5">
+            <img src="site_exemples\img\onepeace.jpg" alt="Image 5">
             <img src="site_exemples\img\sexy.jpg" alt="Image 6">
             <img src="site_exemples\img\onepeace.jpg" alt="Image 7">
         </div>
@@ -43,8 +50,8 @@
     <hr class="trait">
 
     <br>
-    <div class="gta">
-        <img src="site_exemples\img\gta.jpg" alt="Image 2">
+    <div class="image-container">
+        <img src="site_exemples\img\watchdog.jpg" alt="Votre image">
     </div>
 
     <br>
@@ -53,7 +60,7 @@
 
     <section class="card-section">
         <div class="card">
-            <img src="site_exemples\img\nfs.jpg" alt="Image 1">
+            <img src="site_exemples\img\onepeace.jpg" alt="Image 1">
             <h3>NEED FOR SPEEDS</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, illo!</p>
             <button>Voir article</button>
@@ -79,8 +86,8 @@
     <h2>FPS ...</h2>
 
     <!-- seconde image -->
-    <div class="gta">
-        <img src="site_exemples\img\wallpaperflare.com_wallpaper(12).jpg" alt="Image 2">
+    <div class="image-container">
+        <img src="site_exemples\img\call-of-duty-warzone-photo-1381831.webp" alt="Votre image">
     </div>
 
 
@@ -96,13 +103,13 @@
         </div>
         <div class="card">
             <img src="site_exemples\img\decor (15).jpg" alt="Image 2">
-            <h3>CALL OF DUTY</h3>
+            <h3>HORIZON ZERO DOWN</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatem!</p>
             <button>Voir article</button>
         </div>
         <div class="card">
-            <img src="site_exemples\img\decor (8).jpg" alt="Image 3">
-            <h3>HARLEY QUEEN</h3>
+            <img src="site_exemples\img\wallpaperflare.com_wallpaper(1).jpg" alt="Image 3">
+            <h3>WATCH DOG</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, explicabo?</p>
             <button>Voir article</button>
         </div>

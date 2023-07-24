@@ -93,12 +93,12 @@
 
                                  <div class="form">
 
-                                     <form class="login-form" method="POST" action="update.php" id="update_article">
-                                         <input name="id_inscription" type="number" value="3" hidden />
-                                         <input name="Nom_Utilisateur" type="text" placeholder="Nom utilisateur" required/>
+                                     <form class="login-form" method="POST" action="inscription.php" id="inscription">
+                                         <input name="id_roles" type="number" value="3" hidden />
+                                         <input name="nom" type="text" placeholder="Nom utilisateur" required/>
                                          <input name="email" type="text" placeholder="email" required/>
-                                         <input name="Mot_de_passe" type="password" placeholder="Mot de passe" required/>
-                                         <input name="Confirmez_Mot_de_passe" type="password" placeholder="Confirmez mot de passe" required/>
+                                         <input name="mdp" type="password" placeholder="Mot de passe" required/>
+                                         <!-- <input name="Confirmez_Mot_de_passe" type="password" placeholder="Confirmez mot de passe" required/> -->
                                          <!-- <input name="categorie_update" type="number" placeholder="categorie" /> -->
                                          <!-- <textarea name="contenu_update" type="text" placeholder="contenu" ></textarea> -->
                                          <!-- <input name="date_update" type="date" placeholder="date" /> -->
@@ -110,7 +110,7 @@
 
                          </div>
                          <div class="modal-footer">
-                             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button> -->
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                              <button form="inscription" type="submit" class="btn-modal">INSCRIPTION</button>
                          </div>
                      </div>

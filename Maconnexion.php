@@ -169,6 +169,26 @@ use MaConnexion as GlobalMaConnexion;
           return false;
       }
     }
+    public function insertionInscription_Secure( $id_roles, $nom, $email, $mdp)
+    
+    {
+        try {
+            $requete = "INSERT INTO `auteurs`(id_roles, nom, email, mdp,) VALUES ( ?, ?, ?, ?)";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+
+            $requete_preparee->bindValue(1, $id_roles);
+            $requete_preparee->bindValue(2, $nom);
+            $requete_preparee->bindValue(3, $email);
+            $requete_preparee->bindValue(4, $mdp);
+            
+
+            $requete_preparee->execute();
+            return "insertion reussie";
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
  }
 
 //  $test = new MaConnexion("blog_jeux","","root","localhost");

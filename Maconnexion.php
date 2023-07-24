@@ -65,6 +65,17 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+    public function select_where_commentaires($table, $column, $id) {
+        try {
+            $requete = "SELECT $column FROM $table WHERE id_auteurs = $id";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); // Fetch the result of the query into an associative array
+
+            return $resultat;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
 
     public function delete($cond){
         try {
@@ -180,6 +191,22 @@ use MaConnexion as GlobalMaConnexion;
             $requete_preparee->bindValue(2, $nom);
             $requete_preparee->bindValue(3, $email);
             $requete_preparee->bindValue(4, $mdp);
+
+            $requete_preparee->execute();
+            return "insertion reussie";
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+    public function insertionCommentaire($contenu, $id_articles, $id_auteurs)
+    {
+        try {
+            $requete = "INSERT INTO `commentaires`(contenu, id_articles, id_auteurs) VALUES ( ?, ?, ?)";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+
+            $requete_preparee->bindValue(1, $contenu);
+            $requete_preparee->bindValue(2, $id_articles);
+            $requete_preparee->bindValue(3, $id_auteurs);
 
             $requete_preparee->execute();
             return "insertion reussie";

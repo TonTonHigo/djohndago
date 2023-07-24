@@ -50,25 +50,53 @@ $_SESSION['id'] = 1;
                         <span class="icon dislike"><i class="fa-regular fa-thumbs-down fa-shake" style="color: #A4133C;"></i>J\'aime pas</span>
                         <span class="icon not-interested"><i class="fa-regular fa-hand fa-shake" style="color: #A4133C;"></i>Pas intéressé</span>
                     </div>
-                </div>
-                    <!-- Section pour les commentaires -->
+                </div> 
+                <!-- Section pour les commentaires -->
                 <div class="comment-section">
                     <h3>Commentaires</h3>
-                    <form class="comment-form">
-                        <input type="text" placeholder="Votre nom" required>
-                        <textarea placeholder="Votre commentaire" required></textarea>
-                        <button type="submit">Poster le commentaire</button>
-                    </form>
-                    <div class="comments">
-                        <!-- Les commentaires des utilisateurs seront ajoutés ici via JavaScript -->
+
+                    ';
+            $commentaires = $wow -> select_where_commentaires("commentaires","*", $ligne['id_articles']);
+            if($commentaires != null){
+                foreach($commentaires as $coms){
+                    if($coms['id_articles'] == $ligne['id_articles']){
+
+                        echo '
+                        <small>';
+    
+                        $comauteur = $wow -> select_where_auteurs("auteurs", "*" ,$coms['id_auteurs']);
+                        foreach($comauteur as $nomaut){
+                            echo $nomaut['nom'];
+                        }
+                        echo ' ' . $coms['date'] . '</small>
+                        <p>'. $coms['contenu'] . '</p>
+                        ';
+                    }
+                }
+
+            }
+
+
+
+            if($_SESSION['role'] == 2 || $_SESSION['role'] == 3 ){
+                echo '
+                        <form class="comment-form" method="POST" action="commentaires.php">
+                            <input name="id_articles" type="number" value="'. $ligne['id_articles'] . '"  hidden>
+                            <input name="id_auteurs" type="number" value="'. $_SESSION['id'] . '"  hidden>
+                            <textarea name="contenu" placeholder="Votre commentaire" required></textarea>
+                            <button type="submit">Poster le commentaire</button>
+                        </form>
+                        
+                        ';
+                    }
+                    
+                echo'
                     </div>
-                </div>
-    
-                <!-- Section pour les icônes d\'appréciation -->
-    
-            </article>
-        </div>
-            ';
+            <!-- Section pour les icônes d\'appréciation -->
+        
+                    </article>
+                </div>';
+                    
         }
         ?>
 

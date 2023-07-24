@@ -518,7 +518,11 @@ button:hover {
 }
 .our_services{
     border: 5px solid white;
-    color: white;
+    color: white;   
+    transition: .5s
+}
+.our_services:hover{
+    scale: 110%;
 }
 
 .our_services .txt3 {

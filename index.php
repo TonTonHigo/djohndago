@@ -94,7 +94,7 @@
     <br>
     <br>
 
-    <section class="card-section">
+    <!-- <section class="card-section">
         <div class="card">
             <img src="site_exemples\img\decor (29).jpg" alt="Image 1">
             <h3>NEED FOR SPEEDS</h3>
@@ -103,7 +103,8 @@
         </div>
         <div class="card">
             <img src="site_exemples\img\decor (15).jpg" alt="Image 2">
-            <h3>HORIZON ZERO DOWN</h3>
+      
+      <h3>HORIZON ZERO DOWN</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatem!</p>
             <button>Voir article</button>
         </div>
@@ -113,7 +114,38 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, explicabo?</p>
             <button>Voir article</button>
         </div>
-    </section>
+    </section> -->
+
+
+    <section class="card-section">
+    <div class="card-image">
+        <img src="site_exemples\img\decor (29).jpg" alt="Image 1">
+        <div class="card-buttons">
+            <button>Voir article</button>
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
+    </div>
+
+    <div class="card-image">
+        <img src="site_exemples\img\decor (15).jpg" alt="Image 1">
+        <div class="card-buttons">
+            <button>Voir article</button>
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
+    </div>
+
+    <div class="card-image">
+        <img src="site_exemples\img\wallpaperflare.com_wallpaper(1).jpg" alt="Image 1">
+        <div class="card-buttons">
+            <button>Voir article</button>
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
+    </div>
+    <!-- Ajoutez d'autres images similaires ici -->
+</section>
 
     <br>
     <hr>

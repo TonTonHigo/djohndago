@@ -67,56 +67,47 @@
                          </div>
                          <div class="modal-footer">
                              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button> -->
-                             <button form="connexion" type="submit" class="btn-modal">CONNEXION</button>
+                             <button form="connexion" type="submit" class="btn btn-modal">CONNEXION</button>
                          </div>
                      </div>
                  </div>
              </div>
 
 
+            <!-- Modal INSCRIPTION -->
+            <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mettre à jour un article</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
+                    <!-- form codepen -->
+                    <div class="login-page">
 
+                        <div class="form">
 
+                                <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
+                                    <input name="id_roles" type="number" value="3" hidden/>
+                                    <input name="nom" type="text" placeholder="Nom..."/>
+                                    <input name="email" type="email" placeholder="Email..."/>
+                                    <input name="mdp" type="password" placeholder="Mot de passe..."/>
+                                    <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..."/>
+                                </form>
 
-             <!-- Modal inscription -->
-             <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                 <div class="modal-dialog">
-                     <div class="modal-content">
-                         <div class="modal-header">
-                             <h1 class="modal-title fs-5" id="exampleModalLabel">INSCRIPTION</h1>
-                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                         </div>
-                         <div class="modal-body">
+                        </div>
+                    </div>
 
-                             <!-- form codepen -->
-                             <div class="login-page">
-
-                                 <div class="form">
-
-                                     <form class="login-form" method="POST" action="inscription.php" id="inscription">
-                                         <input name="id_roles" type="number" value="3" hidden />
-                                         <input name="nom" type="text" placeholder="Nom utilisateur" required/>
-                                         <input name="email" type="text" placeholder="email" required/>
-                                         <input name="mdp" type="password" placeholder="Mot de passe" required/>
-                                         <!-- <input name="Confirmez_Mot_de_passe" type="password" placeholder="Confirmez mot de passe" required/> -->
-                                         <!-- <input name="categorie_update" type="number" placeholder="categorie" /> -->
-                                         <!-- <textarea name="contenu_update" type="text" placeholder="contenu" ></textarea> -->
-                                         <!-- <input name="date_update" type="date" placeholder="date" /> -->
-                                         <!-- <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden /> -->
-                                     </form>
-
-                                 </div>
-                             </div>
-
-                         </div>
-                         <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                             <button form="inscription" type="submit" class="btn-modal">INSCRIPTION</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button form="form_inscription" type="submit" class="btn btn-modal">S'INSCRIRE</button>
+                </div>
+                </div>
+            </div>
+            </div>
 
 
 

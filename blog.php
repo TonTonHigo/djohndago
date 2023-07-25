@@ -34,7 +34,7 @@ include ('Maconnexion.php');
         <section>
             
         <?php 
-            if($_SESSION['role'] == 2){
+            if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
                 echo '
                 <!-- button stylé -->
                 <div class="frame">
@@ -105,7 +105,7 @@ include ('Maconnexion.php');
                                 </form>
                                 ';
 
-                        if($_SESSION['role'] == 2){
+                        if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
                             echo '
                                 <div class="crudbut">
                                     <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#update'. $cartes['id_articles'] . '"><span>UPDATE</span></button>
@@ -140,7 +140,12 @@ include ('Maconnexion.php');
                                                         <input name="categorie_update" type="number" placeholder="categorie"/>
                                                         <textarea name="contenu_update" type="text" placeholder="contenu"/></textarea>
                                                         <input name="date_update" type="date" placeholder="date"/>
-                                                        <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden/>
+                                                        <input name="id_auteur_update" type="number" value="';
+                                                        if(isset($_SESSION['id'])){
+                                                            echo $_SESSION['id'];
+                                                        }
+                                                    echo' 
+                                                         " hidden/>
                                                     </form>
                     
                                             </div>

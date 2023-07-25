@@ -172,7 +172,7 @@ include('Maconnexion.php');
                 }
             }
 
-            if ($_SESSION['role'] == 2 || $_SESSION['role'] == 3) {
+            if (isset($_SESSION['role']) && ($_SESSION['role'] == 2 || $_SESSION['role'] == 3)) {
                 echo '
                             <form class="comment-form" method="POST" action="commentaires.php">
                                 <input name="id_articles" type="number" value="' . $ligne['id_articles'] . '"  hidden>

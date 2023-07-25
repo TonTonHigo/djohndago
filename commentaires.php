@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include("Maconnexion.php");
 
 if (isset($_POST['id_articles'], $_POST['id_auteurs'], $_POST['contenu'])) {

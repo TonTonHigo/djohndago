@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     include "Maconnexion.php";
 
     // MISE A JOUR ARTICLE

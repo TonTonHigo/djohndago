@@ -91,6 +91,20 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : ".$e->getMessage();
         }    
     }
+    public function delete_com($cond){
+        try {
+            $requete = "DELETE FROM `commentaires` WHERE id_commentaires = ?";
+            $resultat = $this->connexionPDO->prepare($requete);
+            $resultat->bindValue(1, $cond);
+
+            $resultat->execute();
+
+            return $resultat;
+        
+        } catch (PDOException $e) {
+            echo "Erreur : ".$e->getMessage();
+        }    
+    }
     
         
    

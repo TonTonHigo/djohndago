@@ -71,6 +71,95 @@ include ('Maconnexion.php');
                         echo ' ' . $coms['date'] . '</small>
                         <p>'. $coms['contenu'] . '</p>
                         ';
+
+                        switch($_SESSION['role']){
+
+                            case 2:
+
+                            echo '
+                                <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#delete'. $coms['id_commentaires'] . '"><span>DELETE</span></button>
+                            ';
+                            echo'
+                            <!-- Modal DELETE -->
+                                <div class="modal fade" id="delete'. $coms['id_commentaires'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Supprimer un article</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">';
+                        
+                            echo 'Veut-tu vraiment supprimer le commentaire '. $coms['contenu'] . ' id: '. $coms['id_commentaires'] . ' de la base de donnée ?';
+                            echo '
+
+                                        <!-- form codepen -->
+                                        <div class="login-page">
+                    
+                                            <div class="form">
+                    
+                                                    <form  method="POST" action="delete_commentaire.php" id="delete_commentaire'. $coms['id_commentaires'] . '">
+                                                        <input name="id_delete" type="number" value="'. $coms['id_commentaires'] . '" hidden/>                                                        
+                                                    </form>
+                    
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button form="delete_commentaire'. $coms['id_commentaires'] . '" type="submit" class="btn btn-primary">Supprimer le commentaire</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>';
+                                break;
+
+
+                            case 3:
+                                if($_SESSION['id'] == $coms['id_auteurs']){
+                                echo '
+                                    <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#delete'. $coms['id_commentaires'] . '"><span>UPDATE</span></button>
+                                    <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#delete'. $coms['id_commentaires'] . '"><span>DELETE</span></button>
+                                ';
+                                echo'
+                                <!-- Modal DELETE -->
+                                    <div class="modal fade" id="delete'. $coms['id_commentaires'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Supprimer un article</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">';
+                            
+                                echo 'Veut-tu vraiment supprimer le commentaire '. $coms['contenu'] . ' id: '. $coms['id_commentaires'] . ' de la base de donnée ?';
+                                echo '
+
+                                            <!-- form codepen -->
+                                            <div class="login-page">
+                        
+                                                <div class="form">
+                        
+                                                        <form  method="POST" action="delete_commentaire.php" id="delete_commentaire'. $coms['id_commentaires'] . '">
+                                                            <input name="id_delete" type="number" value="'. $coms['id_commentaires'] . '" hidden/>                                                        
+                                                        </form>
+                        
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                            <button form="delete_commentaire'. $coms['id_commentaires'] . '" type="submit" class="btn btn-primary">Supprimer le commentaire</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>';
+                                }
+                            
+                                break;
+                        }
                     }
                 }
 

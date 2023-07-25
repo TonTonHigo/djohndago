@@ -31,7 +31,7 @@
                 <?php
                     if($_SESSION['role'] == 2 || $_SESSION['role'] == 3){
                         echo '
-                            <button type="button" class="custom-btn-del decobut" href="deco.php"><span>DECONNEXION</span></button>
+                        <a id="deconul" href="deco.php"><button type="button" class="custom-btn-deco decobut"><span> DECONNEXION </span></button></a>
                         ';
                     }
                 ?>

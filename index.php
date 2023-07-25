@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$_SESSION['role'] = 1;
-$_SESSION['id'] = 1;
+$_SESSION['role'] = 3;
+$_SESSION['id'] = 2;
 
 include('Maconnexion.php'); 
 ?>

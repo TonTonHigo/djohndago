@@ -21,7 +21,25 @@ setInterval(showSlide, 4000);
 
 
 
+///fonction verification//////
+document.getElementById("email").addEventListener ('input',function(){
+    var email = document.getElementById("email").value;
+    var text = document.getElementById("text");
+    var pattern = /^[^ ]+@[^ ]+.[a-z]{2,3}$/; // C'est dans la description 
 
+    if (email.match(pattern)) {
+        text.innerHTML ="Votre addresse Mail est valide";
+        text.style.color ="#00ff00"
+    }else {
+        text.innerHTML ="Votre addresse Mail est invalide";
+        text.style.color ="red"
+    }
+    if (email == "") {
+        text.innerHTML ="";
+        text.style.color ="red"
+    }
+
+ })
 
 
 

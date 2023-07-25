@@ -25,7 +25,13 @@
              </div>
              <div class="nav-right">
 
-                <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"><span>CONNEXION</span></button>
+                <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"
+                <?php
+                    if(isset($_SESSION['role'])){
+                        echo 'hidden';
+                    }
+                ?>
+                ><span>CONNEXION</span></button>
                 
                 <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#inscription" 
                 <?php

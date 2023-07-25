@@ -36,7 +36,7 @@
 
 
              <!-- Modal connexion -->
-             <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+             <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                  <div class="modal-dialog">
                      <div class="modal-content">
                          <div class="modal-header">
@@ -59,6 +59,9 @@
                                          <!-- <textarea name="contenu_update" type="text" placeholder="contenu" ></textarea> -->
                                          <!-- <input name="date_update" type="date" placeholder="date" /> -->
                                          <!-- <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden /> -->
+
+                                         <input type="password" id="password" name="password" required>
+                                         <input type="password" id="confirm_password" name="confirm_password" required>
                                      </form>
 
                                  </div>
@@ -74,40 +77,40 @@
              </div>
 
 
-            <!-- Modal INSCRIPTION -->
-            <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mettre à jour un article</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+             <!-- Modal INSCRIPTION -->
+             <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-header">
+                             <h1 class="modal-title fs-5" id="exampleModalLabel">Mettre à jour un article</h1>
+                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
 
-                    <!-- form codepen -->
-                    <div class="login-page">
+                             <!-- form codepen -->
+                             <div class="login-page">
 
-                        <div class="form">
+                                 <div class="form">
 
-                                <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
-                                    <input name="id_roles" type="number" value="3" hidden/>
-                                    <input name="nom" type="text" placeholder="Nom..."/>
-                                    <input name="email" type="email" placeholder="Email..."/>
-                                    <input name="mdp" type="password" placeholder="Mot de passe..."/>
-                                    <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..."/>
-                                </form>
+                                     <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
+                                         <input name="id_roles" type="number" value="3" hidden />
+                                         <input name="nom" type="text" placeholder="Nom..." />
+                                         <input name="email" type="email" placeholder="Email..." />
+                                         <input name="mdp" type="password" placeholder="Mot de passe..." />
+                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." />
+                                     </form>
 
-                        </div>
-                    </div>
+                                 </div>
+                             </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button form="form_inscription" type="submit" class="btn btn-modal">S'INSCRIRE</button>
-                </div>
-                </div>
-            </div>
-            </div>
+                         </div>
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                             <button form="form_inscription" type="submit" class="btn btn-modal">S'INSCRIRE</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
 
 
 

@@ -188,7 +188,9 @@ use MaConnexion as GlobalMaConnexion;
         }
     }
 
- }
+}
+
+
 
 //  $test = new MaConnexion("blog_jeux","","root","localhost");
  

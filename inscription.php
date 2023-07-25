@@ -7,11 +7,37 @@ $role = $_POST['id_roles'];
 $nom = $_POST['nom'];
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
+$conf_mdp = $_POST['conf_mdp'];
 
-$ajout_article = new MaConnexion("blog_jeux","","root","localhost");
-$requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp);
-header("Location: index.php");
-exit();
+$pattern = '/[\[^\'£$%^&*()}{@:\'#~?><>,;@\|\\\-=\-_+\-¬\`\]]/';
+
+
+if(preg_match($pattern, $nom)){
+
+    if($mdp == $conf_mdp){
+        $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+    
+        $ajout_article = new MaConnexion("blog_jeux","","root","localhost");
+        $requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp_hash);
+        header("Location: blog.php");
+        exit();
+    }else{
+        header("Location: index.php");
+        exit();
+    }
+
+}else{
+    header("Location: article.php");
+    exit();
+}  
+
+// $plainMdp = $_POST["mdp"];
+// $hashedMdp = password_hash($plainMdp, PASSWORD_BCRYPT);
+// $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+
+
+
 
 
 // $newInsertion = new MaConnexion("blog_jeux", "", "root", "localhost"); //$ plus nom de la variable= declarer la varaiable

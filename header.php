@@ -50,7 +50,7 @@
 
                                  <div class="form">
 
-                                     <form class="login-form" method="POST" action="connexion.php" id="connexion">
+                                     <form class="login-form" method="POST" action="connexion.php" id="connexi">
                                          <!-- <input name="id_update" type="number" value="" hidden /> -->
                                          <!-- <input name="image_update" type="text" placeholder="image" /> -->
                                          <input name="Nom" type="text" placeholder="Nom" />
@@ -70,7 +70,7 @@
                          </div>
                          <div class="modal-footer">
                              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button> -->
-                             <button form="connexion" type="submit" class="btn btn-modal">CONNEXION</button>
+                             <button form="connexi" type="submit" class="btn btn-modal">CONNEXION</button>
                          </div>
                      </div>
                  </div>

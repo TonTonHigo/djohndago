@@ -73,11 +73,20 @@ hr .trait{
 
 
 /* image apres le carousel */
-.gta{
-    margin: 100px auto;
-    border: 4px solid white;
+/* Conteneur pour centrer l'image */
+.image-container {
+    max-width: 80%; /* Vous pouvez ajuster cette valeur selon vos besoins */
+    margin: 0 auto; /* Centre horizontalement */
+    background-color: #000000; /* Ajoute un fond blanc autour de l'image */
+    padding: 20px; /* Ajoute un espace entre l'image et le bord de la boîte */
 }
 
+/* L'image à centrer */
+.image-container img {
+    display: block; /* Permet de gérer les marges automatiques (auto) */
+    margin: 0 auto; /* Centre l'image horizontalement dans la boîte */
+    max-width: 100%; /* Pour que l'image s'adapte à la largeur du conteneur */
+}
 
 
 
@@ -86,44 +95,56 @@ h2{
     color: white;
     font-family: 'Lilita One', cursive;
 }
-/* section de carte apres l'image */
+
+
+/* test de nouvelle carte */
 .card-section {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.card {
-    width: 300px;
-    padding: 20px;
-    background-color: #f2f2f2;
-    text-align: center;
+.card-image {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 30%; /* Ajustez la taille des cartes selon vos besoins */
 }
 
-.card img {
+.card-image img {
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.card-image:hover img {
+    transform: scale(1.2);
 }
 
-.card p {
-    font-size: 16px;
-    margin-bottom: 20px;
+.card-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
 }
 
-.card button {
-    padding: 10px 20px;
-    background-color: #A4133C;
-    color: #fff;
+.card-image:hover .card-buttons {
+    display: flex;
+}
+
+.card-buttons button {
+    background-color: #3498db;
+    color: white;
     border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
 }
+
+
 
 
 

@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$_SESSION['role'] = 3;
-$_SESSION['id'] = 2;
+$_SESSION['role'] = 2;
+$_SESSION['id'] = 1;
 
 include('Maconnexion.php'); 
 ?>
@@ -64,28 +64,6 @@ include('Maconnexion.php');
 
     <h2>ARTICLES RECENTS ...</h2>
 
-    <!-- <section class="card-section">
-        <div class="card">
-            <img src="site_exemples\img\onepeace.jpg" alt="Image 1">
-            <h3>NEED FOR SPEEDS</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, illo!</p>
-            <button>Voir article</button>
-        </div>
-        <div class="card">
-            <img src="site_exemples\img\fps game image.jpg" alt="Image 2">
-            <h3>CALL OF DUTY</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatem!</p>
-            <button>Voir article</button>
-        </div>
-        <div class="card">
-            <img src="site_exemples\img\harleyqueen.jpg" alt="Image 3">
-            <h3>HARLEY QUEEN</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, explicabo?</p>
-            <button>Voir article</button>
-        </div>
-    </section> -->
-
-
     <section class="card-section">
     <div class="card-image">
         <img src="site_exemples\img\onepeace.jpg" alt="Image 1">
@@ -131,28 +109,6 @@ include('Maconnexion.php');
 
     <br>
     <br>
-
-    <!-- <section class="card-section">
-        <div class="card">
-            <img src="site_exemples\img\decor (29).jpg" alt="Image 1">
-            <h3>NEED FOR SPEEDS</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, illo!</p>
-            <button>Voir article</button>
-        </div>
-        <div class="card">
-            <img src="site_exemples\img\decor (15).jpg" alt="Image 2">
-      
-      <h3>HORIZON ZERO DOWN</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatem!</p>
-            <button>Voir article</button>
-        </div>
-        <div class="card">
-            <img src="site_exemples\img\wallpaperflare.com_wallpaper(1).jpg" alt="Image 3">
-            <h3>WATCH DOG</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, explicabo?</p>
-            <button>Voir article</button>
-        </div>
-    </section> -->
 
 
     <section class="card-section">

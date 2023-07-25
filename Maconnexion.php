@@ -67,7 +67,7 @@ use MaConnexion as GlobalMaConnexion;
     }
     public function select_where_commentaires($table, $column, $id) {
         try {
-            $requete = "SELECT $column FROM $table WHERE id_auteurs = $id";
+            $requete = "SELECT $column FROM $table WHERE id_articles = $id";
             $resultat = $this->connexionPDO->query($requete);
             $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); // Fetch the result of the query into an associative array
 

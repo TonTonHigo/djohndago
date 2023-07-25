@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $mdp = $_POST['mdp'];
 $conf_mdp = $_POST['conf_mdp'];
 
-$pattern = '/[\[^\'£$%^&*()}{@:\'#~?><>,;@\|\\\-=\-_+\-¬\`\]]/';
+$pattern = '/^[a-zA-Z0-9_]+$/';
 
 if(preg_match($pattern, $nom)){
 

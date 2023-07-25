@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Assurez-vous que le formulaire de connexion a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire

@@ -1,3 +1,6 @@
+ <?php 
+ session_start();
+ ?>
  <!DOCTYPE html>
  <html lang="fr">
 
@@ -25,8 +28,16 @@
              </div>
              <div class="nav-right">
 
-                 <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"><span>CONNEXION</span></button>
-                 <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#inscription"><span>INSCRIPTION</span></button>
+                <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"><span>CONNEXION</span></button>
+                <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#inscription"><span>INSCRIPTION</span></button>
+                 
+                <?php
+                    if($_SESSION['role'] == 2 || $_SESSION['role'] == 3){
+                        echo '
+                            <button type="button" class="custom-btn-del decobut" href="deco.php"><span>DECONNEXION</span></button>
+                        ';
+                    }
+                ?>
                  <!-- <button class="btn"><a href="inscription.php">Inscription</a></button>
                 <button class="btn"><a href="connexion.php">Connexion</a></button> -->
 

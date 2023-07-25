@@ -1,4 +1,10 @@
-<?php include('Maconnexion.php'); ?>
+<?php 
+session_start();
+$_SESSION['role'] = 2;
+$_SESSION['id'] = 1;
+
+include('Maconnexion.php'); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 

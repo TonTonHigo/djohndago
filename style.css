@@ -751,6 +751,47 @@ button:hover {
     width:100%;
     transition:800ms ease all;
   }
+
+  .decobut{
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #A4133C;
+  }
+  .decobut:hover {
+    color: white;
+    background: black;
+     box-shadow:none;
+  }
+  .decobut:before,
+  .decobut:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #A4133C;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .decobut:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .decobut:hover:before,
+  .decobut:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
   .custom-btn-del {
     width: auto;
     height: 40px;
@@ -759,7 +800,7 @@ button:hover {
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    background: #E83CF5;
+    background: #A4133C;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;

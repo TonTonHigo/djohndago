@@ -1,48 +1,26 @@
 <?php
 session_start();
-// Assurez-vous que le formulaire de connexion a été soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
-    $nom = $_POST["Nom"];
-    $motdepasse = $_POST["Mot_de_passe"];
 
-    // Connexion à la base de données (remplacez les paramètres avec vos informations de connexion)
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "blog_jeux";
+include("Maconnexion.php");
 
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        // Configuration pour afficher les erreurs MySQL
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$nom = $_POST['nom'];
+$mdp = $_POST['mdp'];
 
-        // Requête pour vérifier les informations de connexion dans la base de données
-        $sql = "SELECT * FROM auteurs WHERE Nom = :nom AND mdp = :motdepasse";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':nom', $nom);
-        $stmt->bindParam(':motdepasse', $motdepasse);
-        $stmt->execute();
+$pattern = '/^[a-zA-Z0-9_]+$/';
 
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+if(preg_match($pattern, $nom)){
 
-        if ($result) {
-            // L'utilisateur est connecté avec succès
-            // Vous pouvez ajouter ici les actions à effectuer après la connexion réussie (par exemple, rediriger vers une page d'accueil)
-
-            // Exemple de redirection vers la page d'accueil
-            header("Location: blog.php");
+    $connexion = new MaConnexion("blog_jeux","","root","localhost");
+    $requete = $connexion-> select("auteurs", "*");
+    foreach($requete as $compare){
+        
+        if(password_verify($mdp, $compare['mdp'])){   
+            $_SESSION['id'] = $compare['id_auteurs'];
+            $_SESSION['role'] = $compare['id_roles'];
+            header("Location: index.php");
             exit();
-        } else {
-            // Les informations de connexion sont invalides, afficher un message d'erreur ou rediriger vers la page de connexion avec un message d'erreur
-            echo "Identifiants invalides. Veuillez réessayer .";
         }
-    } catch (PDOException $e) {
-        // En cas d'erreur, affiche le message d'erreur
-        echo "Erreur : " . $e->getMessage();
     }
 
-    // Ferme la connexion à la base de données
-    $conn = null;
-}
+}      
 ?>

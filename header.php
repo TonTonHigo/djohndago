@@ -29,7 +29,7 @@
                 <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#inscription"><span>INSCRIPTION</span></button>
                  
                 <?php
-                    if($_SESSION['role'] == 2 || $_SESSION['role'] == 3){
+                    if(isset($_SESSION['role'])){
                         echo '
                         <a id="deconul" href="deco.php"><button type="button" class="custom-btn-deco decobut"><span> DECONNEXION </span></button></a>
                         ';
@@ -61,15 +61,12 @@
                                      <form class="login-form" method="POST" action="connexion.php" id="connexi">
                                          <!-- <input name="id_update" type="number" value="" hidden /> -->
                                          <!-- <input name="image_update" type="text" placeholder="image" /> -->
-                                         <input name="Nom" type="text" placeholder="Nom" />
-                                         <input name="Mot_de_passe" type="password" placeholder="Mot de passe" />
+                                         <input name="nom" type="text" placeholder="Nom" />
+                                         <input name="mdp" type="password" placeholder="Mot de passe" />
                                          <!-- <input name="categorie_update" type="number" placeholder="categorie" /> -->
                                          <!-- <textarea name="contenu_update" type="text" placeholder="contenu" ></textarea> -->
                                          <!-- <input name="date_update" type="date" placeholder="date" /> -->
                                          <!-- <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden /> -->
-
-                                         <input type="password" id="password" name="password" required>
-                                         <input type="password" id="confirm_password" name="confirm_password" required>
                                      </form>
 
                                  </div>

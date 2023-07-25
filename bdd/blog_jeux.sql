@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 21 juil. 2023 à 09:22
+-- Généré le : mar. 25 juil. 2023 à 10:20
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -20,15 +20,14 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `blog_jeux`
 --
-CREATE DATABASE blog_jeux;
-USE blog_jeux;
+
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `articles`
 --
 
-
+DROP TABLE IF EXISTS `articles`;
 CREATE TABLE IF NOT EXISTS `articles` (
   `id_articles` int NOT NULL AUTO_INCREMENT,
   `image` varchar(100) NOT NULL,
@@ -50,7 +49,6 @@ INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_public
 (1, 'site_exemples/img/21-games-keyart-01-07jun23$en.webp', 'Double A', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 1),
 (2, 'site_exemples/img/decolastofusblackandwhite.jpg', 'The last of us 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 2, 2),
 (3, 'site_exemples/img/decor (29).jpg', 'God of war', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex facilisis est lacinia rutrum. Cras porttitor lorem ipsum, vitae condimentum sapien vestibulum in. Donec at suscipit felis. Pellentesque tristique urna bibendum nulla ultricies bibendum. Pellentesque pulvinar, ante ac elementum ultrices, mi neque vulputate lorem, non volutpat ipsum risus ac est. Pellentesque mattis, mauris nec mattis pharetra, massa nulla placerat arcu, ut faucibus tortor ex non felis. Nunc sed hendrerit sapien, non mattis quam. Phasellus sed lobortis nisi. Curabitur maximus tortor molestie, porta nisl sit amet, pulvinar quam. Ut odio purus, consectetur nec nisi sed, dapibus scelerisque metus. Fusce tincidunt augue consequat, euismod purus at, mollis risus. Phasellus ut cursus tellus. In vel venenatis erat.\r\n\r\nDonec tristique, dolor in vulputate dapibus, felis dolor dignissim turpis, non fermentum urna nibh nec augue. Integer vestibulum neque arcu, et tristique mauris placerat ac. Proin felis nisl, pellentesque sit amet eleifend a, porta quis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor eget metus nec eleifend. Suspendisse scelerisque congue pharetra. Aenean sed nisl vel quam tristique cursus et sit amet tortor. Morbi fermentum mattis diam, sit amet ornare turpis vestibulum quis. Cras vitae elit at lorem scelerisque tempor nec id augue. Nam tempor finibus elit eget pharetra. Nunc egestas nunc eget erat tristique scelerisque id non quam. Integer porttitor vulputate elit vitae iaculis.', '2023-07-19', 6, 3),
-(5, 'site_exemples/img/battlefield-2042-logo.webp', 'L\'avenir de Battlefield', 'caca', '2023-07-21', 1, 1),
 (7, 'site_exemples/img/wallpaperflare.com_wallpaper(11).jpg', 'test', 'test', '2023-07-21', 2, 1);
 
 -- --------------------------------------------------------
@@ -59,7 +57,7 @@ INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_public
 -- Structure de la table `articles_tags`
 --
 
-
+DROP TABLE IF EXISTS `articles_tags`;
 CREATE TABLE IF NOT EXISTS `articles_tags` (
   `id_articles_tags` int NOT NULL AUTO_INCREMENT,
   `id_articles` int NOT NULL,
@@ -75,17 +73,17 @@ CREATE TABLE IF NOT EXISTS `articles_tags` (
 -- Structure de la table `auteurs`
 --
 
-
+DROP TABLE IF EXISTS `auteurs`;
 CREATE TABLE IF NOT EXISTS `auteurs` (
   `id_auteurs` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
-  `bio` text NOT NULL,
+  `bio` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `email` varchar(30) NOT NULL,
   `mdp` varchar(100) NOT NULL,
   `id_roles` int NOT NULL,
   PRIMARY KEY (`id_auteurs`),
   KEY `FK_auteurs_roles` (`id_roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `auteurs`
@@ -94,7 +92,11 @@ CREATE TABLE IF NOT EXISTS `auteurs` (
 INSERT INTO `auteurs` (`id_auteurs`, `nom`, `bio`, `email`, `mdp`, `id_roles`) VALUES
 (1, 'DAIN', 'flemmard', 'hugoh420@outlook.fr', 'poulet', 2),
 (2, 'LAFOSSE', 'obsédé', 'lafosse.damien@outlook.fr', 'tang', 2),
-(3, 'NOSILE', 'le silencieux', 'johnnosilegloire@gmail.com', 'cabri', 2);
+(3, 'NOSILE', 'le silencieux', 'johnnosilegloire@gmail.com', 'cabri', 2),
+(4, 'test', NULL, 'test@gmail.com', 'lol', 3),
+(5, 'rocky', NULL, 'doggo@gmail.com', 'doggo', 3),
+(6, 'test', NULL, 'test@gmail.com', 'zero', 3),
+(7, 'zaza', NULL, 'zaza@gmail.com', '$2y$10$n26IRXjI5n.ypiF9ekeRKuJY/UQxZnhmBRFGNCsMCxtxXH0Ld61ay', 3);
 
 -- --------------------------------------------------------
 
@@ -102,14 +104,25 @@ INSERT INTO `auteurs` (`id_auteurs`, `nom`, `bio`, `email`, `mdp`, `id_roles`) V
 -- Structure de la table `commentaires`
 --
 
+DROP TABLE IF EXISTS `commentaires`;
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `id_commentaires` int NOT NULL AUTO_INCREMENT,
   `contenu` text NOT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_articles` int NOT NULL,
+  `id_auteurs` int NOT NULL,
   PRIMARY KEY (`id_commentaires`),
-  KEY `FK_commentaires_articles` (`id_articles`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FK_commentaires_articles` (`id_articles`),
+  KEY `FK_commentaires_auteurs` (`id_auteurs`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`id_commentaires`, `contenu`, `date`, `id_articles`, `id_auteurs`) VALUES
+(6, 'test nul', '2023-07-25 07:38:09', 3, 3),
+(10, 'ragnarok', '2023-07-25 09:10:23', 7, 6);
 
 -- --------------------------------------------------------
 
@@ -117,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 -- Structure de la table `contacts`
 --
 
-
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id_contacts` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -132,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Structure de la table `roles`
 --
 
-
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `id_roles` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -154,7 +167,7 @@ INSERT INTO `roles` (`id_roles`, `nom`) VALUES
 -- Structure de la table `tags`
 --
 
-
+DROP TABLE IF EXISTS `tags`;
 CREATE TABLE IF NOT EXISTS `tags` (
   `id_tags` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -202,7 +215,8 @@ ALTER TABLE `auteurs`
 -- Contraintes pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  ADD CONSTRAINT `FK_commentaires_articles` FOREIGN KEY (`id_articles`) REFERENCES `articles` (`id_articles`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_commentaires_articles` FOREIGN KEY (`id_articles`) REFERENCES `articles` (`id_articles`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_commentaires_auteurs` FOREIGN KEY (`id_auteurs`) REFERENCES `auteurs` (`id_auteurs`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

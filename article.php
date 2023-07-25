@@ -125,9 +125,11 @@ include('Maconnexion.php');
                             case 3:
                                 if (isset($_SESSION['id']) && ($_SESSION['id'] == $coms['id_auteurs'] && ($_SESSION['role'] == 3))) {
                                     echo '
-                                                <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#delete' . $coms['id_commentaires'] . '"><span>UPDATE</span></button>
-                                                <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#delete' . $coms['id_commentaires'] . '"><span>DELETE</span></button>
-                                            ';
+                                        <div id="mdr">
+                                            <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#delete' . $coms['id_commentaires'] . '"><span>UPDATE</span></button>
+                                            <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#delete' . $coms['id_commentaires'] . '"><span>DELETE</span></button>
+                                        </div>      
+                                                ';
                                     echo '
                                             <!-- Modal DELETE -->
                                                 <div class="modal fade" id="delete' . $coms['id_commentaires'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

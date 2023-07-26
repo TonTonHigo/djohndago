@@ -12,17 +12,17 @@ $conf_mdp = $_POST['conf_mdp'];
 
 $pattern = '/^[a-zA-Z0-9_]+$/';
 
-if(preg_match($pattern, $nom)){
-
-    if($mdp == $conf_mdp){
-        $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+    if(preg_match($pattern, $nom)){
     
-        $ajout_article = new MaConnexion("blog_jeux","","root","localhost");
-        $requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp_hash);
-        header("Location: index.php");
-        exit();
-    }
-}      
+        if($mdp == $conf_mdp){
+            $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+        
+            $ajout_article = new MaConnexion("blog_jeux","","root","localhost");
+            $requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp_hash);
+            header("Location: index.php");
+            exit();
+        }
+    }      
 
 
 // $newInsertion = new MaConnexion("blog_jeux", "", "root", "localhost"); //$ plus nom de la variable= declarer la varaiable

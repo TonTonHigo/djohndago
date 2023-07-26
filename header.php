@@ -126,10 +126,10 @@
 
                                      <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
                                          <input name="id_roles" type="number" value="3" hidden />
-                                         <input name="nom" type="text" placeholder="Nom..." />
-                                         <input name="email" type="email" placeholder="Email..." />
-                                         <input name="mdp" type="password" placeholder="Mot de passe..." />
-                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." />
+                                         <input name="nom" type="text" placeholder="Nom..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
+                                         <input name="email" type="email" placeholder="Email..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
+                                         <input name="mdp" type="password" placeholder="Mot de passe..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
+                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
                                      </form>
 
                                  </div>

@@ -26,3 +26,12 @@
 //         echo "Identifiants invalides";
 //     }
 // }
+
+
+/*#input name :invalid{
+    border: 1px #A4133C;
+}
+input name :valid{
+    border: 1px #43A047;
+}
+*/

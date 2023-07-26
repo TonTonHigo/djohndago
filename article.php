@@ -33,7 +33,14 @@ include('Maconnexion.php');
     <main>
 
         <?php
-        $articles = $_POST['id_articles'];
+        if(isset($_SESSION['article'])){
+            $articles = $_SESSION['article'];
+
+        }else{
+            $articles = $_POST['id_articles'];
+            $_SESSION['article'] = $articles;
+        }
+
         $wow = new MaConnexion("blog_jeux", "", "root", "localhost");
         $afficher = $wow->select_where_articles("articles", "*", $articles);
 
@@ -178,6 +185,10 @@ include('Maconnexion.php');
                                 <input name="id_articles" type="number" value="' . $ligne['id_articles'] . '"  hidden>
                                 <input name="id_auteurs" type="number" value="' . $_SESSION['id'] . '"  hidden>
                                 <textarea name="contenu" placeholder="Votre commentaire" required></textarea>
+                    ';
+                    $monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+                    echo'<input name="url" type="text" value="' . $monUrl . '"  hidden>';
+                    echo'
                                 <button type="submit">Poster le commentaire</button>
                             </form>
                             

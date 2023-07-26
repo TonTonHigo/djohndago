@@ -24,7 +24,13 @@
                  </ul>
              </div>
              <div class="nav-right">
-
+                <?php
+                    if(isset($_SESSION['role'])){
+                        echo '
+                        <h1 id="salut">Salut '. $_SESSION['nom'] . ' ༼･ิɷ･ิ༽</h1>
+                        ';
+                    }
+                ?>
                 <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"
                 <?php
                     if(isset($_SESSION['role'])){
@@ -44,6 +50,21 @@
                     if(isset($_SESSION['role'])){
                         echo '
                         <a id="deconul" href="deco.php"><button type="button" class="custom-btn-deco decobut"><span> DECONNEXION </span></button></a>
+                        ';
+                    }
+                ?>
+                <?php
+                    if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
+                        echo '
+                            <a id="dashnul" href="dashboard.php"><button type="button" class="custom-btn-dash dashbut"';
+                            
+                            $monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+                            if($monUrl == "http://localhost/djohndago/dashboard.php"){
+                                echo 'hidden';
+                            }
+                        echo'
+                            ><span> DASHBOARD </span></button></a>
+
                         ';
                     }
                 ?>

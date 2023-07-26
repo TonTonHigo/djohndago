@@ -246,18 +246,21 @@ body .FOOTER {
     font-family: Arial, sans-serif;
 }
 
-/* .footer { 
-    background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
-    background-size: cover; 
-    height: 400px; 
+.footer { 
+    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg);
+    background-size: cover;
+    height: 400px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
     color: #fff;
     width: 100%;
-    padding-top: 10%; 
-} */
-.footer{
+    padding-top: 1%;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: nowrap;
+}
+/* .footer{
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     
     height:582px;
@@ -267,8 +270,8 @@ body .FOOTER {
     background-size: cover;
     /* left:29px;
     top:3587px; */
+/* } */
 
-}
 
 /* .contact {
     width: 60%;
@@ -318,6 +321,8 @@ input[type="email"] {
     padding: 5px;
     color: #fff;
     background-color: #a4133c;
+    height: 164px;
+    width: 540px;
 }
 
 .contact button {

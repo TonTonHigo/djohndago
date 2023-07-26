@@ -24,7 +24,13 @@
                  </ul>
              </div>
              <div class="nav-right">
-
+                <?php
+                    if(isset($_SESSION['role'])){
+                        echo '
+                        <h1 id="salut">Salut '. $_SESSION['nom'] . ' ༼･ิɷ･ิ༽</h1>
+                        ';
+                    }
+                ?>
                 <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"
                 <?php
                     if(isset($_SESSION['role'])){

@@ -17,6 +17,7 @@ if(preg_match($pattern, $nom)){
         if(password_verify($mdp, $compare['mdp'])){   
             $_SESSION['id'] = $compare['id_auteurs'];
             $_SESSION['role'] = $compare['id_roles'];
+            $_SESSION['nom'] = $compare['nom'];
             header("Location: index.php");
             exit();
         }

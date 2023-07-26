@@ -169,6 +169,7 @@ h2{
 
 
 
+
 /* pour la navbar */
 body .navbar {
     margin: 0;
@@ -245,23 +246,47 @@ body .FOOTER {
     font-family: Arial, sans-serif;
 }
 
-.footer {
+/* .footer { 
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
-    background-size: cover;
-    /* height: 400px; */
+    background-size: cover; 
+    height: 400px; 
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: #fff;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 10%; 
+} */
+.footer{
+    background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
+    
+    height:582px;
+    width:1443px;
+    border:1px solid #000000;
+    position:absolute;
+    background-size: cover;
+    /* left:29px;
+    top:3587px; */
+
 }
 
-.contact {
+/* .contact {
     width: 60%;
     padding: 20px;
     color:#A4133C;
     font-size: 30px;
+} */
+
+.contact
+{
+color:#ffffff;
+text-align:center;
+vertical-align:text-top;
+font-size:24px;
+font-family:Inter;
+line-height:auto;
+border:2px solid #0b77de;
+width:152px;
 }
 
 .contact h2 {
@@ -269,15 +294,30 @@ body .FOOTER {
     padding-bottom: 10px;
 }
 
-.contact form {
+/* .contact form {
     display: flex;
     flex-direction: column;
+} */
+
+
+.contact input{
+    background-color:#a4133c;
+    height:38px;
+    width:221px;
+    
 }
 
-.contact input,
+input[type="email"] {
+    background-color: #a4133c;
+    height: 45px;
+    width: 412px;
+}
+
 .contact textarea {
     margin-bottom: 10px;
     padding: 5px;
+    color: #fff;
+    background-color: #a4133c;
 }
 
 .contact button {

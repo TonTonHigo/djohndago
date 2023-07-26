@@ -47,6 +47,21 @@
                         ';
                     }
                 ?>
+                <?php
+                    if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
+                        echo '
+                            <a id="dashnul" href="dashboard.php"><button type="button" class="custom-btn-dash dashbut"';
+                            
+                            $monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+                            if($monUrl == "http://localhost/djohndago/dashboard.php"){
+                                echo 'hidden';
+                            }
+                        echo'
+                            ><span> DASHBOARD </span></button></a>
+
+                        ';
+                    }
+                ?>
                  <!-- <button class="btn"><a href="inscription.php">Inscription</a></button>
                 <button class="btn"><a href="connexion.php">Connexion</a></button> -->
 

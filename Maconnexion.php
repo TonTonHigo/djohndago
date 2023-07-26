@@ -65,6 +65,17 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+    public function select_where_abonne($table, $column, $id) {
+        try {
+            $requete = "SELECT $column FROM $table WHERE id_roles = $id";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); // Fetch the result of the query into an associative array
+
+            return $resultat;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
     public function select_where_commentaires($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_articles = $id";

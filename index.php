@@ -50,6 +50,19 @@ foreach ($images as $image) {
 echo '</div>
 </div>';
 
+
+// Chemin d'accès de votre image que vous souhaitez afficher
+$chemin_image = "site_exemples\img\watchdog.jpg";
+echo '<div class="image-container">
+    <img src="' . $chemin_image . '" alt="Votre image">
+</div>';
+
+
+
+
+
+
+
 // Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
 $articles = array(
     array("site_exemples\img\onepeace.jpg"),
@@ -77,6 +90,16 @@ foreach($afficher as $cartes){
 }
 echo '</section>';
 
+
+
+// Chemin d'accès de votre image que vous souhaitez afficher
+$chemin_image = "site_exemples\img\decor (22).jpg";
+echo '<div class="image-container">
+    <img src="' . $chemin_image . '" alt="Votre image">
+</div>';
+
+
+
 // Tableau des images de FPS (à remplacer par vos données réelles)
 $fpsImages = array(
     "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
@@ -89,9 +112,13 @@ $fpsImages = array(
 echo '<h2>FPS ...</h2>';
 $fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $image) {
-    echo '<div class="image-container">
-        <img src="' . $image['image'] . '" alt="Votre image">
-    </div>';
+    echo '<div class="card-image">
+    <img src="' . $cartes['image'] . '" alt="Image">
+    <div class="card-buttons">
+        <button>Voir article</button>
+
+    </div>
+</div>';
 }
 
 

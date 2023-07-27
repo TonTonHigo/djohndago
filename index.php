@@ -50,9 +50,9 @@
     <hr class="trait">
 
     <br>
-    <div class="image-container">
+    <!-- <div class="image-container">
         <img src="site_exemples\img\watchdog.jpg" alt="Votre image">
-    </div>
+    </div> -->
 
     <br>
 

@@ -1,7 +1,4 @@
-<?php 
-session_start();
-include('Maconnexion.php'); 
-?>
+<?php include('Maconnexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +33,7 @@ include('Maconnexion.php');
     <br>
     <br>
     <!-- mon carousel -->
-
+<!-- 
     <div class="carousel-container-nav">
         <div class="carousel-slide">
             <img src="site_exemples\img\battlefield-2042-logo.webp" alt="Image 1">
@@ -48,18 +45,18 @@ include('Maconnexion.php');
             <img src="site_exemples\img\onepeace.jpg" alt="Image 7">
         </div>
     </div>
-    <br>
+    <br> -->
 
     <hr class="trait">
 
-    <br>
-    <div class="image-container">
+    <!-- <br> -->
+    <!-- <div class="image-container">
         <img src="site_exemples\img\watchdog.jpg" alt="Votre image">
-    </div>
+    </div> -->
 
-    <br>
+    <!-- <br> -->
 
-    <h2>ARTICLES RECENTS ...</h2>
+    <!-- <h2>ARTICLES RECENTS ...</h2>
 
     <section class="card-section">
     <div class="card-image">
@@ -87,9 +84,9 @@ include('Maconnexion.php');
             <button>Update</button>
             <button>Delete</button>
         </div>
-    </div>
+    </div> -->
     <!-- Ajoutez d'autres images similaires ici -->
-</section>
+<!-- </section>
 
 
     <br>
@@ -98,17 +95,17 @@ include('Maconnexion.php');
 
     <h2>FPS ...</h2>
 
-    <!-- seconde image -->
-    <div class="image-container">
+    <-- seconde image -->
+    <!-- <div class="image-container">
         <img src="site_exemples\img\call-of-duty-warzone-photo-1381831.webp" alt="Votre image">
     </div>
 
 
     <br>
-    <br>
+    <br>  -->
 
 
-    <section class="card-section">
+    <!-- <section class="card-section">
     <div class="card-image">
         <img src="site_exemples\img\decor (29).jpg" alt="Image 1">
         <div class="card-buttons">
@@ -134,13 +131,80 @@ include('Maconnexion.php');
             <button>Update</button>
             <button>Delete</button>
         </div>
-    </div>
+    </div> -->
     <!-- Ajoutez d'autres images similaires ici -->
-</section>
+<!-- </section>
 
     <br>
     <hr>
-    <br>
+    <br> -->
+
+
+
+
+    <?php
+// Définir un tableau contenant les chemins d'accès des images
+$images = array(
+    "site_exemples\img\battlefield-2042-logo.webp",
+    "site_exemples\img\daysgone.jpg",
+    "site_exemples\img\wallpaperflare.com_wallpaper(10).jpg",
+    "site_exemples\img\decolastofusblackandwhite.jpg",
+    "site_exemples\img\onepeace.jpg",
+    "site_exemples\img\sexy.jpg",
+    "site_exemples\img\onepeace.jpg",
+);
+
+// Boucle foreach pour afficher les images du carousel
+echo '<div class="carousel-container-nav">
+    <div class="carousel-slide">';
+foreach ($images as $image) {
+    echo '<img src="' . $image . '" alt="Image">';
+}
+echo '</div>
+</div>';
+
+// Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
+$articles = array(
+    array("site_exemples\img\onepeace.jpg"),
+    array("site_exemples\img\fps game image.jpg"),
+    array("site_exemples\img\harleyqueen.jpg"),
+    // Ajoutez d'autres articles similaires ici
+);
+
+// Boucle foreach pour afficher les cartes d'articles récents
+echo '<h2>ARTICLES RECENTS ...</h2>
+<section class="card-section">';
+foreach ($articles as $article) {
+    echo '<div class="card-image">
+        <img src="' . $article[0] . '" alt="Image">
+        <div class="card-buttons">
+            <button>Voir article</button>
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
+    </div>';
+}
+echo '</section>';
+
+// Tableau des images de FPS (à remplacer par vos données réelles)
+$fpsImages = array(
+    "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
+    "site_exemples\img\decor (29).jpg",
+    "site_exemples\img\decor (15).jpg",
+    // Ajoutez d'autres images de FPS similaires ici
+);
+
+// Boucle foreach pour afficher les images de FPS
+echo '<h2>FPS ...</h2>';
+foreach ($fpsImages as $image) {
+    echo '<div class="image-container">
+        <img src="' . $image . '" alt="Votre image">
+    </div>';
+}
+
+
+?>
+<?php include('footer.php'); ?>
 
 
 
@@ -151,7 +215,7 @@ include('Maconnexion.php');
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <?php include('footer.php'); ?>
+    
     <script src="script.js"></script>
 </body>
 

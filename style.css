@@ -91,57 +91,63 @@ hr .trait{
 
 
 /* titre avant la class cards */
-h2{
-    color: white;
-    font-family: 'Lilita One', cursive;
+/* Applique le style aux balises h2 */
+h2 {
+    color: white; /* Couleur du texte en blanc */
+    font-family: 'Lilita One', cursive; /* Police de caractères utilisée, 'Lilita One' avec cursive */
 }
 
-
-/* test de nouvelle carte */
+/* Styles pour une section de cartes */
 .card-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex; /* Affiche les cartes en tant que flexbox pour les aligner horizontalement */
+    justify-content: space-between; /* Répartit l'espace entre les cartes de manière égale */
+    gap: 20px; /* Ajoute un espace de 20px entre les cartes */
 }
 
+/* Styles pour l'image de la carte */
 .card-image {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 30%; /* Ajustez la taille des cartes selon vos besoins */
+    position: relative; /* Positionnement relatif pour que les éléments internes soient positionnés par rapport à cette div */
+    overflow: hidden; /* Cache tout contenu dépassant de la carte */
+    border: 1px solid #ccc; /* Bordure d'un pixel avec couleur grise (#ccc) */
+    border-radius: 8px; /* Bordure arrondie de 8 pixels pour donner un effet de coins arrondis */
+    width: 30%; /* Largeur de la carte, ajustable selon les besoins */
 }
 
+/* Styles pour l'image à l'intérieur de la carte */
 .card-image img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s ease;
+    width: 100%; /* L'image occupe 100% de la largeur de la carte */
+    display: block; /* L'image est affichée en tant que bloc */
+    transition: transform 0.3s ease; /* Ajoute une transition fluide de 0.3 secondes pour l'effet de zoom */
 }
 
+/* Zoom sur l'image de la carte lorsque survolée avec la souris */
 .card-image:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2); /* L'image est agrandie à 120% de sa taille initiale lors du survol de la carte */
 }
 
+/* Styles pour les boutons de la carte */
 .card-buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
+    position: absolute; /* Positionnement absolu pour placer les boutons par rapport à la carte */
+    bottom: 10px; /* Les boutons sont situés à 10px du bas de la carte */
+    left: 50%; /* Les boutons sont centrés horizontalement à 50% de la largeur de la carte */
+    transform: translateX(-50%); /* Décale les boutons horizontalement de -50% de leur propre largeur pour les centrer parfaitement */
+    display: none; /* Les boutons ne sont pas affichés par défaut */
 }
 
+/* Affiche les boutons lorsque la carte est survolée avec la souris */
 .card-image:hover .card-buttons {
-    display: flex;
+    display: flex; /* Les boutons sont affichés en tant que flexbox lors du survol de la carte */
 }
 
+/* Styles pour les boutons eux-mêmes */
 .card-buttons button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    margin: 0 5px;
-    cursor: pointer;
+    background-color: #3498db; /* Couleur de fond des boutons en bleu (#3498db) */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Bordure arrondie de 4 pixels pour donner un aspect légèrement arrondi aux boutons */
+    padding: 6px 12px; /* Espacement interne des boutons pour un aspect visuel agréable */
+    margin: 0 5px; /* Marge de 5px à gauche et à droite des boutons pour les séparer les uns des autres */
+    cursor: pointer; /* Le curseur se transforme en pointeur de souris au survol des boutons pour indiquer qu'ils sont cliquables */
 }
 
 
@@ -171,83 +177,98 @@ h2{
 
 
 /* pour la navbar */
+/* Styles appliqués au corps du document et à la classe "navbar" */
 body .navbar {
-    margin: 0;
-    padding: 0;
-    font-family: 'Permanent Marker" sans sérif';
-    
+    margin: 0; /* Supprime les marges autour de la classe "navbar" */
+    padding: 0; /* Supprime les espaces internes à la classe "navbar" */
+    font-family: 'Permanent Marker', sans-serif; /* Police de caractères utilisée pour le texte de la classe "navbar" */
 }
 
+/* Styles pour l'en-tête (header) */
 header {
-    background: url('site_exemples/img/navpackman-fotor.jpg');
+    background: url('site_exemples/img/navpackman-fotor.jpg'); /* Définit une image de fond pour l'en-tête */
 }
 
+/* Styles pour la balise <nav> (barre de navigation) */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-image: linear-gradient(90deg, #000000, #FFF, #E83CF5, #A4133C, #0B77DE); */
-    padding: 10px 20px;
-    background: url('site_exemples/img/navpackman-fotor.jpg');
-    border: 3px solid white;
+    display: flex; /* Affiche les éléments de la barre de navigation en tant que flexbox pour les aligner horizontalement */
+    align-items: center; /* Centre les éléments verticalement dans la barre de navigation */
+    justify-content: space-between; /* Répartit l'espace entre les éléments de la barre de navigation */
+    padding: 10px 20px; /* Espacement interne de 10px en haut/bas et 20px à gauche/droite */
+    background: url('site_exemples/img/navpackman-fotor.jpg'); /* Définit une image de fond pour la barre de navigation */
+    border: 3px solid white; /* Bordure blanche de 3px autour de la barre de navigation */
 }
 
+/* Styles pour l'image du logo dans la partie gauche de la barre de navigation */
 .nav-left img {
-    height: 100px; /* Ajuste la taille du logo en fonction de tes besoins */
-    width: 250px;
+    height: 100px; /* Hauteur de l'image du logo */
+    width: 250px; /* Largeur de l'image du logo */
 }
 
+/* Styles pour la partie centrale de la barre de navigation contenant une liste non ordonnée (ul) */
 .nav-center ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime les espaces internes à la liste */
+    margin: 0; /* Supprime les marges autour de la liste */
+    display: flex; /* Affiche les éléments de la liste en tant que flexbox pour les aligner horizontalement */
 }
 
+/* Styles pour chaque élément de la liste dans la partie centrale de la barre de navigation */
 .nav-center li {
-    margin: 0 15px;
+    margin: 0 15px; /* Marge de 0 sur les côtés gauche et droit de chaque élément de la liste */
 }
 
+/* Styles pour les liens (ancres) dans la partie centrale de la barre de navigation */
 .nav-center a {
-    text-decoration: none;
-    color: #ffffff; /* Couleur des liens */
-    font-size: 40px;
+    text-decoration: none; /* Supprime la décoration de soulignement des liens */
+    color: #ffffff; /* Couleur du texte des liens (blanc) */
+    font-size: 40px; /* Taille du texte des liens */
 }
 
+/* Styles pour la partie droite de la barre de navigation contenant un bouton */
 .nav-right .btn {
-    padding: 10px 12px;
-    margin-left: 2px;
-    border: 2px solid #0B77DE;
-    background-color: #000000; /* Couleur des boutons */
-    color: #fff; /* Couleur du texte des boutons */
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
+    padding: 10px 12px; /* Espacement interne du bouton */
+    margin-left: 2px; /* Marge de 2px à gauche du bouton pour le séparer des autres éléments */
+    border: 2px solid #0B77DE; /* Bordure bleue de 2px autour du bouton */
+    background-color: #000000; /* Couleur de fond du bouton (noir) */
+    color: #fff; /* Couleur du texte du bouton (blanc) */
+    font-size: 20px; /* Taille du texte du bouton */
+    cursor: pointer; /* Change le curseur en pointeur de souris lors du survol du bouton */
+    display: flex; /* Affiche le bouton en tant que flexbox pour aligner son contenu */
 }
 
-.nav-right .btn a{
-    text-decoration: none;
-    color: white;
-    font-family: fantasy;
-    font-size: 30px;
+/* Styles pour les liens (ancres) à l'intérieur du bouton de la partie droite de la barre de navigation */
+.nav-right .btn a {
+    text-decoration: none; /* Supprime la décoration de soulignement des liens dans le bouton */
+    color: white; /* Couleur du texte des liens (blanc) */
+    font-family: fantasy; /* Police de caractères fantaisie pour les liens dans le bouton */
+    font-size: 30px; /* Taille du texte des liens dans le bouton */
 }
 
-/* Style du bouton lorsqu'il est survolé */
+/* Styles du bouton de la partie droite de la barre de navigation lorsqu'il est survolé */
 .nav-right .btn:hover {
-    background-color: #A4133C;
-    border: 2px solid white;
+    background-color: #A4133C; /* Couleur de fond du bouton lorsqu'il est survolé (rouge) */
+    border: 2px solid white; /* Bordure blanche de 2px autour du bouton lorsqu'il est survolé */
 }
+
+
+
+
+
+
+
 
 
 /* mon css pour mon footer */
+/* Styles appliqués au corps du document et à la classe "FOOTER" */
 body .FOOTER {
-    margin: 0;
-    padding-top: 0;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Supprime les marges autour de la classe "FOOTER" */
+    padding-top: 0; /* Supprime l'espacement interne en haut de la classe "FOOTER" */
+    font-family: Arial, sans-serif; /* Police de caractères utilisée pour le texte de la classe "FOOTER" */
 }
 
 .footer { 
-    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg);
+    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /*Ajouter image dans le footer*/
     background-size: cover;
     height: 400px;
     display: flex;
@@ -259,7 +280,10 @@ body .FOOTER {
     flex-direction: row;
     align-content: space-around;
     flex-wrap: nowrap;
+    backdrop-filter: blur(15px);
+    
 }
+
 /* .footer{
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     
@@ -292,148 +316,97 @@ border:2px solid #0b77de;
 width:152px;
 }
 
+/* Styles pour la classe "contact" (section de contact dans le pied de page) */
+.contact {
+    color: #ffffff; /* Couleur du texte en blanc */
+    text-align: center; /* Centre le contenu horizontalement */
+    vertical-align: text-top; /* Aligne le contenu verticalement en haut */
+    font-size: 24px; /* Taille du texte */
+    font-family: Inter; /* Police de caractères utilisée pour le texte */
+    line-height: auto; /* Hauteur de ligne automatique */
+    border: 2px solid #0b77de; /* Bordure de 2px avec couleur bleue (#0b77de) */
+    width: 152px; /* Largeur de la section de contact */
+}
+
+/* Styles pour le titre h2 dans la section de contact */
 .contact h2 {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #fff; /* Bordure inférieure de 1px avec couleur blanche (#fff) */
+    padding-bottom: 10px; /* Espacement en bas du titre */
 }
 
-/* .contact form {
-    display: flex;
-    flex-direction: column;
-} */
-
-
-.contact input{
-    background-color:#a4133c;
-    height:38px;
-    width:221px;
-    
+/* Styles pour les champs de saisie (input) dans la section de contact */
+.contact input {
+    color:#0B77DE;
+    background-color: #ffffff; /* Couleur de fond des champs de saisie en rouge foncé (#a4133c) */
+    height: 38px; /* Hauteur des champs de saisie */
+    width: 221px; /* Largeur des champs de saisie */
 }
 
+/* Styles spécifiques pour le champ de saisie de type "email" dans la section de contact */
 input[type="email"] {
-    background-color: #a4133c;
-    height: 45px;
-    width: 412px;
+    color:#0B77DE;
+    background-color: #ffffff; /* Couleur de fond du champ de saisie de type "email" en rouge foncé (#a4133c) */
+    height: 45px; /* Hauteur du champ de saisie de type "email" */
+    width: 412px; /* Largeur du champ de saisie de type "email" */
 }
 
+/* Styles pour la zone de texte (textarea) dans la section de contact */
 .contact textarea {
-    margin-bottom: 10px;
-    padding: 5px;
-    color: #fff;
-    background-color: #a4133c;
-    height: 164px;
-    width: 540px;
+    margin-bottom: 10px; /* Marge inférieure de 10px pour séparer le champ de saisie de la zone de texte */
+    padding: 5px; /* Espacement interne de 5px dans la zone de texte */
+    color:#0B77DE; /* Couleur du texte en blanc */
+    background-color: #ffffff; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
+    height: 164px; /* Hauteur de la zone de texte */
+    width: 540px; /* Largeur de la zone de texte */
 }
 
+/* Styles pour le bouton (button) dans la section de contact */
 .contact button {
-    padding: 12px 16px;
-    border: none;
-    background-color: #A4133C;
-    color: #fff;
-    cursor: pointer;
-    font-size: x-large;
+    padding: 12px 16px; /* Espacement interne du bouton */
+    border: none; /* Pas de bordure */
+    background-color: #132ea4; /* Couleur de fond du bouton en rouge foncé (#A4133C) */
+    color: #fff; /* Couleur du texte en blanc */
+    cursor: pointer; /* Change le curseur en pointeur de souris lors du survol du bouton */
+    font-size: x-large; /* Taille du texte du bouton en "x-large" */
 }
 
+/* Styles pour la classe "social" (section des liens sociaux dans le pied de page) */
 .social {
-    width: 40%;
-    padding: 20px;
-    color: #A4133C;
-    font-size: 30px;
+    width: 40%; /* Largeur de la section des liens sociaux */
+    padding: 20px; /* Espacement interne de 20px dans la section des liens sociaux */
+    color: #A4133C; /* Couleur du texte en rouge foncé (#A4133C) */
+    font-size: 30px; /* Taille du texte */
 }
 
+/* Styles pour le titre h2 dans la section des liens sociaux */
 .social h2 {
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff; /* Bordure inférieure de 1px avec couleur blanche (#ffffff) */
+    padding-bottom: 10px; /* Espacement en bas du titre */
 }
 
-
+/* Styles pour la liste (ul) dans la section des liens sociaux */
 .social ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Affiche les éléments de la liste en tant que flexbox pour les aligner horizontalement */
+    padding: 0; /* Supprime les espaces internes à la liste */
+    margin: 0; /* Supprime les marges autour de la liste */
 }
 
+/* Styles pour chaque élément de la liste (li) dans la section des liens sociaux */
 .social li {
-    margin-right: 10px;
+    margin-right: 10px; /* Marge de 10px à droite de chaque élément de la liste pour les séparer */
 }
 
+.social li a{
+    text-decoration: none;
+    color: #A4133C;
+    font-size: xx-large;
+}
+
+/* Styles pour les images (logos) dans la section des liens sociaux */
 .social img {
-    height: 60px; /* Ajuste la taille des logos selon tes besoins */
-}
-
-
-
-
-
-
-
-
-
-/* page de connexion */
-body .connexion {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    
-}
-
-.container {
-    background-image: url('site_exemples/img/decopageconnexion.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-form {
-    background-color: hsl(0, 0%, 100%);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* width: 300px; */
-}
-
-.login-form h2 {
-    text-align: center;
-    color: #040404;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    color: #0B77DE;
-    margin-bottom: 5px;
-    font-size: x-large;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #0B77DE;
-    color: #FFF;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: x-large;
-}
-
-/* Style du bouton lorsqu'il est survolé */
-button:hover {
-    background-color: #A4133C;
+    height: 60px; /* Hauteur des logos sociaux */
+    /* Ajuste la taille des logos selon tes besoins */
 }
 
 
@@ -445,68 +418,11 @@ button:hover {
 
 
 
-/* css de ma page d'inscription */
-body .inscription {
-    /* margin: 0 auto; */
-    /* padding: 0 auto; */
-    font-family: Arial, sans-serif;
-}
 
-.container {
-    background-image: url('site_exemples/img/decopageconnexion.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.signup-form {
-    background-color: #FFF;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
-}
 
-.signup-form h2 {
-    text-align: center;
-    color: #000000;
-    margin-bottom: 20px;
-}
 
-.form-group {
-    margin-bottom: 20px;
-}
 
-.form-group label {
-    display: block;
-    color: #000000;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #0B77DE;
-    color: #000000;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-/* Style du bouton lorsqu'il est survolé */
-button:hover {
-    background-color: #A4133C;
-    
-}
 
 
 
@@ -515,245 +431,280 @@ button:hover {
 
 
 /* ... Styles pour les formulaires de connexion et d'inscription ... */
-
-
-/* BLOG */
-/* #blog_flex{
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    flex-wrap: wrap;
-    padding: 5% 0;
-} */
-
-
-
 /* modal formulaire */
 
+/* Styles pour la classe "login-page" */
 .login-page {
-  width: 360px;
-  /* padding: 8% 0 0; */
-  margin: auto;
-}
-
-.form input {
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form button {
-  text-transform: uppercase;
-  outline: 0;
-  background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
-}
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-.form .register-form {
-  display: none;
-}
-
-#ourservices{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 5% 10%;
-    gap: 20px;
-}
-.our_services{
-    border: 5px solid white;
-    color: white;   
-    transition: .5s
-}
-.our_services:hover{
-    scale: 110%;
-}
-
-.our_services .txt3 {
-    display: none;
-}
-.our_services:hover .txt3 {
-    display: block;
-    width: auto;
-}
-
-.butcard{
-    width: 0%;
-    padding: 0px;
-    border: none;
-    background-color: #A4133C;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .5s;
-}
-.butcard:hover{
-    background-color: transparent;
-    border: 1px solid #0B77DE;
-}
-.titre_style{
+    width: 360px; /* Largeur de la page de connexion */
+    margin: auto; /* Centre la page horizontalement */
+  }
+  
+  /* Styles pour les champs de saisie (input) dans le formulaire */
+  .form input {
+    outline: 0; /* Supprime la bordure bleue autour du champ de saisie lorsqu'il est en surbrillance */
+    background: #f2f2f2; /* Couleur de fond des champs de saisie */
+    width: 100%; /* Largeur du champ de saisie */
+    border: 0; /* Supprime la bordure autour du champ de saisie */
+    margin: 0 0 15px; /* Marge inférieure de 15px pour séparer les champs de saisie */
+    padding: 15px; /* Espacement interne des champs de saisie */
+    box-sizing: border-box; /* Inclut le rembourrage et la bordure dans la largeur totale du champ de saisie */
+    font-size: 14px; /* Taille du texte des champs de saisie */
+  }
+  
+  /* Styles pour le bouton dans le formulaire */
+  .form button {
+    text-transform: uppercase; /* Transforme le texte du bouton en majuscules */
+    outline: 0; /* Supprime la bordure bleue autour du bouton lorsqu'il est en surbrillance */
+    background: #4CAF50; /* Couleur de fond du bouton en vert */
+    width: 100%; /* Largeur du bouton */
+    border: 0; /* Supprime la bordure autour du bouton */
+    padding: 15px; /* Espacement interne du bouton */
+    color: #FFFFFF; /* Couleur du texte en blanc */
+    font-size: 14px; /* Taille du texte du bouton */
+    -webkit-transition: all 0.3 ease; /* Transition fluide pour les propriétés CSS sur les navigateurs basés sur WebKit (comme Chrome et Safari) */
+    transition: all 0.3 ease; /* Transition fluide pour les propriétés CSS */
+    cursor: pointer; /* Change le curseur en pointeur de souris lors du survol du bouton */
+  }
+  
+  /* Styles pour le bouton lorsqu'il est survolé, actif ou en focus */
+  .form button:hover, .form button:active, .form button:focus {
+    background: #43A047; /* Couleur de fond du bouton en vert foncé lorsqu'il est survolé, actif ou en focus */
+  }
+  
+  /* Styles pour le message dans le formulaire */
+  .form .message {
+    margin: 15px 0 0; /* Marge supérieure de 15px pour séparer le message du reste du formulaire */
+    color: #b3b3b3; /* Couleur du texte du message en gris clair */
+    font-size: 12px; /* Taille du texte du message */
+  }
+  
+  /* Styles pour le lien dans le message du formulaire */
+  .form .message a {
+    color: #4CAF50; /* Couleur du texte du lien en vert */
+    text-decoration: none; /* Supprime la décoration de soulignement du lien */
+  }
+  
+  /* Styles pour la classe "register-form" (formulaire d'inscription, qui est masqué par défaut) */
+  .form .register-form {
+    display: none; /* Masque le formulaire d'inscription par défaut */
+  }
+  
+  /* Styles pour la classe "ourservices" (conteneur des services) */
+  #ourservices {
+    display: grid; /* Affiche les services en tant que grille */
+    grid-template-columns: auto auto auto; /* Trois colonnes de largeur automatique */
+    margin: 5% 10%; /* Marge de 5% en haut et en bas, et de 10% à gauche et à droite du conteneur */
+    gap: 20px; /* Espace de 20px entre les services */
+  }
+  
+  /* Styles pour chaque service (élément avec la classe "our_services") */
+  .our_services {
+    border: 5px solid white; /* Bordure de 5px avec couleur blanche autour de chaque service */
+    color: white; /* Couleur du texte en blanc */
+    transition: .5s; /* Durée de la transition de 0.5 seconde pour les animations */
+  }
+  
+  /* Styles pour chaque service lorsqu'il est survolé */
+  .our_services:hover {
+    scale: 110%; /* Agrandit le service à 110% de sa taille initiale lorsqu'il est survolé */
+  }
+  
+  /* Styles pour le texte du service (élément avec la classe "txt3") qui est caché par défaut */
+  .our_services .txt3 {
+    display: none; /* Cache le texte du service par défaut */
+  }
+  
+  /* Styles pour le texte du service lorsqu'il est survolé */
+  .our_services:hover .txt3 {
+    display: block; /* Affiche le texte du service lorsqu'il est survolé */
+    width: auto; /* Largeur automatique du texte du service */
+  }
+  
+  /* Styles pour le bouton de la carte du service (élément avec la classe "butcard") */
+  .butcard {
+    width: 0%; /* Largeur initiale du bouton de la carte du service à 0% */
+    padding: 0px; /* Pas de rembourrage interne pour le bouton */
+    border: none; /* Pas de bordure autour du bouton */
+    background-color: #A4133C; /* Couleur de fond du bouton en rouge foncé */
+    color: white; /* Couleur du texte en blanc */
+    border-radius: 30px; /* Bordure arrondie de 30px pour donner un effet de coin arrondi au bouton */
+    cursor: pointer; /* Change le curseur en pointeur de souris au survol du bouton */
+    transition: .5s; /* Durée de la transition de 0.5 seconde pour les animations */
+  }
+  
+  /* Styles pour le bouton de la carte du service lorsqu'il est survolé */
+  .butcard:hover {
+    background-color: transparent; /* Couleur de fond du bouton devient transparente lorsqu'il est survolé */
+    border: 1px solid #0B77DE; /* Bordure de 1px avec couleur bleue autour du bouton lorsqu'il est survolé */
+  }
+  
+  /* Styles pour les titres avec effet de texte ombré (élément avec la classe "titre_style") */
+  .titre_style {
     text-shadow: 2px 0 #0B77DE, -2px 0 #0B77DE, 0 2px #0B77DE, 0 -2px #0B77DE,
-               1px 1px #0B77DE, -1px -1px #0B77DE, 1px -1px #0B77DE, -1px 1px #0B77DE;
-}
+                 1px 1px #0B77DE, -1px -1px #0B77DE, 1px -1px #0B77DE, -1px 1px #0B77DE; /* Ombre du texte avec décalages pour créer l'effet ombré */
+  }
+  
+
+
+
 
 /* 5 */
+/* Styles pour le bouton avec la classe "btn-5" */
 .btn-5 {
-    width: 130px;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    background: #A4133C;
+    width: 130px; /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton */
+    line-height: 42px; /* Hauteur de ligne du bouton */
+    padding: 0; /* Pas de rembourrage interne */
+    border: none; /* Pas de bordure */
+    background: #A4133C; /* Couleur de fond du bouton en rouge foncé */
   }
+  
+  /* Styles pour le bouton lorsqu'il est survolé */
   .btn-5:hover {
-    color: white;
-    background: black;
-     box-shadow:none;
+    color: white; /* Couleur du texte en blanc */
+    background: black; /* Couleur de fond du bouton en noir lorsqu'il est survolé */
+    box-shadow: none; /* Supprime l'ombre du bouton lorsqu'il est survolé */
   }
+  
+  /* Styles pour les pseudos-éléments "before" et "after" du bouton */
   .btn-5:before,
-  .btn-5:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #A4133C;
+  .btn-5:after {
+    content: ''; /* Ajoute du contenu vide aux pseudos-éléments */
+    position: absolute; /* Position absolue pour les pseudos-éléments */
+    top: 0; /* Position en haut du bouton */
+    right: 0; /* Position à droite du bouton */
+    height: 2px; /* Hauteur de 2px pour les lignes des pseudos-éléments */
+    width: 0; /* Largeur initiale de 0 pour les lignes des pseudos-éléments */
+    background: #A4133C; /* Couleur de fond des lignes des pseudos-éléments en rouge foncé */
     box-shadow:
-     -1px -1px 5px 0px #fff,
-     7px 7px 20px 0px #0003,
-     4px 4px 5px 0px #0002;
-    transition:400ms ease all;
+      -1px -1px 5px 0px #fff,
+      7px 7px 20px 0px #0003,
+      4px 4px 5px 0px #0002; /* Effets d'ombre pour les lignes des pseudos-éléments */
+    transition: 400ms ease all; /* Transition fluide de 400ms pour les animations */
   }
-  .btn-5:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
+  
+  /* Styles pour le pseudo-élément "after" du bouton */
+  .btn-5:after {
+    right: inherit; /* Position "right" hérite de la position parente */
+    top: inherit; /* Position "top" hérite de la position parente */
+    left: 0; /* Position à gauche du bouton */
+    bottom: 0; /* Position en bas du bouton */
   }
+  
+  /* Styles pour les pseudos-éléments "before" et "after" du bouton lorsqu'il est survolé */
   .btn-5:hover:before,
-  .btn-5:hover:after{
-    width:100%;
-    transition:800ms ease all;
+  .btn-5:hover:after {
+    width: 100%; /* Largeur des lignes des pseudos-éléments à 100% lorsqu'il est survolé */
+    transition: 800ms ease all; /* Transition fluide de 800ms pour les animations lorsqu'il est survolé */
   }
+  
+  /* Styles pour la classe "frame" */
   .frame {
-    width: 100%;
-    margin: 40px auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Largeur de la classe "frame" */
+    margin: 40px auto; /* Marge de 40px en haut et en bas, et centrage horizontal de la classe "frame" */
+    text-align: center; /* Alignement du texte centré */
+    display: flex; /* Affiche les éléments de la classe "frame" en tant que flexbox */
+    justify-content: center; /* Centre les éléments horizontalement dans la classe "frame" */
   }
+  
+  /* Styles pour le bouton personnalisé avec la classe "custom-btn" */
   .custom-btn {
-    width: auto;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: #A4133C;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
-  .crudbut{
-    display: none;
-}
-.our_services:hover .crudbut {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    width: auto; /* Largeur automatique du bouton */
+    height: 40px; /* Hauteur du bouton */
+    color: #fff; /* Couleur du texte en blanc */
+    border-radius: 5px; /* Bordure arrondie de 5px pour donner un effet de coin arrondi au bouton */
+    padding: 10px 25px; /* Espacement interne du bouton */
+    font-family: 'Lato', sans-serif; /* Police de caractères utilisée pour le texte du bouton */
+    font-weight: 500; /* Poids de la police de caractères */
+    background: #A4133C; /* Couleur de fond du bouton en rouge foncé */
+    cursor: pointer; /* Change le curseur en pointeur de souris au survol du bouton */
+    transition: all 0.3s ease; /* Transition fluide de 0.3 seconde pour les animations */
+    position: relative; /* Position relative pour les pseudos-éléments des boutons */
+    display: inline-block; /* Affiche le bouton en tant que bloc en ligne */
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+      7px 7px 20px 0px rgba(0, 0, 0, .1),
+      4px 4px 5px 0px rgba(0, 0, 0, .1); /* Effets d'ombre pour le bouton */
+    outline: none; /* Supprime la bordure de contour autour du bouton lorsqu'il est en surbrillance */
+    display: flex; /* Affiche les éléments du bouton en tant que flexbox */
+    justify-content: center; /* Centre les éléments horizontalement dans le bouton */
+    align-items: center; /* Centre les éléments verticalement dans le bouton */
+  }
+
+
+
+
+/* Styles pour le bouton de mise à jour avec la classe "updatebut" */
+.updatebut {
+  width: 130px; /* Largeur du bouton */
+  height: 40px; /* Hauteur du bouton */
+  line-height: 42px; /* Hauteur de ligne du bouton */
+  padding: 0; /* Pas de rembourrage interne */
+  border: none; /* Pas de bordure */
+  background: goldenrod; /* Couleur de fond du bouton en doré */
 }
 
-.updatebut {
-    width: 130px;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    background: goldenrod;
-  }
-  .updatebut:hover {
-    color: white;
-    background: black;
-     box-shadow:none;
-  }
-  .updatebut:before,
-  .updatebut:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: goldenrod;
-    box-shadow:
-     -1px -1px 5px 0px #fff,
-     7px 7px 20px 0px #0003,
-     4px 4px 5px 0px #0002;
-    transition:400ms ease all;
-  }
-  .updatebut:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .updatebut:hover:before,
-  .updatebut:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
-  .custom-btn-up {
-    width: auto;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: goldenrod;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
+/* Styles pour le bouton de mise à jour lorsqu'il est survolé */
+.updatebut:hover {
+  color: white; /* Couleur du texte en blanc */
+  background: black; /* Couleur de fond du bouton en noir lorsqu'il est survolé */
+  box-shadow: none; /* Supprime l'ombre du bouton lorsqu'il est survolé */
+}
+
+/* Styles pour les pseudos-éléments "before" et "after" du bouton de mise à jour */
+.updatebut:before,
+.updatebut:after {
+  content: ''; /* Ajoute du contenu vide aux pseudos-éléments */
+  position: absolute; /* Position absolue pour les pseudos-éléments */
+  top: 0; /* Position en haut du bouton */
+  right: 0; /* Position à droite du bouton */
+  height: 2px; /* Hauteur de 2px pour les lignes des pseudos-éléments */
+  width: 0; /* Largeur initiale de 0 pour les lignes des pseudos-éléments */
+  background: goldenrod; /* Couleur de fond des lignes des pseudos-éléments en doré */
+  box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002; /* Effets d'ombre pour les lignes des pseudos-éléments */
+  transition: 400ms ease all; /* Transition fluide de 400ms pour les animations */
+}
+
+/* Styles pour le pseudo-élément "after" du bouton de mise à jour */
+.updatebut:after {
+  right: inherit; /* Position "right" hérite de la position parente */
+  top: inherit; /* Position "top" hérite de la position parente */
+  left: 0; /* Position à gauche du bouton */
+  bottom: 0; /* Position en bas du bouton */
+}
+
+/* Styles pour les pseudos-éléments "before" et "after" du bouton de mise à jour lorsqu'il est survolé */
+.updatebut:hover:before,
+.updatebut:hover:after {
+  width: 100%; /* Largeur des lignes des pseudos-éléments à 100% lorsqu'il est survolé */
+  transition: 800ms ease all; /* Transition fluide de 800ms pour les animations lorsqu'il est survolé */
+}
+
+/* Styles pour le bouton de mise à jour personnalisé avec la classe "custom-btn-up" */
+.custom-btn-up {
+  width: auto; /* Largeur automatique du bouton */
+  height: 40px; /* Hauteur du bouton */
+  color: #fff; /* Couleur du texte en blanc */
+  border-radius: 5px; /* Bordure arrondie de 5px pour donner un effet de coin arrondi au bouton */
+  padding: 10px 25px; /* Espacement interne du bouton */
+  font-family: 'Lato', sans-serif; /* Police de caractères utilisée pour le texte du bouton */
+  font-weight: 500; /* Poids de la police de caractères */
+  background: goldenrod; /* Couleur de fond du bouton en doré */
+  cursor: pointer; /* Change le curseur en pointeur de souris au survol du bouton */
+  transition: all 0.3s ease; /* Transition fluide de 0.3 seconde pour les animations */
+  position: relative; /* Position relative pour les pseudos-éléments des boutons */
+  display: inline-block; /* Affiche le bouton en tant que bloc en ligne */
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1); /* Effets d'ombre pour le bouton */
+  outline: none; /* Supprime la bordure de contour autour du bouton lorsqu'il est en surbrillance */
+  display: flex; /* Affiche les éléments du bouton en tant que flexbox */
+  justify-content: center; /* Centre les éléments horizontalement dans le bouton */
+  align-items: center; /* Centre les éléments verticalement dans le bouton */
+}
+
 
 
 .deletebut {

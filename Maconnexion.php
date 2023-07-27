@@ -54,6 +54,10 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
+
     public function select_where_auteurs($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_auteurs = $id";

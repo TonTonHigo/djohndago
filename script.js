@@ -22,14 +22,15 @@ setInterval(showSlide, 4000);
 
 
 ///fonction verification//////
+//getElementById() de Document renvoie un objet Element représentant l'élément dont la propriété id correspond à la chaîne de caractères spécifiée.
 document.getElementById("email").addEventListener ('input',function(){
     var email = document.getElementById("email").value;
     var text = document.getElementById("text");
-    var pattern = /^[^ ]+@[^ ]+.[a-z]{2,3}$/; // C'est dans la description 
+    var pattern = '/^[a-zA-Z0-9_]+$/'; // C'est dans la description, et permet de determiné quelle type de pattern n'est pas pris en compte ou autoriser
 
     if (email.match(pattern)) {
         text.innerHTML ="Votre addresse Mail est valide";
-        text.style.color ="#00ff00"
+        text.style.color ="green"
     }else {
         text.innerHTML ="Votre addresse Mail est invalide";
         text.style.color ="red"

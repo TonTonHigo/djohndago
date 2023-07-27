@@ -1,7 +1,4 @@
-<?php 
-session_start();
-include('Maconnexion.php'); 
-?>
+<?php include('Maconnexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 

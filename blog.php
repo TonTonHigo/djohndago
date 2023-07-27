@@ -112,6 +112,7 @@ include ('Maconnexion.php');
                                 <p class="txt3">'. $truncatedContent . '</p>
                                 <form method="POST" action="article.php">
                                     <input name="id_articles" value="';
+                        
                            if(isset($_SESSION['article']) && $_SESSION['article'] == ""){
                                 $_SESSION['article'] = $cartes['id_articles'];
                                 echo $cartes['id_articles'];

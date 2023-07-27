@@ -259,7 +259,11 @@ body .FOOTER {
     flex-direction: row;
     align-content: space-around;
     flex-wrap: nowrap;
+    backdrop-filter: blur(15px);
+    
+    
 }
+
 /* .footer{
     background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
     

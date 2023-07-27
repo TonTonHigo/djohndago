@@ -71,8 +71,7 @@ foreach($afficher as $cartes){
         <img src="' . $cartes['image'] . '" alt="Image">
         <div class="card-buttons">
             <button>Voir article</button>
-            <button>Update</button>
-            <button>Delete</button>
+
         </div>
     </div>';
 }
@@ -88,9 +87,10 @@ $fpsImages = array(
 
 // Boucle foreach pour afficher les images de FPS
 echo '<h2>FPS ...</h2>';
+$fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $image) {
     echo '<div class="image-container">
-        <img src="' . $image . '" alt="Votre image">
+        <img src="' . $image['image'] . '" alt="Votre image">
     </div>';
 }
 

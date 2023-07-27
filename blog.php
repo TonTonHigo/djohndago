@@ -1,10 +1,13 @@
 <?php 
+// On ouvre notre session
 session_start();
+// On inclu notre page Maconnexion pour l'utiliser si besoin
 include ('Maconnexion.php'); 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,19 +27,24 @@ include ('Maconnexion.php');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
+
 <body class="blog">
-    
+
+<!-- J'inclu notre header dans la page -->
 <?php include ('header.php'); ?>
 
+    <!-- Corps de page -->
     <main>
 
-
         <section>
-            
+
+        <!-- On va afficher nos articles -->
         <?php 
+            // Ici on dit à notre page SI il y a une session de lancer ET que le role de la session est 2
+            // on affiche le code avec le echo
             if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
                 echo '
-                <!-- button stylé -->
+                <!-- button stylé chopé sur codepen est modifier -->
                 <div class="frame">
                 <button type="button" class="custom-btn btn-5" data-bs-toggle="modal" data-bs-target="#insertion"><span>Ajouter un article</span></button>
                 </div>
@@ -55,15 +63,18 @@ include ('Maconnexion.php');
                         <div class="login-page">
     
                             <div class="form">
-    
+
+                                    // Notre formulaire d\'insertion
+
                                     <form class="login-form" method="POST" action="insertion.php" id="form_article">
                                         <input name="image" type="text" placeholder="image"/>
                                         <input name="titre" type="text" placeholder="titre"/>
                                         <input name="categorie" type="number" placeholder="categorie"/>
                                         <textarea class="contenu_article" name="contenu" type="text" placeholder="contenu"/></textarea>
+                                        // Ici on chope l\'id de la session et on la met dans un input
                                         <input name="id_auteur" type="number" value="' . $_SESSION['id'] . '" hidden/>
-                                    </form>
-    
+                                    </form>  
+
                             </div>
                         </div>
     
@@ -80,30 +91,41 @@ include ('Maconnexion.php');
         ?>
            
            <div id="ourservices">
+            <!-- Ici on va afficher les cartes, elles sont en format grid côté css -->
                 <?php
+                    // On selectionne nos articles
                     $select = new MaConnexion("blog_jeux", "" , "root" , "localhost");
                     $afficher = $select -> select("articles","*");
                     foreach($afficher as $cartes){
                         $maxContentLength = 100; // Maximum de caractère a afficher 
 
-                        // Raccourci le contenu si il est trop long
+                        // Raccourci le contenu trop long pour donner un effet prévu
                         $truncatedContent = (strlen($cartes['contenu']) > $maxContentLength) ?
                         substr($cartes['contenu'], 0, $maxContentLength) . "..." :
                         $cartes['contenu'];
-
-                        echo '
-
                         
+                        // Une carte 
+                        echo '                       
 
                             <div class="our_services" id="massage'. $cartes['id_articles'] . '">
                                 <h3 class="titre_style">'. $cartes['titre'] . '</h3>
                                 <p class="txt3">'. $truncatedContent . '</p>
                                 <form method="POST" action="article.php">
-                                    <input name="id_articles" value="'. $cartes['id_articles'] . '" hidden>
+                                    <input name="id_articles" value="';
+                           if(isset($_SESSION['article']) && $_SESSION['article'] == ""){
+                                $_SESSION['article'] = $cartes['id_articles'];
+                                echo $cartes['id_articles'];
+                           }else{
+                                unset($_SESSION['article']);
+                                echo $cartes['id_articles'];
+                           }      
+                        echo '
+                        " hidden>
                                     <button type="submit" class="txt3 butcard">Voir l\'article</button>
                                 </form>
                                 ';
 
+                        // Si il y a un session de lancé ET que le role de la session est 2 alors on fait le echo
                         if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
                             echo '
                                 <div class="crudbut">

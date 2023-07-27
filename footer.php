@@ -14,6 +14,7 @@
 
     <div class="footer">
         <div class="contact">
+            <!-- Formulaire de contact -->
             <h2>Contact</h2>
             <form action="submit_form.php" method="post">
                 <input type="text" name="nom" placeholder="Nom" required>
@@ -25,6 +26,7 @@
         </div>
         <hr>
         <div class="social">
+            <!-- Liens vers les réseaux sociaux -->
             <h2>Réseaux sociaux</h2>
             <ul>
                 <li><a href="lien_vers_facebook" target="_blank"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i>TWITTER</a></li>

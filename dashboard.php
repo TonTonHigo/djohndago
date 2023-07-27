@@ -1,5 +1,7 @@
 <?php 
+// On ouvre notre session
 session_start();
+// On inclu notre page Maconnexion pour l'utiliser si besoin
 include ('Maconnexion.php'); 
 ?>
 
@@ -29,24 +31,25 @@ include ('Maconnexion.php');
 <?php include ('header.php'); ?>
 
     <main>
-    <table>
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody> 
+        <!-- Une table wow c'est impressionant -->
+        <table>
+                    <thead>
+                        <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
 
 
         <?php
-
-        
+            // On select les auteurs avec comme role 3
             $connexion = new MaConnexion("blog_jeux","","root","localhost");
             $afficher = $connexion->select_where_abonne("auteurs", "*", "3");
 
+            // On les affiche
             foreach ($afficher as $ligne) {
                 echo '
                     <tr>

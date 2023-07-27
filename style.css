@@ -287,7 +287,8 @@ body .FOOTER {
     top: 0; /* Positionnement à 0 pixels depuis le haut */
     left: 0; /* Positionnement à 0 pixels depuis la gauche */
     content: ""; /* Contenu pseudo-élément utilisé pour générer la superposition semi-transparente */
-    position: absolute; /* Position absolue pour que la superposition soit positionnée par rapport au pied de page */
+    /* position: absolute; Position absolue pour que la superposition soit positionnée par rapport au pied de page */
+    /* opacity: 0.15; */
 }
 
 /* Styles pour la classe "contact" (section de contact dans le pied de page) */

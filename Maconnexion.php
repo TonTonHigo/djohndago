@@ -31,6 +31,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select($table, $column){
         try {
             $requete = "SELECT $column from $table";
@@ -69,6 +72,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select_where_abonne($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_roles = $id";
@@ -80,6 +86,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select_where_commentaires($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_articles = $id";
@@ -91,6 +100,8 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
 
     public function delete($cond){
         try {
@@ -106,6 +117,10 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : ".$e->getMessage();
         }    
     }
+
+
+
+    
     public function delete_com($cond){
         try {
             $requete = "DELETE FROM `commentaires` WHERE id_commentaires = ?";

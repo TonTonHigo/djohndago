@@ -267,28 +267,53 @@ body .FOOTER {
     font-family: Arial, sans-serif; /* Police de caractères utilisée pour le texte de la classe "FOOTER" */
 }
 
-/* Styles pour la classe "footer" (pied de page) */
-.footer {
-    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /* Définit une image de fond pour le pied de page */
-    background-size: cover; /* Redimensionne l'image de fond pour qu'elle couvre tout l'espace disponible */
-    height: 400px; /* Hauteur du pied de page */
-    display: flex; /* Affiche les éléments du pied de page en tant que flexbox pour les aligner horizontalement */
-    justify-content: space-around; /* Répartit l'espace autour des éléments du pied de page */
-    color: #fff; /* Couleur du texte en blanc */
-    width: 100%; /* Largeur du pied de page */
-    padding-top: 1%; /* Espacement interne en haut du pied de page */
-    align-items: center; /* Centre les éléments verticalement dans le pied de page */
-    flex-direction: row; /* Dispose les éléments horizontalement dans le pied de page */
-    align-content: space-around; /* Répartit l'espace autour des éléments du pied de page lorsque plusieurs lignes sont présentes */
-    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne s'ils ne rentrent pas dans l'espace disponible */
-    background-color: rgba(255, 255, 255, 0.456); /* Couleur de superposition semi-transparente pour la partie visible du pied de page */
-    backdrop-filter: blur(5px); /* Applique un flou à la superposition (la quantité de flou dépend de la valeur en pixels) */
-    z-index: -1; /* Placez la superposition derrière le contenu du footer */
-    top: 0; /* Positionnement à 0 pixels depuis le haut */
-    left: 0; /* Positionnement à 0 pixels depuis la gauche */
-    content: ""; /* Contenu pseudo-élément utilisé pour générer la superposition semi-transparente */
-    /* position: absolute; Position absolue pour que la superposition soit positionnée par rapport au pied de page */
-    /* opacity: 0.15; */
+.footer { 
+    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /*Ajouter image dans le footer*/
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    width: 100%;
+    padding-top: 1%;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    backdrop-filter: blur(15px);
+    
+}
+
+/* .footer{
+    background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
+    
+    height:582px;
+    width:1443px;
+    border:1px solid #000000;
+    position:absolute;
+    background-size: cover;
+    /* left:29px;
+    top:3587px; */
+/* } */
+
+
+/* .contact {
+    width: 60%;
+    padding: 20px;
+    color:#A4133C;
+    font-size: 30px;
+} */
+
+.contact
+{
+color:#ffffff;
+text-align:center;
+vertical-align:text-top;
+font-size:24px;
+font-family:Inter;
+line-height:auto;
+border:2px solid #0b77de;
+width:152px;
 }
 
 /* Styles pour la classe "contact" (section de contact dans le pied de page) */

@@ -60,8 +60,7 @@ include ('Maconnexion.php');
                                         <input name="image" type="text" placeholder="image"/>
                                         <input name="titre" type="text" placeholder="titre"/>
                                         <input name="categorie" type="number" placeholder="categorie"/>
-                                        <textarea name="contenu" type="text" placeholder="contenu"/></textarea>
-                                        <input name="date" type="date" placeholder="date"/>
+                                        <textarea class="contenu_article" name="contenu" type="text" placeholder="contenu"/></textarea>
                                         <input name="id_auteur" type="number" value="' . $_SESSION['id'] . '" hidden/>
                                     </form>
     
@@ -138,14 +137,7 @@ include ('Maconnexion.php');
                                                         <input name="image_update" type="text" placeholder="image"/>
                                                         <input name="titre_update" type="text" placeholder="titre"/>
                                                         <input name="categorie_update" type="number" placeholder="categorie"/>
-                                                        <textarea name="contenu_update" type="text" placeholder="contenu"/></textarea>
-                                                        <input name="date_update" type="date" placeholder="date"/>
-                                                        <input name="id_auteur_update" type="number" value="';
-                                                        if(isset($_SESSION['id'])){
-                                                            echo $_SESSION['id'];
-                                                        }
-                                                    echo' 
-                                                         " hidden/>
+                                                        <textarea class="contenu_article" name="contenu_update" type="text" placeholder="contenu"/></textarea>
                                                     </form>
                     
                                             </div>

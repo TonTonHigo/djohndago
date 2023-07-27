@@ -120,18 +120,17 @@ use MaConnexion as GlobalMaConnexion;
         
    
 
-    public function insertionArticle_Secure( $image, $titre, $contenu, $date_publication, $categorie, $id_auteurs)
+    public function insertionArticle_Secure( $image, $titre, $contenu, $categorie, $id_auteurs)
     {
         try {
-            $requete = "INSERT INTO `articles`( image, titre, contenu, date_publication, categorie, id_auteurs) VALUES ( ?, ?, ?, ?, ?, ?)";
+            $requete = "INSERT INTO `articles`( image, titre, contenu, categorie, id_auteurs) VALUES (?, ?, ?, ?, ?)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
             $requete_preparee->bindValue(1, $image);
             $requete_preparee->bindValue(2, $titre);
             $requete_preparee->bindValue(3, $contenu);
-            $requete_preparee->bindValue(4, $date_publication);
-            $requete_preparee->bindValue(5, $categorie);
-            $requete_preparee->bindValue(6, $id_auteurs);
+            $requete_preparee->bindValue(4, $categorie);
+            $requete_preparee->bindValue(5, $id_auteurs);
 
             $requete_preparee->execute();
             return "insertion reussie";
@@ -153,20 +152,18 @@ use MaConnexion as GlobalMaConnexion;
 
 
 
-    public function miseAJourArticle_Secure($id_articles,$image,$titre,$contenu,$date_publication,$categorie,$id_auteurs)
+    public function miseAJourArticle_Secure($id_articles,$image,$titre,$contenu,$categorie)
     {
         try {
-            $requete = "UPDATE `articles` SET image=?,titre=?,contenu=?,date_publication=?,categorie=?,id_auteurs=? WHERE id_articles=?";
+            $requete = "UPDATE `articles` SET image=?,titre=?,contenu=?,categorie=? WHERE id_articles=?";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
             
             $requete_preparee->bindValue(1, $image);
             $requete_preparee->bindValue(2, $titre);
             $requete_preparee->bindValue(3, $contenu);
-            $requete_preparee->bindValue(4, $date_publication);
-            $requete_preparee->bindValue(5, $categorie);
-            $requete_preparee->bindValue(6, $id_auteurs);
-            $requete_preparee->bindValue(7, $id_articles);
+            $requete_preparee->bindValue(4, $categorie);
+            $requete_preparee->bindValue(5, $id_articles);
 
             $requete_preparee->execute();
             return "mise à jour réussie";

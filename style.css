@@ -311,14 +311,16 @@ body .FOOTER {
 
 /* Styles pour les champs de saisie (input) dans la section de contact */
 .contact input {
-    background-color: #a4133c; /* Couleur de fond des champs de saisie en rouge foncé (#a4133c) */
+    color:#0B77DE;
+    background-color: #ffffff; /* Couleur de fond des champs de saisie en rouge foncé (#a4133c) */
     height: 38px; /* Hauteur des champs de saisie */
     width: 221px; /* Largeur des champs de saisie */
 }
 
 /* Styles spécifiques pour le champ de saisie de type "email" dans la section de contact */
 input[type="email"] {
-    background-color: #a4133c; /* Couleur de fond du champ de saisie de type "email" en rouge foncé (#a4133c) */
+    color:#0B77DE;
+    background-color: #ffffff; /* Couleur de fond du champ de saisie de type "email" en rouge foncé (#a4133c) */
     height: 45px; /* Hauteur du champ de saisie de type "email" */
     width: 412px; /* Largeur du champ de saisie de type "email" */
 }
@@ -327,8 +329,8 @@ input[type="email"] {
 .contact textarea {
     margin-bottom: 10px; /* Marge inférieure de 10px pour séparer le champ de saisie de la zone de texte */
     padding: 5px; /* Espacement interne de 5px dans la zone de texte */
-    color: #fff; /* Couleur du texte en blanc */
-    background-color: #a4133c; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
+    color:#0B77DE; /* Couleur du texte en blanc */
+    background-color: #ffffff; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
     height: 164px; /* Hauteur de la zone de texte */
     width: 540px; /* Largeur de la zone de texte */
 }
@@ -337,7 +339,7 @@ input[type="email"] {
 .contact button {
     padding: 12px 16px; /* Espacement interne du bouton */
     border: none; /* Pas de bordure */
-    background-color: #A4133C; /* Couleur de fond du bouton en rouge foncé (#A4133C) */
+    background-color: #132ea4; /* Couleur de fond du bouton en rouge foncé (#A4133C) */
     color: #fff; /* Couleur du texte en blanc */
     cursor: pointer; /* Change le curseur en pointeur de souris lors du survol du bouton */
     font-size: x-large; /* Taille du texte du bouton en "x-large" */
@@ -368,6 +370,12 @@ input[type="email"] {
 /* Styles pour chaque élément de la liste (li) dans la section des liens sociaux */
 .social li {
     margin-right: 10px; /* Marge de 10px à droite de chaque élément de la liste pour les séparer */
+}
+
+.social li a{
+    text-decoration: none;
+    color: #A4133C;
+    font-size: xx-large;
 }
 
 /* Styles pour les images (logos) dans la section des liens sociaux */

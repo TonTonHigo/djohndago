@@ -24,6 +24,7 @@
                  </ul>
              </div>
              <div class="nav-right">
+                <!-- Si il y a une session active on prend le nom dans la session pour afficher le message du h1 -->
                 <?php
                     if(isset($_SESSION['role'])){
                         echo '
@@ -31,8 +32,11 @@
                         ';
                     }
                 ?>
+
                 <button type="button" class="custom-btn-up updatebut" data-bs-toggle="modal" data-bs-target="#connexion"
+                
                 <?php
+                // Si il y a une session lancé alors on affiche hidden qui cachera le button CONNEXION
                     if(isset($_SESSION['role'])){
                         echo 'hidden';
                     }
@@ -41,12 +45,14 @@
                 
                 <button type="button" class="custom-btn-del deletebut" data-bs-toggle="modal" data-bs-target="#inscription" 
                 <?php
+                // Si il y a une session lancé alors on affiche hidden qui cachera le button INSCRIPTION
                     if(isset($_SESSION['role'])){
                         echo 'hidden';
                     }
                 ?>
                 ><span>INSCRIPTION</span></button>
                 <?php
+                // Si il y a une session lancé alors on affiche le button DECONNEXION
                     if(isset($_SESSION['role'])){
                         echo '
                         <a id="deconul" href="deco.php"><button type="button" class="custom-btn-deco decobut"><span> DECONNEXION </span></button></a>
@@ -54,6 +60,7 @@
                     }
                 ?>
                 <?php
+                // Si il y a une session lancé et que le role de la session est 2 alors on affiche le button DASHBOARD
                     if(isset($_SESSION['role']) && $_SESSION['role'] == 2){
                         echo '
                             <a id="dashnul" href="dashboard.php"><button type="button" class="custom-btn-dash dashbut"';
@@ -68,11 +75,6 @@
                         ';
                     }
                 ?>
-                 <!-- <button class="btn"><a href="inscription.php">Inscription</a></button>
-                <button class="btn"><a href="connexion.php">Connexion</a></button> -->
-
-                 <!-- <button onclick="openModal('connexion')">Connexion</button> -->
-                 <!--        <button onclick="openModal('inscription')">Inscription</button> -->
              </div>
 
 

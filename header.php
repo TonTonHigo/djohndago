@@ -26,7 +26,7 @@
              <div class="nav-right">
                 <!-- Si il y a une session active on prend le nom dans la session pour afficher le message du h1 -->
                 <?php
-                    if(isset($_SESSION['role'])){
+                    if(isset($_SESSION['role']) && isset($_SESSION['nom'])){
                         echo '
                         <h1 id="salut">Salut '. $_SESSION['nom'] . ' ༼･ิɷ･ิ༽</h1>
                         ';

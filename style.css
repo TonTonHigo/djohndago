@@ -271,7 +271,7 @@ body .FOOTER {
 .footer {
   background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /* Ajoute une image d'arrière-plan dans le pied de page */
   background-size: cover; /* Ajuste la taille de l'image d'arrière-plan pour couvrir le pied de page */
-  height: 400px; /* Hauteur du pied de page */
+  height: 500px; /* Hauteur du pied de page */
   display: flex; /* Utilise un affichage flexible pour aligner les éléments */
   justify-content: space-around; /* Répartit l'espace disponible autour des éléments horizontalement */
   color: #fff; /* Couleur du texte en blanc */

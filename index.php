@@ -50,6 +50,19 @@ foreach ($images as $image) {
 echo '</div>
 </div>';
 
+
+// Chemin d'accès de votre image que vous souhaitez afficher
+$chemin_image = "site_exemples\img\watchdog.jpg";
+echo '<div class="image-container">
+    <img src="' . $chemin_image . '" alt="Votre image">
+</div>';
+
+
+
+
+
+
+
 // Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
 $articles = array(
     array("site_exemples\img\onepeace.jpg"),
@@ -61,17 +74,31 @@ $articles = array(
 // Boucle foreach pour afficher les cartes d'articles récents
 echo '<h2>ARTICLES RECENTS ...</h2>
 <section class="card-section">';
-foreach ($articles as $article) {
+// On instancie une nouvelle MaConnexion qu'on met dans notre variable $trois_cartes 
+$trois_cartes = new MaConnexion("blog_jeux", "" , "root" , "localhost");
+// On utilise une fonction de la classe MaConnexion pour select les cartes et on les met dans la variable $afficher
+$afficher = $trois_cartes -> select_articles_recents("articles","*");
+// Maintenant qu'on à selectionner nos articles on doit les afficher donc on fait un foreach car $afficher est un tableau dans un tableau ($afficher = [[propriété:valeur])
+foreach($afficher as $cartes){
     echo '<div class="card-image">
-        <img src="' . $article[0] . '" alt="Image">
+        <img src="' . $cartes['image'] . '" alt="Image">
         <div class="card-buttons">
             <button>Voir article</button>
-            <button>Update</button>
-            <button>Delete</button>
+
         </div>
     </div>';
 }
 echo '</section>';
+
+
+
+// Chemin d'accès de votre image que vous souhaitez afficher
+$chemin_image = "site_exemples\img\decor (22).jpg";
+echo '<div class="image-container">
+    <img src="' . $chemin_image . '" alt="Votre image">
+</div>';
+
+
 
 // Tableau des images de FPS (à remplacer par vos données réelles)
 $fpsImages = array(
@@ -83,10 +110,15 @@ $fpsImages = array(
 
 // Boucle foreach pour afficher les images de FPS
 echo '<h2>FPS ...</h2>';
+$fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $image) {
-    echo '<div class="image-container">
-        <img src="' . $image . '" alt="Votre image">
-    </div>';
+    echo '<div class="card-image">
+    <img src="' . $image['image'] . '" alt="Image">
+    <div class="card-buttons">
+        <button>Voir article</button>
+
+    </div>
+</div>';
 }
 
 

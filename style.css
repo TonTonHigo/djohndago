@@ -262,62 +262,38 @@ nav {
 /* mon css pour mon footer */
 /* Styles appliqués au corps du document et à la classe "FOOTER" */
 body .FOOTER {
-    margin: 0; /* Supprime les marges autour de la classe "FOOTER" */
-    padding-top: 0; /* Supprime l'espacement interne en haut de la classe "FOOTER" */
-    font-family: Arial, sans-serif; /* Police de caractères utilisée pour le texte de la classe "FOOTER" */
+  margin: 0; /* Supprime les marges autour de la classe "FOOTER" */
+  padding-top: 0; /* Supprime l'espacement interne en haut de la classe "FOOTER" */
+  font-family: Arial, sans-serif; /* Police de caractères utilisée pour le texte de la classe "FOOTER" */
 }
 
-.footer { 
-    background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /*Ajouter image dans le footer*/
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: space-around;
-    color: #fff;
-    width: 100%;
-    padding-top: 1%;
-    align-items: center;
-    flex-direction: row;
-    align-content: space-around;
-    flex-wrap: nowrap;
-    backdrop-filter: blur(15px);
-    
+/* CSS pour la classe "footer" (pied de page) */
+.footer {
+  background-image: url(../djohndago/site_exemples/img/decortoucheps.jpg); /* Ajoute une image d'arrière-plan dans le pied de page */
+  background-size: cover; /* Ajuste la taille de l'image d'arrière-plan pour couvrir le pied de page */
+  height: 400px; /* Hauteur du pied de page */
+  display: flex; /* Utilise un affichage flexible pour aligner les éléments */
+  justify-content: space-around; /* Répartit l'espace disponible autour des éléments horizontalement */
+  color: #fff; /* Couleur du texte en blanc */
+  width: 100%; /* Largeur du pied de page */
+  padding-top: 1%; /* Espacement interne en haut du pied de page */
+  align-items: center; /* Alignement vertical des éléments au centre */
+  flex-direction: row; /* Direction des éléments en ligne */
+  align-content: space-around; /* Alignement vertical des éléments entre les lignes */
+  flex-wrap: nowrap; /* Empêche le retour à la ligne des éléments */
+  backdrop-filter: blur(15px); /* Applique un flou sur l'arrière-plan du pied de page */
 }
 
-a {
-    color: white;
-}
-
-/* .footer{
-    background-image: url('../djohndago/site_exemples/img/decortoucheps.jpg');
-    
-    height:582px;
-    width:1443px;
-    border:1px solid #000000;
-    position:absolute;
-    background-size: cover;
-    /* left:29px;
-    top:3587px; */
-/* } */
-
-
-/* .contact {
-    width: 60%;
-    padding: 20px;
-    color:#A4133C;
-    font-size: 30px;
-} */
-
-.contact
-{
-color:#ffffff;
-text-align:center;
-vertical-align:text-top;
-font-size:24px;
-font-family:Inter;
-line-height:auto;
-border:2px solid #0b77de;
-width:152px;
+/* CSS pour la classe "contact" (section de contact dans le pied de page) */
+.contact {
+  color: #ffffff; /* Couleur du texte en blanc */
+  text-align: center; /* Centre le contenu horizontalement */
+  vertical-align: text-top; /* Aligne le contenu verticalement en haut */
+  font-size: 24px; /* Taille du texte */
+  font-family: Inter; /* Police de caractères utilisée pour le texte */
+  line-height: auto; /* Hauteur de ligne automatique */
+  border: 2px solid #0b77de; /* Bordure de 2px avec couleur bleue (#0b77de) */
+  width: 152px; /* Largeur de la section de contact */
 }
 
 /* Styles pour la classe "contact" (section de contact dans le pied de page) */

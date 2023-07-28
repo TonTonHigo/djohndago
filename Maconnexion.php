@@ -31,6 +31,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select($table, $column){
         try {
             $requete = "SELECT $column from $table";
@@ -42,6 +45,44 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : ".$e->getMessage();
         }    
     }
+
+
+
+
+    // On modifie juste le nom de la function ici "select" devient "select_articles_recents"
+    public function select_articles_recents($table, $column){
+        try {
+            // On reparamètre notre requete SQL selon nos besoin
+            // Ici on avait besoin de selectionné 3 articles récentes donc on rajoute ORDERBY BY 'nom_column' DESC pour mettre notre liste en ordre décroissant
+            // Et ensuite LIMIT 3 pour limiter le nombre d'article selectionné à 3
+            $requete = "SELECT $column from $table ORDER BY id_articles DESC LIMIT 3 ";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); //Recupere le resultat de la requete dans un tableau associatif
+            return $resultat;
+        
+        } catch (PDOException $e) {
+            echo "Erreur : ".$e->getMessage();
+        }    
+    }
+
+
+
+
+        // On modifie juste le nom de la function ici "select" devient "select_articles_recents"
+        public function select_articles_FPS($table, $column){
+            try {
+                // On reparamètre notre requete SQL selon nos besoin
+                // Ici on avait besoin de selectionné 3 articles récentes donc on rajoute ORDERBY BY 'nom_column' DESC pour mettre notre liste en ordre décroissant
+                // Et ensuite LIMIT 3 pour limiter le nombre d'article selectionné à 3
+                $requete = "SELECT $column from $table WHERE categorie = 1 ORDER BY id_articles DESC LIMIT 3 ";
+                $resultat = $this->connexionPDO->query($requete);
+                $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); //Recupere le resultat de la requete dans un tableau associatif
+                return $resultat;
+            
+            } catch (PDOException $e) {
+                echo "Erreur : ".$e->getMessage();
+            }    
+        }
 
     public function select_where_articles($table, $column, $id) {
         try {
@@ -69,6 +110,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select_where_abonne($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_roles = $id";
@@ -80,6 +124,9 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
     public function select_where_commentaires($table, $column, $id) {
         try {
             $requete = "SELECT $column FROM $table WHERE id_articles = $id";
@@ -91,6 +138,8 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
 
     public function delete($cond){
         try {
@@ -106,6 +155,10 @@ use MaConnexion as GlobalMaConnexion;
             echo "Erreur : ".$e->getMessage();
         }    
     }
+
+
+
+    
     public function delete_com($cond){
         try {
             $requete = "DELETE FROM `commentaires` WHERE id_commentaires = ?";

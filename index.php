@@ -117,7 +117,7 @@ echo "<br>";
 
 
 // Chemin d'accès de votre image que vous souhaitez afficher
-$chemin_image = "site_exemples\img\decor (22).jpg";
+$chemin_image = "site_exemples\img\poi.webp";
 echo '<div class="image-container">
     <img src="' . $chemin_image . '" alt="Votre image">
 </div>';

@@ -117,7 +117,7 @@ echo "<br>";
 
 
 // Chemin d'accès de votre image que vous souhaitez afficher
-$chemin_image = "site_exemples\img\decor (22).jpg";
+$chemin_image = "site_exemples\img\poi.webp";
 echo '<div class="image-container">
     <img src="' . $chemin_image . '" alt="Votre image">
 </div>';
@@ -142,9 +142,28 @@ echo '<h2>FPS ...</h2>
 $fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $cartes) {
     echo '<div class="card-image">
+<<<<<<< HEAD
+    <img src="' . $cartes['image'] .
+        '" alt="Image">
+=======
     <img src="' . $cartes['image'] . '" alt="Image">
+>>>>>>> 9aadc08fe0be217c4742dbb28289cbb10e85edb2
     <div class="card-buttons">
-        <button>Voir article</button>
+    <form method="POST" action="article.php">
+                                    <input name="id_articles" value="';
+
+        if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+            $_SESSION['article'] = $cartes['id_articles'];
+            echo $cartes['id_articles'];
+        } else {
+            unset($_SESSION['article']);
+            echo $cartes['id_articles'];
+        }
+        echo '
+                        " hidden>
+                                    <button type="submit" class="txt3 butcard">Voir l\'article</button>
+    </form>
+        
 
     </div>
 </div>';

@@ -142,7 +142,7 @@ echo '<h2>FPS ...</h2>
 $fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $cartes) {
     echo '<div class="card-image">
-    <img src="' . $image['image'] . '" alt="Image">
+    <img src="' . $cartes['image'] . '" alt="Image">
     <div class="card-buttons">
         <button>Voir article</button>
 

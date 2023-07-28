@@ -142,9 +142,24 @@ echo '<h2>FPS ...</h2>
 $fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
 foreach ($fpsImages as $cartes) {
     echo '<div class="card-image">
-    <img src="' . $image['image'] . '" alt="Image">
+    <img src="' . $cartes['image'] .
+        '" alt="Image">
     <div class="card-buttons">
-        <button>Voir article</button>
+    <form method="POST" action="article.php">
+                                    <input name="id_articles" value="';
+
+        if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+            $_SESSION['article'] = $cartes['id_articles'];
+            echo $cartes['id_articles'];
+        } else {
+            unset($_SESSION['article']);
+            echo $cartes['id_articles'];
+        }
+        echo '
+                        " hidden>
+                                    <button type="submit" class="txt3 butcard">Voir l\'article</button>
+    </form>
+        
 
     </div>
 </div>';

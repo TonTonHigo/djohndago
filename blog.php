@@ -97,7 +97,7 @@ include ('Maconnexion.php');
                     $select = new MaConnexion("blog_jeux", "" , "root" , "localhost");
                     $afficher = $select -> select("articles","*");
                     foreach($afficher as $cartes){
-                        $maxContentLength = 100; // Maximum de caractère a afficher 
+                        $maxContentLength = 100; // Maximum de caractère a afficher //contenu pour reduire la taille
 
                         // Raccourci le contenu trop long pour donner un effet prévu
                         $truncatedContent = (strlen($cartes['contenu']) > $maxContentLength) ?
@@ -117,7 +117,7 @@ include ('Maconnexion.php');
                                 $_SESSION['article'] = $cartes['id_articles'];
                                 echo $cartes['id_articles'];
                            }else{
-                                unset($_SESSION['article']);
+                                unset($_SESSION['article']);//enleve la valeur
                                 echo $cartes['id_articles'];
                            }      
                         echo '

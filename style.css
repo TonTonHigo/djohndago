@@ -292,21 +292,9 @@ body .FOOTER {
   font-size: 24px; /* Taille du texte */
   font-family: Inter; /* Police de caractères utilisée pour le texte */
   line-height: auto; /* Hauteur de ligne automatique */
-  border: 2px solid #0b77de; /* Bordure de 2px avec couleur bleue (#0b77de) */
   width: 152px; /* Largeur de la section de contact */
 }
 
-/* Styles pour la classe "contact" (section de contact dans le pied de page) */
-.contact {
-    color: #ffffff; /* Couleur du texte en blanc */
-    text-align: center; /* Centre le contenu horizontalement */
-    vertical-align: text-top; /* Aligne le contenu verticalement en haut */
-    font-size: 24px; /* Taille du texte */
-    font-family: Inter; /* Police de caractères utilisée pour le texte */
-    line-height: auto; /* Hauteur de ligne automatique */
-    border: 2px solid #0b77de; /* Bordure de 2px avec couleur bleue (#0b77de) */
-    width: 152px; /* Largeur de la section de contact */
-}
 
 /* Styles pour le titre h2 dans la section de contact */
 .contact h2 {
@@ -316,26 +304,25 @@ body .FOOTER {
 
 /* Styles pour les champs de saisie (input) dans la section de contact */
 .contact input {
-    color:#0B77DE;
-    background-color: #ffffff; /* Couleur de fond des champs de saisie en rouge foncé (#a4133c) */
+    color:white;
+    background-color: #A4133C; /* Couleur de fond des champs de saisie en rouge foncé (#a4133c) */
     height: 38px; /* Hauteur des champs de saisie */
     width: 221px; /* Largeur des champs de saisie */
 }
-
-/* Styles spécifiques pour le champ de saisie de type "email" dans la section de contact */
-input[type="email"] {
-    color:#0B77DE;
-    background-color: #ffffff; /* Couleur de fond du champ de saisie de type "email" en rouge foncé (#a4133c) */
-    height: 45px; /* Hauteur du champ de saisie de type "email" */
-    width: 412px; /* Largeur du champ de saisie de type "email" */
+.contact input::placeholder{
+    color: white;
 }
+.contact textarea::placeholder{
+    color: white;
+}
+
 
 /* Styles pour la zone de texte (textarea) dans la section de contact */
 .contact textarea {
     margin-bottom: 10px; /* Marge inférieure de 10px pour séparer le champ de saisie de la zone de texte */
     padding: 10px; /* Espacement interne de 5px dans la zone de texte */
-    color:#0B77DE; /* Couleur du texte en blanc */
-    background-color: #ffffff; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
+    color:white; /* Couleur du texte en blanc */
+    background-color: #A4133C; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
     height: 164px; /* Hauteur de la zone de texte */
     width: 540px; /* Largeur de la zone de texte */
 }

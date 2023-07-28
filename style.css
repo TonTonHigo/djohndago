@@ -1162,3 +1162,22 @@ small{
     color: #0B77DE;
     font-weight: bold;
 }
+
+
+
+
+/* Styles par défaut pour les écrans jusqu'à 767px (y compris les smartphones) */
+/* Ajoutez vos styles ici pour les appareils mobiles */
+
+/* Media query pour les écrans de 768px (tablettes en mode portrait) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Ajoutez vos styles spécifiques pour les tablettes ici */
+
+
+  
+
+
+
+
+
+}

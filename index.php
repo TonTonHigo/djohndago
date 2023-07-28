@@ -25,11 +25,24 @@
     <?php include('header.php'); ?>
 
 
-    
+
 
 
 
     <?php
+
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
+
+
+
 // Définir un tableau contenant les chemins d'accès des images
 $images = array(
     "site_exemples\img\battlefield-2042-logo.webp",
@@ -51,13 +64,20 @@ echo '</div>
 </div>';
 
 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
 // Chemin d'accès de votre image que vous souhaitez afficher
 $chemin_image = "site_exemples\img\watchdog.jpg";
 echo '<div class="image-container">
     <img src="' . $chemin_image . '" alt="Votre image">
 </div>';
 
-
+echo "<br>";
+echo "<br>";
+echo "<br>";
 
 
 
@@ -90,6 +110,10 @@ foreach($afficher as $cartes){
 }
 echo '</section>';
 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
 
 
 // Chemin d'accès de votre image que vous souhaitez afficher
@@ -98,20 +122,25 @@ echo '<div class="image-container">
     <img src="' . $chemin_image . '" alt="Votre image">
 </div>';
 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
 
 
 // Tableau des images de FPS (à remplacer par vos données réelles)
 $fpsImages = array(
     "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
     "site_exemples\img\decor (29).jpg",
-    "site_exemples\img\decor (15).jpg",
+    "site_exemples/img/battlefield-2042-logo.webp",
     // Ajoutez d'autres images de FPS similaires ici
 );
 
 // Boucle foreach pour afficher les images de FPS
-echo '<h2>FPS ...</h2>';
+echo '<h2>FPS ...</h2>
+<section class="card-section">';
 $fpsImages = $trois_cartes -> select_articles_FPS("articles","*");
-foreach ($fpsImages as $image) {
+foreach ($fpsImages as $cartes) {
     echo '<div class="card-image">
     <img src="' . $image['image'] . '" alt="Image">
     <div class="card-buttons">
@@ -120,8 +149,14 @@ foreach ($fpsImages as $image) {
     </div>
 </div>';
 }
+echo '</section>';
 
-
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
 
 
 

@@ -333,7 +333,7 @@ input[type="email"] {
 /* Styles pour la zone de texte (textarea) dans la section de contact */
 .contact textarea {
     margin-bottom: 10px; /* Marge inférieure de 10px pour séparer le champ de saisie de la zone de texte */
-    padding: 5px; /* Espacement interne de 5px dans la zone de texte */
+    padding: 10px; /* Espacement interne de 5px dans la zone de texte */
     color:#0B77DE; /* Couleur du texte en blanc */
     background-color: #ffffff; /* Couleur de fond de la zone de texte en rouge foncé (#a4133c) */
     height: 164px; /* Hauteur de la zone de texte */
@@ -354,7 +354,7 @@ input[type="email"] {
 .social {
     width: 40%; /* Largeur de la section des liens sociaux */
     padding: 20px; /* Espacement interne de 20px dans la section des liens sociaux */
-    color: #A4133C; /* Couleur du texte en rouge foncé (#A4133C) */
+    color:#0b77de; /* Couleur du texte en rouge foncé (#A4133C) */
     font-size: 30px; /* Taille du texte */
 }
 
@@ -379,7 +379,7 @@ input[type="email"] {
 
 .social li a{
     text-decoration: none;
-    color: #A4133C;
+    color: #ffffff;
     font-size: xx-large;
 }
 

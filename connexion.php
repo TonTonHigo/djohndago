@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Maconnexion.php");
 
 // On récolte les données
@@ -18,6 +17,14 @@ if(preg_match($pattern, $nom)){
     foreach($requete as $compare){
         // Si le $mdp est égale au mot de passe de la bdd alors on créer la session
         if(password_verify($mdp, $compare['mdp'])){ 
+
+            session_start([
+                'cookie_lifetime' => 3600, // Durée de vie du cookie sesison en secondes quand la session est inactive
+                'cookie_httponly' => true, // Empêche l'accés des cookie par JavaScript
+                'cookie_secure' => true, // Cookie en https seulement
+                'cookie_samesite' => 'Lax', // Contrôle le comportement du cookie en fonction du site
+                'use_strict_mode' => true // Utilisation du mode strict pour les sesisons 
+            ]);
             // On enregistre l'id de l'auteur dans $_SESSION['id'] 
             $_SESSION['id'] = $compare['id_auteurs'];
             // On enregistre role de l'auteur dans $_SESSION['role'] 

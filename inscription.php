@@ -21,7 +21,7 @@ $pattern = '/^[a-zA-Z0-9_]+$/';
     if(preg_match($pattern, $nom)){
     
         if($mdp == $conf_mdp){
-            $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+            $mdp_hash = password_hash($mdp, PASSWORD_ARGON2ID);
         
             $ajout_article = new MaConnexion("blog_jeux","","root","localhost");
             $requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp_hash);

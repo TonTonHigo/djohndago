@@ -94,14 +94,8 @@
                                  <div class="form">
 
                                      <form class="login-form" method="POST" action="connexion.php" id="connexi">
-                                         <!-- <input name="id_update" type="number" value="" hidden /> -->
-                                         <!-- <input name="image_update" type="text" placeholder="image" /> -->
                                          <input name="nom" type="text" placeholder="Nom" />
                                          <input name="mdp" type="password" placeholder="Mot de passe" />
-                                         <!-- <input name="categorie_update" type="number" placeholder="categorie" /> -->
-                                         <!-- <textarea name="contenu_update" type="text" placeholder="contenu" ></textarea> -->
-                                         <!-- <input name="date_update" type="date" placeholder="date" /> -->
-                                         <!-- <input name="id_auteur_update" type="number" value="' . $_SESSION['id'] . '" hidden /> -->
                                      </form>
 
                                  </div>
@@ -109,7 +103,6 @@
 
                          </div>
                          <div class="modal-footer">
-                             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button> -->
                              <button form="connexi" type="submit" class="btn btn-modal">CONNEXION</button>
                          </div>
                      </div>
@@ -134,10 +127,10 @@
 
                                      <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
                                          <input name="id_roles" type="number" value="3" hidden />
-                                         <input name="nom" type="text" placeholder="Nom..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
-                                         <input name="email" type="email" placeholder="Email..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
-                                         <input name="mdp" type="password" placeholder="Mot de passe..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
-                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." required pattern = '/^[a-zA-Z0-9_]+$/'/>
+                                         <input name="nom" type="text" id="text" placeholder="Nom..." required/>
+                                         <input name="email" type="email" placeholder="Email..." required/>
+                                         <input name="mdp" type="password" placeholder="Mot de passe..." required/>
+                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." required/>
                                      </form>
 
                                  </div>

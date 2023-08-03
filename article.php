@@ -213,13 +213,14 @@ include ('Maconnexion.php');
             // Enfin on affiche un formulaire pour envoyer un commentaire si il y a une session de lancé
             if (isset($_SESSION['role'])) {
                 echo '
-                            <form class="comment-form" method="POST" action="commentaires.php">
-                                <input name="id_articles" type="number" value="' . $ligne['id_articles'] . '"  hidden>
-                                <input name="id_auteurs" type="number" value="' . $_SESSION['id'] . '"  hidden>
+                            <form class="comment-form" method="POST" action="commentaires.php">                           
+                                <input name="id_articles" type="hidden" value="' . $ligne['id_articles'] . '">
+                                <input name="id_auteurs" type="hidden" value="' . $_SESSION['id'] . '">
+                                <input name="token" type="hidden" value="' . $_SESSION['csrf_token'] . '">                           
                                 <textarea name="contenu" placeholder="Votre commentaire" required></textarea>
                     ';
                     $monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-                    echo'<input name="url" type="text" value="' . $monUrl . '"  hidden>';
+                    echo'<input name="url" type="hidden" value="' . $monUrl . '">';
                     echo'
                                 <button type="submit">Poster le commentaire</button>
                             </form>

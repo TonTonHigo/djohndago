@@ -43,6 +43,9 @@ include ('Maconnexion.php');
             SINON $articles prend la valeur su post id_article et la session prend la valeur de $articles
             se sera utile quand on commentera pour que la page ne perde pas l'id de l'article afficher -->
         <?php
+        if(isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
+            
+        }
         if(isset($_SESSION['article'])){
             $articles = $_SESSION['article'];
 

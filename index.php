@@ -40,159 +40,324 @@ include('Maconnexion.php');
 
     <?php
 
-
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-
-
-
-
-    // Définir un tableau contenant les chemins d'accès des images
-    $images = array(
-        "site_exemples\img\battlefield-2042-logo.webp",
-        "site_exemples\img\daysgone.jpg",
-        "site_exemples\img\wallpaperflare.com_wallpaper(10).jpg",
-        "site_exemples\img\decolastofusblackandwhite.jpg",
-        "site_exemples\img\onepeace.jpg",
-        "site_exemples\img\sexy.jpg",
-        "site_exemples\img\onepeace.jpg",
-    );
-
-    // Boucle foreach pour afficher les images du carousel
-    echo '<div class="carousel-container-nav">
-    <div class="carousel-slide">';
-    foreach ($images as $image) {
-        echo '<img src="' . $image . '" alt="Image">';
-    }
-    echo '</div>
-</div>';
-
-
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-
-    // Chemin d'accès de votre image que vous souhaitez afficher
-    $chemin_image = "site_exemples\img\watchdog.jpg";
-    echo '<div class="image-container">
-    <img src="' . $chemin_image . '" alt="Votre image">
-</div>';
-
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-
-
-
-
-    // Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
-    $articles = array(
-        array("site_exemples\img\onepeace.jpg"),
-        array("site_exemples\img\fps game image.jpg"),
-        array("site_exemples\img\harleyqueen.jpg"),
-        // Ajoutez d'autres articles similaires ici
-    );
-
-    // Boucle foreach pour afficher les cartes d'articles récents
-    echo '<h2>ARTICLES RECENTS ...</h2>
-<section class="card-section">';
-    // On instancie une nouvelle MaConnexion qu'on met dans notre variable $trois_cartes 
-    $trois_cartes = new MaConnexion("blog_jeux", "", "root", "localhost");
-    // On utilise une fonction de la classe MaConnexion pour select les cartes et on les met dans la variable $afficher
-    $afficher = $trois_cartes->select_articles_recents("articles", "*");
-    // Maintenant qu'on à selectionner nos articles on doit les afficher donc on fait un foreach car $afficher est un tableau dans un tableau ($afficher = [[propriété:valeur])
-    foreach ($afficher as $cartes) {
-        echo '<div class="card-image">
-        <img src="' . $cartes['image'] . '" alt="Image">
-        <div class="card-buttons">
-        <form method="POST" action="article.php">
-        <input name="id_articles" value="';
-
-        if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
-            $_SESSION['article'] = $cartes['id_articles'];
-            echo $cartes['id_articles'];
-        } else {
-            unset($_SESSION['article']);
-            echo $cartes['id_articles'];
+    if(isset($_SESSION['id_auteurs'])){
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+    
+    
+        // Définir un tableau contenant les chemins d'accès des images
+        $images = array(
+            "site_exemples\img\battlefield-2042-logo.webp",
+            "site_exemples\img\daysgone.jpg",
+            "site_exemples\img\wallpaperflare.com_wallpaper(10).jpg",
+            "site_exemples\img\decolastofusblackandwhite.jpg",
+            "site_exemples\img\onepeace.jpg",
+            "site_exemples\img\sexy.jpg",
+            "site_exemples\img\onepeace.jpg",
+        );
+    
+        // Boucle foreach pour afficher les images du carousel
+        echo '<div class="carousel-container-nav">
+        <div class="carousel-slide">';
+        foreach ($images as $image) {
+            echo '<img src="' . $image . '" alt="Image">';
         }
-        echo '
-                " hidden>
-        <button type="submit">Voir l\'article</button>
-        </form>
-
-        </div>
+        echo '</div>
     </div>';
-    }
-    echo '</section>';
-
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-
-
-    // Chemin d'accès de votre image que vous souhaitez afficher
-    $chemin_image = "site_exemples\img\poi.webp";
-    echo '<div class="image-container">
-    <img src="' . $chemin_image . '" alt="Votre image">
-</div>';
-
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-
-
-    // Tableau des images de FPS (à remplacer par vos données réelles)
-    $fpsImages = array(
-        "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
-        "site_exemples\img\decor (29).jpg",
-        "site_exemples/img/battlefield-2042-logo.webp",
-        // Ajoutez d'autres images de FPS similaires ici
-    );
-
-    // Boucle foreach pour afficher les images de FPS
-    echo '<h2>FPS ...</h2>
+    
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+        // Chemin d'accès de votre image que vous souhaitez afficher
+        $chemin_image = "site_exemples\img\watchdog.jpg";
+        echo '<div class="image-container">
+        <img src="' . $chemin_image . '" alt="Votre image">
+    </div>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+    
+    
+        // Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
+        $articles = array(
+            array("site_exemples\img\onepeace.jpg"),
+            array("site_exemples\img\fps game image.jpg"),
+            array("site_exemples\img\harleyqueen.jpg"),
+            // Ajoutez d'autres articles similaires ici
+        );
+    
+        // Boucle foreach pour afficher les cartes d'articles récents
+        echo '<h2>ARTICLES RECENTS ...</h2>
     <section class="card-section">';
-    $fpsImages = $trois_cartes->select_articles_FPS("articles", "*");
-    foreach ($fpsImages as $cartes) {
-        echo '<div class="card-image">
-        <img src="' . $cartes['image'] . '" alt="Image">
-        <div class="card-buttons">
-        <form method="POST" action="article.php">
-                                        <input name="id_articles" value="';
-
-        if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
-            $_SESSION['article'] = $cartes['id_articles'];
-            echo $cartes['id_articles'];
-        } else {
-            unset($_SESSION['article']);
-            echo $cartes['id_articles'];
-        }
-        echo '
-                " hidden>
+        // On instancie une nouvelle MaConnexion qu'on met dans notre variable $trois_cartes 
+        $trois_cartes = new MaConnexion("blog_jeux", "", "root", "localhost");
+        // On utilise une fonction de la classe MaConnexion pour select les cartes et on les met dans la variable $afficher
+        $afficher = $trois_cartes->select_articles_recents("articles", "*");
+        // Maintenant qu'on à selectionner nos articles on doit les afficher donc on fait un foreach car $afficher est un tableau dans un tableau ($afficher = [[propriété:valeur])
+        foreach ($afficher as $cartes) {
+            echo '<div class="card-image">
+            <img src="' . $cartes['image'] . '" alt="Image">
+            <div class="card-buttons">
+            <form method="POST" action="article.php">
+            <input type="hidden" name="csrf_token" value=" '. $_SESSION["csrf_token"] .'"> 
+            <input name="id_articles" value="';
+    
+            if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+                $_SESSION['article'] = $cartes['id_articles'];
+                echo $cartes['id_articles'];
+            } else {
+                unset($_SESSION['article']);
+                echo $cartes['id_articles'];
+            }
+            echo '
+                    " hidden>
             <button type="submit">Voir l\'article</button>
-        </form>
-
-
-        </div>
+            </form>
+    
+            </div>
+        </div>';
+        }
+        echo '</section>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+        // Chemin d'accès de votre image que vous souhaitez afficher
+        $chemin_image = "site_exemples\img\poi.webp";
+        echo '<div class="image-container">
+        <img src="' . $chemin_image . '" alt="Votre image">
     </div>';
-    }
-    echo '</section>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+        // Tableau des images de FPS (à remplacer par vos données réelles)
+        $fpsImages = array(
+            "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
+            "site_exemples\img\decor (29).jpg",
+            "site_exemples/img/battlefield-2042-logo.webp",
+            // Ajoutez d'autres images de FPS similaires ici
+        );
+    
+        // Boucle foreach pour afficher les images de FPS
+        echo '<h2>FPS ...</h2>
+        <section class="card-section">';
+        $fpsImages = $trois_cartes->select_articles_FPS("articles", "*");
+        foreach ($fpsImages as $cartes) {
+            echo '<div class="card-image">
+            <img src="' . $cartes['image'] . '" alt="Image">
+            <div class="card-buttons">
+            <form method="POST" action="article.php">
+            <input type="hidden" name="csrf_token" value=" '. $_SESSION["csrf_token"] .'"> 
+                                            <input name="id_articles" value="';
+    
+            if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+                $_SESSION['article'] = $cartes['id_articles'];
+                echo $cartes['id_articles'];
+            } else {
+                unset($_SESSION['article']);
+                echo $cartes['id_articles'];
+            }
+            echo '
+                    " hidden>
+                <button type="submit">Voir l\'article</button>
+            </form>
+    
+    
+            </div>
+        </div>';
+        }
+        echo '</section>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
 
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
+        
+    } else {
+
+
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+    
+    
+        // Définir un tableau contenant les chemins d'accès des images
+        $images = array(
+            "site_exemples\img\battlefield-2042-logo.webp",
+            "site_exemples\img\daysgone.jpg",
+            "site_exemples\img\wallpaperflare.com_wallpaper(10).jpg",
+            "site_exemples\img\decolastofusblackandwhite.jpg",
+            "site_exemples\img\onepeace.jpg",
+            "site_exemples\img\sexy.jpg",
+            "site_exemples\img\onepeace.jpg",
+        );
+    
+        // Boucle foreach pour afficher les images du carousel
+        echo '<div class="carousel-container-nav">
+        <div class="carousel-slide">';
+        foreach ($images as $image) {
+            echo '<img src="' . $image . '" alt="Image">';
+        }
+        echo '</div>
+    </div>';
+    
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+        // Chemin d'accès de votre image que vous souhaitez afficher
+        $chemin_image = "site_exemples\img\watchdog.jpg";
+        echo '<div class="image-container">
+        <img src="' . $chemin_image . '" alt="Votre image">
+    </div>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+    
+    
+        // Tableau des articles récents avec les boutons (à remplacer par vos données réelles)
+        $articles = array(
+            array("site_exemples\img\onepeace.jpg"),
+            array("site_exemples\img\fps game image.jpg"),
+            array("site_exemples\img\harleyqueen.jpg"),
+            // Ajoutez d'autres articles similaires ici
+        );
+    
+        // Boucle foreach pour afficher les cartes d'articles récents
+        echo '<h2>ARTICLES RECENTS ...</h2>
+    <section class="card-section">';
+        // On instancie une nouvelle MaConnexion qu'on met dans notre variable $trois_cartes 
+        $trois_cartes = new MaConnexion("blog_jeux", "", "root", "localhost");
+        // On utilise une fonction de la classe MaConnexion pour select les cartes et on les met dans la variable $afficher
+        $afficher = $trois_cartes->select_articles_recents("articles", "*");
+        // Maintenant qu'on à selectionner nos articles on doit les afficher donc on fait un foreach car $afficher est un tableau dans un tableau ($afficher = [[propriété:valeur])
+        foreach ($afficher as $cartes) {
+            echo '<div class="card-image">
+            <img src="' . $cartes['image'] . '" alt="Image">
+            <div class="card-buttons">
+            <form method="POST" action="article.php">
+            
+            <input name="id_articles" value="';
+    
+            if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+                $_SESSION['article'] = $cartes['id_articles'];
+                echo $cartes['id_articles'];
+            } else {
+                unset($_SESSION['article']);
+                echo $cartes['id_articles'];
+            }
+            echo '
+                    " hidden>
+            <button type="submit">Voir l\'article</button>
+            </form>
+    
+            </div>
+        </div>';
+        }
+        echo '</section>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+        // Chemin d'accès de votre image que vous souhaitez afficher
+        $chemin_image = "site_exemples\img\poi.webp";
+        echo '<div class="image-container">
+        <img src="' . $chemin_image . '" alt="Votre image">
+    </div>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    
+    
+    
+        // Tableau des images de FPS (à remplacer par vos données réelles)
+        $fpsImages = array(
+            "site_exemples\img\call-of-duty-warzone-photo-1381831.webp",
+            "site_exemples\img\decor (29).jpg",
+            "site_exemples/img/battlefield-2042-logo.webp",
+            // Ajoutez d'autres images de FPS similaires ici
+        );
+    
+        // Boucle foreach pour afficher les images de FPS
+        echo '<h2>FPS ...</h2>
+        <section class="card-section">';
+        $fpsImages = $trois_cartes->select_articles_FPS("articles", "*");
+        foreach ($fpsImages as $cartes) {
+            echo '<div class="card-image">
+            <img src="' . $cartes['image'] . '" alt="Image">
+            <div class="card-buttons">
+            <form method="POST" action="article.php">
+            
+                                            <input name="id_articles" value="';
+    
+            if (isset($_SESSION['article']) && $_SESSION['article'] == "") {
+                $_SESSION['article'] = $cartes['id_articles'];
+                echo $cartes['id_articles'];
+            } else {
+                unset($_SESSION['article']);
+                echo $cartes['id_articles'];
+            }
+            echo '
+                    " hidden>
+                <button type="submit">Voir l\'article</button>
+            </form>
+    
+    
+            </div>
+        </div>';
+        }
+        echo '</section>';
+    
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+    }
+
+
+
 
 
 

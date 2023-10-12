@@ -125,13 +125,13 @@
 
                                  <div class="form">
 
-                                     <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
-                                         <input name="id_roles" type="number" value="3" hidden />
-                                         <input name="nom" type="text" id="text" placeholder="Nom..." required/>
-                                         <input name="email" type="email" placeholder="Email..." required/>
-                                         <input name="mdp" type="password" placeholder="Mot de passe..." required/>
-                                         <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." required/>
-                                     </form>
+                                    <form class="login-form" method="POST" action="inscription.php" id="form_inscription">
+                                        <input name="id_roles" type="number" value="3" hidden />
+                                        <input name="nom" type="text" id="text" placeholder="Nom..." required/>
+                                        <input name="email" type="email" placeholder="Email..." required/>
+                                        <input name="mdp" type="password" placeholder="Mot de passe..." required/>
+                                        <input name="conf_mdp" type="password" placeholder="Confirmer le mot de passe..." required/>
+                                    </form>
 
                                  </div>
                              </div>

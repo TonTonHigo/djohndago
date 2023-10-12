@@ -9,7 +9,7 @@ session_start([
 
 include("Maconnexion.php");
 
-// // AJOUT AUTEUR
+// AJOUT AUTEUR
 $role = $_POST['id_roles'];
 $nom = $_POST['nom'];
 $email = $_POST['email'];

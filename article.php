@@ -186,7 +186,7 @@ include ('Maconnexion.php');
                                                                         <div class="form">
                                                 
                                                                                 <form  method="POST" action="delete_commentaire.php" id="delete_commentaire' . $coms['id_commentaires'] . '">
-                                                                                    <input name="id_delete" type="number" value="' . $coms['id_commentaires'] . '" hidden/>                                                        
+                                                                                    <input name="id_delete" type="hidden" value="' . $coms['id_commentaires'] . '">                                                        
                                                                                 </form>
                                                 
                                                                         </div>

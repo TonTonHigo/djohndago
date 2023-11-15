@@ -1,9 +1,15 @@
 <?php
-session_start();
+session_start([
+    'cookie_lifetime' => 3600, // Durée de vie du cookie sesison en secondes quand la session est inactive
+    'cookie_httponly' => true, // Empêche l'accés des cookie par JavaScript
+    'cookie_secure' => true, // Cookie en https seulement
+    'cookie_samesite' => 'Lax', // Contrôle le comportement du cookie en fonction du site
+    'use_strict_mode' => true // Utilisation du mode strict pour les sesisons 
+]);
 
 include("Maconnexion.php");
 
-// // AJOUT AUTEUR
+// AJOUT AUTEUR
 $role = $_POST['id_roles'];
 $nom = $_POST['nom'];
 $email = $_POST['email'];
@@ -15,7 +21,7 @@ $pattern = '/^[a-zA-Z0-9_]+$/';
     if(preg_match($pattern, $nom)){
     
         if($mdp == $conf_mdp){
-            $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+            $mdp_hash = password_hash($mdp, PASSWORD_ARGON2ID);
         
             $ajout_article = new MaConnexion("blog_jeux","","root","localhost");
             $requete = $ajout_article -> insertionInscription($role, $nom, $email, $mdp_hash);

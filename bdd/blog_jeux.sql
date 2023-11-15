@@ -29,7 +29,7 @@ USE blog_jeux;
 -- Structure de la table `articles`
 --
 
-DROP TABLE IF EXISTS `articles`;
+
 CREATE TABLE IF NOT EXISTS `articles` (
   `id_articles` int NOT NULL AUTO_INCREMENT,
   `image` varchar(100) NOT NULL,
@@ -64,7 +64,7 @@ INSERT INTO `articles` (`id_articles`, `image`, `titre`, `contenu`, `date_public
 -- Structure de la table `articles_tags`
 --
 
-DROP TABLE IF EXISTS `articles_tags`;
+
 CREATE TABLE IF NOT EXISTS `articles_tags` (
   `id_articles_tags` int NOT NULL AUTO_INCREMENT,
   `id_articles` int NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `articles_tags` (
 -- Structure de la table `auteurs`
 --
 
-DROP TABLE IF EXISTS `auteurs`;
+
 CREATE TABLE IF NOT EXISTS `auteurs` (
   `id_auteurs` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -109,7 +109,7 @@ INSERT INTO `auteurs` (`id_auteurs`, `nom`, `bio`, `email`, `mdp`, `id_roles`) V
 -- Structure de la table `commentaires`
 --
 
-DROP TABLE IF EXISTS `commentaires`;
+
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `id_commentaires` int NOT NULL AUTO_INCREMENT,
   `contenu` text NOT NULL,
@@ -138,7 +138,7 @@ INSERT INTO `commentaires` (`id_commentaires`, `contenu`, `date`, `id_articles`,
 -- Structure de la table `contacts`
 --
 
-DROP TABLE IF EXISTS `contacts`;
+
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id_contacts` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Structure de la table `roles`
 --
 
-DROP TABLE IF EXISTS `roles`;
+
 CREATE TABLE IF NOT EXISTS `roles` (
   `id_roles` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
@@ -175,7 +175,7 @@ INSERT INTO `roles` (`id_roles`, `nom`) VALUES
 -- Structure de la table `tags`
 --
 
-DROP TABLE IF EXISTS `tags`;
+
 CREATE TABLE IF NOT EXISTS `tags` (
   `id_tags` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,

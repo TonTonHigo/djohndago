@@ -1,6 +1,12 @@
 <?php 
 // On ouvre notre session
-session_start();
+session_start([
+    'cookie_lifetime' => 3600, // Durée de vie du cookie sesison en secondes quand la session est inactive
+    'cookie_httponly' => true, // Empêche l'accés des cookie par JavaScript
+    'cookie_secure' => true, // Cookie en https seulement
+    'cookie_samesite' => 'Lax', // Contrôle le comportement du cookie en fonction du site
+    'use_strict_mode' => true // Utilisation du mode strict pour les sesisons 
+]);
 // On inclu notre page Maconnexion pour l'utiliser si besoin
 include ('Maconnexion.php'); 
 ?>
@@ -37,6 +43,9 @@ include ('Maconnexion.php');
             SINON $articles prend la valeur su post id_article et la session prend la valeur de $articles
             se sera utile quand on commentera pour que la page ne perde pas l'id de l'article afficher -->
         <?php
+        if(isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
+            
+        }
         if(isset($_SESSION['article'])){
             $articles = $_SESSION['article'];
 
@@ -204,13 +213,14 @@ include ('Maconnexion.php');
             // Enfin on affiche un formulaire pour envoyer un commentaire si il y a une session de lancé
             if (isset($_SESSION['role'])) {
                 echo '
-                            <form class="comment-form" method="POST" action="commentaires.php">
-                                <input name="id_articles" type="number" value="' . $ligne['id_articles'] . '"  hidden>
-                                <input name="id_auteurs" type="number" value="' . $_SESSION['id'] . '"  hidden>
+                            <form class="comment-form" method="POST" action="commentaires.php">                           
+                                <input name="id_articles" type="hidden" value="' . $ligne['id_articles'] . '">
+                                <input name="id_auteurs" type="hidden" value="' . $_SESSION['id'] . '">
+                                <input name="token" type="hidden" value="' . $_SESSION['csrf_token'] . '">                           
                                 <textarea name="contenu" placeholder="Votre commentaire" required></textarea>
                     ';
                     $monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-                    echo'<input name="url" type="text" value="' . $monUrl . '"  hidden>';
+                    echo'<input name="url" type="hidden" value="' . $monUrl . '">';
                     echo'
                                 <button type="submit">Poster le commentaire</button>
                             </form>
